@@ -1,0 +1,29 @@
+{% from 'macros/tag-pills.njk' import tagPills with context %}
+
+{% macro feedCard(param) %}
+
+<article class="card">
+    <div class="w-stack">
+            <a href="{{ param.url }}" class="w-stack">
+                <div class="card__header">
+                    <p>{{ param.title }}</p>
+                </div>
+
+                {% if param.cover %}
+                    {% Image param.cover, "sample data", "sample-data-img", "min-width: 600px;" %}
+                {% endif %}
+
+                <h2>{{ param.title }}</h2>
+            </a>
+            <a href="{{ param.jurnal }}">Kunci Jawaban</a>
+
+            {% if param.tags %}
+                <div class="card__tags cluster gap-top-base" aria-label="tags for this page">
+                    {# {{ tagPills(param.tags) }} #}
+                    {# {{ param.tags }} #}
+                </div>
+            {% endif %}
+    </div>
+</article>
+
+{% endmacro %}

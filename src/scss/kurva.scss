@@ -1,0 +1,155 @@
+
+@import 'config';
+
+// $generate-utility-classes: false;
+
+@import '../../node_modules/gorko/gorko.scss';
+
+@import 'reset';
+@import 'fonts';
+
+$global-gutter: map-get($gorko-space-scale, 'size-1');
+
+/// Elements that feature in prose contexts need to have a consistent/
+$global-prose-element-max-width: 50rem;
+
+@import 'functions/get-space';
+
+@import 'mixins/card-base-styles';
+
+body {
+    font-size: get-size('size-1');
+    display: flex;
+    flex-direction: column;
+    font-family: Familijen Grotesk,Segoe UI,system-ui,-apple-system,sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    flex: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Familijen Grotesk,Segoe UI,system-ui,-apple-system,sans-serif,
+}
+
+h1 {
+  font-size: get-size('size-3');
+}
+
+h2 {
+  font-size: get-size('size-2');
+}
+
+h3 {
+  font-size: get-size('size-1');
+}
+
+h4,
+h5,
+h6 {
+  font-size: get-size('base');
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+ul:not([class]),
+ol:not([class]) {
+    list-style: none;
+}
+
+ol:not([class]),
+ul:not([class]) {
+  li {
+    position: relative;
+
+    // @include apply-utility('leading', 'short');
+  }
+
+  li + li {
+    margin-top: 1em;
+  }
+}
+
+ul:not([class]) {
+    // AB: I don't like how restrictive the marker pseudo-element is
+    // and we have some sizing and positioning that will benefit
+    // from a standard pseudo-element instead.
+    list-style: none;
+    padding-inline-start: 1rem;
+  
+    > li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 1ex 0 0 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  
+    > li {
+      padding-inline-start: 2ch;
+    }
+  }
+
+pre {
+  border: 1px solid black;
+}
+
+code {
+  padding: 2rem;
+  font-size: 0.9em;
+  tab-size: 2;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  box-decoration-break: clone;
+
+  font-family: Martian Mono,Consolas,Liberation Mono,Menlo,monospace,
+}
+
+pre > code {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@import 'compositions/auto-grid';
+@import 'compositions/cluster';
+@import 'compositions/repel';
+@import 'compositions/switcher';
+@import 'compositions/wrapper';
+@import 'compositions/wide-card-index';
+
+@import 'components/stack';
+
+@import 'blocks/card';
+@import 'blocks/pill';
+@import 'blocks/prose';
+@import 'blocks/site-footer';
+@import 'blocks/site-header';
+
+@import 'pages/homepage';
+@import 'pages/feeds/model-dan-grid.scss';
+@import 'pages/feeds/iklan-majalah.scss';
+@import 'pages/feeds/jadwal-elegan-bandara.scss';
+
+@import 'utilities/flow';
+@import 'utilities/region';
+@import 'utilities/all-center';

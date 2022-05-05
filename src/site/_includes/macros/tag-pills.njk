@@ -1,0 +1,11 @@
+
+{% macro tagPills(tags) %}
+    {% for tagKey in tags or [] %}
+        {% if tagKey in collections.tags %}
+            {% set tag = collections.tags[tagKey] %}
+            {# {% if tag !== 'feeds' %} #}
+                <a class="pill" href="{{ tag.url }}">{{ tag.title }}</a>
+            {# {% endif %} #}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

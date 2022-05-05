@@ -1,0 +1,13 @@
+
+.card {
+    @include card-base-styles;
+
+    h1, h2 {
+        font-weight: 400;
+    }
+}
+
+.card__tags {
+    --gutter: 0.5rem;
+    margin-block-start: get-space('base');
+}

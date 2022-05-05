@@ -1,0 +1,9 @@
+
+.w-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.w-stack * + * {
+    margin-top: 1rem;
+}

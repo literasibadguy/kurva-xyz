@@ -1,0 +1,22 @@
+---
+layout: 'layouts/base'
+tags:
+    - jurnal
+---
+
+<main class="jurnal-page">
+    <div class="post wrapper gap-top-size-3">
+        {% set safeTitle = title | safe %}
+
+        <div class="sidebar">
+            <article class="prose">
+                <header class="flow gap-bottom-size-3">
+                    <h1 id="{{ safeTitle }}">{{ safeTitle }}</h1>
+                </header>
+
+                {{ content | safe }}
+
+            </article>
+        </div>
+    </div>
+</main>

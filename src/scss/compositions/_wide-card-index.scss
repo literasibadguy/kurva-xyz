@@ -1,0 +1,8 @@
+
+@include media-query('md') {
+    .wide-card-index {
+        .auto-grid {
+            --auto-grid-min-item-size: 22rem;
+        }
+    }
+}

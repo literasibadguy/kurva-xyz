@@ -1,0 +1,59 @@
+// cyrillic
+@font-face {
+    font-family: 'Familijen Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: local('FamilijenGrotesk-Regular'),
+      url('/fonts/familijen-grotesk/FamiljenGrotesk-Regular.woff2') format('woff2');
+  }
+
+  // greek
+  @font-face {
+    font-family: 'Familijen Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-display: optional;
+    src: local('FamilijenGrotesk-Medium'),
+      url('/fonts/familijen-grotesk/FamiljenGrotesk-Medium.woff2') format('woff2');
+  }
+
+  // vietnamese
+  @font-face {
+    font-family: 'Familijen Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-display: optional;
+    src: local('FamilijenGrotesk-SemiBold'),
+      url('/fonts/familijen-grotesk/FamiljenGrotesk-SemiBold.woff2') format('woff2');
+  }
+
+  // cyrillic
+@font-face {
+  font-family: 'Martian Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local('MartianMono-StdRg'),
+    url('/fonts/martian-mono/MartianMono-StdRg.woff2') format('woff2');
+}
+
+// greek
+@font-face {
+  font-family: 'Martian Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: optional;
+  src: local('MartianMono-StdMd'),
+    url('/fonts/martian-mono/MartianMono-StdMd.woff2') format('woff2');
+}
+
+// vietnamese
+@font-face {
+  font-family: 'Martian Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: local('MartianMono-StdBd'),
+    url('/fonts/martian-mono/MartianMono-StdBd.woff2') format('woff2');
+}

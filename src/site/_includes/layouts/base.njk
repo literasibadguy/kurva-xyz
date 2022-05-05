@@ -1,0 +1,14 @@
+---
+title: Kurva, eksperimen desain web dan belajar CSS.
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'partials/head.njk' %}
+    </head>
+    <body>
+        {% include "partials/site-header.njk" %}
+        {{ content | safe }}
+        {% include "partials/site-footer.njk" %}
+    </body>
+</html>

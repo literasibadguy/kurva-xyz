@@ -1,0 +1,21 @@
+
+///  TEXT SIZES
+$gorko-size-scale: (
+  "base": 1rem,
+  "size-0": clamp(0.75rem, 0.71rem + 0.18vw, 0.875rem),
+  "size-1": clamp(1rem, 0.96rem + 0.18vw, 1.125rem),
+  "size-2": clamp(1.125rem, 1.09rem + 0.18vw, 1.25rem),
+  "size-3": clamp(1.25rem, 1.11rem + 0.71vw, 1.75rem),
+  "size-4": clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem),
+  "size-5": clamp(1.75rem, 1.39rem + 1.79vw, 3rem),
+  "size-6": clamp(2.25rem, 1.82rem + 2.14vw, 3.75rem),
+);
+
+///  SPACING SIZES
+$gorko-space-scale: (
+  "base": 1rem,
+  "size-1": clamp(1.375rem, 1.2rem + 0.89vw, 2rem),
+  "size-2": clamp(2.375rem, 1.98rem + 1.96vw, 3.75rem),
+  "size-3": clamp(3.75rem, 3.21rem + 2.68vw, 5.625rem),
+  "size-4": clamp(6.25rem, 5.36rem + 4.46vw, 9.375rem),
+);

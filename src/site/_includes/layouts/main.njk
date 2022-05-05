@@ -1,0 +1,50 @@
+---
+layout: 'layouts/base'
+---
+
+{# {% from 'macros/feed-card.njk' import feedCard with context %} #}
+{% from 'macros/tag-pills.njk' import tagPills with context %}
+
+{% set paged = collections.feeds %}
+
+<main class="wide-card-index" id="main">
+    <div class="heading__home">
+        <div class="wrapper region">
+            <div class="all-center">
+            <h2>Eksperimen desain web dan CSS</h2>
+            <p>Belajar sederhana menulis CSS dengan pilihan contoh kasus halaman desain web terkini</p>
+            </div>
+        </div>
+    </div>
+    <div class="auto-grid" id="archive__collections">
+        {% for feed in paged %}
+            {# {% set data = feed.data %} #}
+
+            {# {{ feedCard({ #}
+                {# title: feed.data.title or 'Lalala', #}
+                {# url: feed.url, #}
+                {# cover: feed.data.cover, #}
+                {# tags: feed.data.tags, #}
+                {# jurnal: feed.data.jurnal #}
+            {# }) }} #}
+            <article class="card">
+            <a href="{{ feed.url }}" class="w-stack">
+
+                {% if feed.data.cover %}
+                    {% Image feed.data.cover, "sample data", "sample-data-img", "min-width: 600px;" %}
+                {% endif %}
+
+                <h1>{{ feed.data.title }}</h1>
+            </a>
+            <a href="{{ feed.data.jurnal }}">Kunci Jawaban</a>
+
+            {% if feed.data.tags %}
+                <div class="card__tags cluster gap-top-base" aria-label="tags for this page">
+                    {{ tagPills(feed.data.tags) }}
+                </div>
+            {% endif %}
+            </article>  
+            
+        {% endfor %}
+    </div>
+</main>

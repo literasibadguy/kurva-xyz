@@ -1,0 +1,47 @@
+
+#iklan-majalah {
+    padding: 2rem;
+    min-height: 100vh;
+    color: bisque;
+    background-color: black;
+
+    h1 {
+        font-size: 80px;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+    }
+
+}
+
+.iklan-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    padding: 1rem;
+    min-height: 80vh;
+
+    .iklan-image {
+        flex: 3;
+    }
+}
+
+.iklan-stories {
+    min-height: 80vh;
+}
+
+.iklan-flex > * {
+    flex: 1;
+}
+
+
+.iklan-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1rem;
+}
+
+.iklan-footer {
+    text-align: center;
+}

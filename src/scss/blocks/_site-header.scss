@@ -1,0 +1,19 @@
+/// SITE HEADER
+/// The main, global header that is on each page
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    border-bottom: 1px solid whitesmoke;
+    line-height: 1;
+    // background-color: black;
+    color: black;
+}
+
+.site-header__brand {
+    display: block;
+    text-align: center;
+    margin-inline: auto;
+    color: black;
+}

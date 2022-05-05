@@ -1,0 +1,19 @@
+flex:
+  title: Flex
+  description: Menampilkan layout dinamis untuk konten secara otomatis
+
+grid:
+  title: Grid
+  description: Membantu membuat denah layout untuk per konten dan menyusun data
+
+basic:
+  title: Basic
+  description: Belajar CSS dari di tingkat sederhana
+
+intermediate:
+  title: Intermediatee
+  description: Eksplor CSS lebih detail di tingkat lebih lanjut
+
+advanced:
+  title: Advanced
+  description: Implementasi CSS di tingkat konsep komersial langsung

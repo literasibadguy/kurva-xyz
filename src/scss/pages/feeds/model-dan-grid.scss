@@ -1,0 +1,45 @@
+// Model and Grid scss
+
+.model__and-grid {
+
+    --region-space: #{get-space('base')};
+}
+
+.header-nav {
+    height: 60px;
+    background-color: antiquewhite;
+    margin-bottom: 1rem;
+}
+
+.header-nav h3 {
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+
+.women-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+     minmax(var(--auto-grid-min-size, 16rem), 1fr));
+    grid-gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Make member in the center of item */
+.women-member {
+    margin: 0 auto;
+}
+
+/* Lets make a space between text and image */
+.women-member > * {
+    margin-top: 1rem;
+  }
+
+.women-member img {
+    width: 30vh;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
