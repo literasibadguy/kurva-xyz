@@ -2,6 +2,11 @@
 const eleventyImage = require("@11ty/eleventy-img");
 const tags = require("./src/site/_collections/tags");
 
+const {memoize, findByUrl} = require('./src/site/_filters/find-by-url');
+const containsTag = require("./src/site/_filters/contains-tag");
+
+
+
 global.__basedir = __dirname;
 
 module.exports = function (config) {
@@ -11,6 +16,12 @@ module.exports = function (config) {
         return collection.getFilteredByTag("feeds");
     });
     config.addCollection('tags', tags);
+    config.addCollection('memoized', (collection) => {
+        return memoize(collection.getAll());
+    })
+
+    config.addFilter('findByUrl', findByUrl);
+    config.addFilter('containsTag', containsTag);
 
     config.addNunjucksAsyncShortcode('Image', async (filepath, alt, classes, sizes) => {
         let options = {
@@ -18,7 +29,6 @@ module.exports = function (config) {
             urlPaths: "/src/images",
             outputDir: "dist/img"
         };
-
         let stats = await eleventyImage(filepath, options);
 
         return eleventyImage.generateHTML(stats, {

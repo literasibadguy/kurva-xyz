@@ -47,12 +47,73 @@
     justify-content: space-between;
     align-items: flex-mulai;
     gap: $global-gutter;
-    grid-area: baris1-mulai / col1-mulai / baris1-akhir / col4-akhir;
+    grid-area: baris1-mulai / col1-mulai / baris1-akhir / col8-akhir;
 }
 
 .flight__subs {
-    grid-area: baris1-mulai/col5-mulai/baris1-akhir/col6-akhir;
+    grid-area: baris2-mulai/col1-mulai/baris2-akhir/col4-akhir;
 }
+
+.white__item {
+    grid-area: baris2-mulai/col5-mulai/baris2-akhir/col8-akhir;
+}
+
+.order__item {
+    grid-area: baris3-mulai/col1-mulai/baris3-akhir/col4-akhir;
+}
+
+.test__item {
+    grid-area: baris3-mulai/col5-mulai/baris3-akhir/col8-akhir;
+}
+
+.career__item {
+    grid-area: baris4-mulai/col1-mulai/baris4-akhir/col4-akhir;
+}
+
+.research__item {
+    grid-area: baris4-mulai/col5-mulai/baris4-akhir/col8-akhir;
+}
+
+.office__item {
+    grid-area: baris5-mulai/col1-mulai/baris5-akhir/col8-akhir;
+}
+
+@include media-query('md') {
+    .featured__flight {
+        grid-area: baris1-mulai / col1-mulai / baris1-akhir / col4-akhir;
+    }
+
+    .flight__subs {
+        grid-area: baris1-mulai/col5-mulai/baris1-akhir/col6-akhir;
+    }
+
+    .white__item {
+        grid-area: baris1-mulai/col7-mulai/baris1-akhir/col7-akhir;
+    }
+
+    .order__item {
+        grid-area: baris2-mulai/col1-mulai/baris2-akhir/col2-akhir;
+    }
+    
+    .test__item {
+        grid-area: baris2-mulai/col3-mulai/baris2-akhir/col4-akhir;
+    }
+
+    .career__item {
+        grid-area: baris2-mulai/col5-mulai/baris2-akhir/col6-akhir;
+    }
+
+    .research__item {
+        grid-area: baris2-mulai/col7-mulai/baris2-akhir/col8-akhir;
+    }
+
+    .office__item {
+        grid-area: baris1-mulai/col8-mulai/baris1-akhir/col8-akhir;
+    }
+}
+
+
+
 
 .airline__item {
     border: 0.5px solid white;
@@ -140,7 +201,6 @@
 
 .career__item {
     display: block;
-    grid-area: baris2-mulai/col5-mulai/baris2-akhir/col6-akhir;
 
     .career__hint {
         padding-top: 10px;
@@ -150,13 +210,6 @@
 .research__item {
     display: flex;
     align-items: flex-end;
-    grid-area: baris2-mulai/col7-mulai/baris2-akhir/col8-akhir;
+    
 }
 
-.order__item {
-    grid-area: baris2-mulai/col1-mulai/baris2-akhir/col2-akhir;
-}
-
-.test__item {
-    grid-area: baris2-mulai/col3-mulai/baris2-akhir/col4-akhir;
-}

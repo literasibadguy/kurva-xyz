@@ -38,7 +38,7 @@ tags:
         <img src="https://d2w9rnfcy7mm78.cloudfront.net/2148068/original_7fafe0f5f202b04a3901f62538705215.jpg?1525738952?bc=1" alt="Jet" />
         </div>
     </div>
-    <div class="airline__item">
+    <div class="airline__item office__item">
         <img class="arrow-icon" src="/images/arrow-down--right.svg" />
         <h3 class="office__head">Our HQ</h3>
         <div class="office__address ">
