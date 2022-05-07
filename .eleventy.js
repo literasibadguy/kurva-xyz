@@ -3,13 +3,16 @@ const eleventyImage = require("@11ty/eleventy-img");
 const tags = require("./src/site/_collections/tags");
 
 const {memoize, findByUrl} = require('./src/site/_filters/find-by-url');
+const pathSlug = require('./src/site/_filters/path-slug');
 const containsTag = require("./src/site/_filters/contains-tag");
-
+const md = require("./src/site/_filters/md");
 
 
 global.__basedir = __dirname;
 
 module.exports = function (config) {
+
+    // config.setLibrary('md', marfkdown);
 
     config.addCollection("feeds", function(collection) {
         const tag = 'feeds';
@@ -21,7 +24,9 @@ module.exports = function (config) {
     })
 
     config.addFilter('findByUrl', findByUrl);
+    config.addFilter('pathSlug', pathSlug);
     config.addFilter('containsTag', containsTag);
+    config.addFilter('md', md);
 
     config.addNunjucksAsyncShortcode('Image', async (filepath, alt, classes, sizes) => {
         let options = {

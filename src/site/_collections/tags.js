@@ -60,8 +60,6 @@ module.exports = (collections) => {
   if (collections) {
     processedCollection = tags;
   }
-
-  console.log(tags);
   
   return tags;
 
