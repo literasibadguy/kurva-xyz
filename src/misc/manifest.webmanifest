@@ -1,0 +1,17 @@
+{
+    "name": "Kurva",
+    "short_name": "kurva.xyz",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#0B12F2",
+    "theme_color": "#fff",
+    "icons": [
+    ],
+    "description": "Belajar desain web dan CSS langsung dari contoh terbaik kurva.xyz",
+    "lang": "en",
+    "categories": ["education", "news"],
+    "screenshots": [
+
+    ]
+  }
