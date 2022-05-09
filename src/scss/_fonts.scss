@@ -1,4 +1,4 @@
-// cyrillic
+
 @font-face {
     font-family: 'Familijen Grotesk';
     font-style: normal;
@@ -8,7 +8,6 @@
       url('/fonts/familijen-grotesk/FamiljenGrotesk-Regular.woff2') format('woff2');
   }
 
-  // greek
   @font-face {
     font-family: 'Familijen Grotesk';
     font-style: normal;
@@ -18,7 +17,6 @@
       url('/fonts/familijen-grotesk/FamiljenGrotesk-Medium.woff2') format('woff2');
   }
 
-  // vietnamese
   @font-face {
     font-family: 'Familijen Grotesk';
     font-style: normal;
@@ -28,7 +26,6 @@
       url('/fonts/familijen-grotesk/FamiljenGrotesk-SemiBold.woff2') format('woff2');
   }
 
-  // cyrillic
 @font-face {
   font-family: 'Martian Mono';
   font-style: normal;
@@ -38,7 +35,6 @@
     url('/fonts/martian-mono/MartianMono-StdRg.woff2') format('woff2');
 }
 
-// greek
 @font-face {
   font-family: 'Martian Mono';
   font-style: normal;
@@ -48,7 +44,6 @@
     url('/fonts/martian-mono/MartianMono-StdMd.woff2') format('woff2');
 }
 
-// vietnamese
 @font-face {
   font-family: 'Martian Mono';
   font-style: normal;
@@ -56,4 +51,22 @@
   font-display: optional;
   src: local('MartianMono-StdBd'),
     url('/fonts/martian-mono/MartianMono-StdBd.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local('IBMPlexMono-Regular'),
+    url('/fonts/plex-mono/IBMPlexMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plex Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: optional;
+  src: local('IBMPlexMono-Text'),
+    url('/fonts/plex-mono/IBMPlexMono-Text.woff2') format('woff2');
 }

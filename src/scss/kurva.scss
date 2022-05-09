@@ -108,20 +108,23 @@ ul:not([class]) {
   }
 
 pre {
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 code {
   padding: 2rem;
-  font-size: 0.9em;
+  font-size: 0.8em;
   tab-size: 2;
   text-align: left;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   box-decoration-break: clone;
-
-  font-family: Martian Mono,Consolas,Liberation Mono,Menlo,monospace,
+  color: #161616;
+  background-color: #f4f4f4;
+  font-weight: 300;
+  font-family: Plex Mono,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 1.3333;
 }
 
 pre > code {
@@ -145,6 +148,8 @@ pre > code {
 @import 'blocks/site-footer';
 @import 'blocks/site-header';
 
+@import 'pages/akses-page';
+@import 'pages/source-page';
 @import 'pages/homepage';
 @import 'pages/feeds/model-dan-grid.scss';
 @import 'pages/feeds/iklan-majalah.scss';

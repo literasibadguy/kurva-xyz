@@ -11,3 +11,8 @@
     --gutter: 0.5rem;
     margin-block-start: get-space('base');
 }
+
+.card-source__link {
+    text-decoration: underline;
+    color: gray;
+}

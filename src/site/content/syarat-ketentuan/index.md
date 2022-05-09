@@ -7,8 +7,7 @@ draft: true
     <div class="wrapper">
         <div class="region w-stack">
             <div class="akses__head">
-                <h1>Akses Kurva Premium hanya Rp. 799.000</h1>
-                <h2>Dapetin cara baru melihat desain web terkini</h2>
+                <h1>Syarat Ketentuan</h1>
             </div>
             <div class="akses__feature auto-grid">
                 <h1>Akses tertutup Kunci Jawaban CSS semua contoh</h1>

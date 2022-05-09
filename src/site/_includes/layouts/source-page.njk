@@ -1,0 +1,38 @@
+---
+layout: 'layouts/landing-page'
+---
+
+{% from 'macros/tag-pills.njk' import tagPills with context %}
+
+<div class="source-page">
+    <div class="wrapper region">
+        <header class="region source__header">
+        <h1 class="source__heading">
+            {{ renderData.title }}
+        </h1>
+
+        {% if renderData.demo %}
+            <a class="source__demo" href={{ renderData.demo }}>Demo</a>
+        {% endif %}
+
+        {% if renderData.premium !== false %}
+            <p class="source__premium">Konten Akses Premium</p>
+        {% endif %}
+
+        {% if tags %}
+                <div class="card__tags cluster gap-top-base" aria-label="tags for this page">
+                    {{ tagPills(tags) }}
+                </div>
+        {% endif %}
+        </header>
+
+        <div class="w-stack">
+            {{ content |  safe }}
+        <div class="source__footnote">
+            <p>Kunci atau sumber kode hanya menggambarkan eksplorasi untuk membuat setiap halaman HTML</p>
+            <p>Bukan suatu standar pasti untuk kode di atas, modifikasi dan ekspresi sendiri sangat rekomendasi
+                untuk belajar desain CSS</p>
+        </div>
+        </div>
+    </div>
+</div>
