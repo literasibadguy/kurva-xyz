@@ -2,6 +2,8 @@
 const eleventyImage = require("@11ty/eleventy-img");
 const tags = require("./src/site/_collections/tags");
 
+const Meta = require('./src/site/_includes/components/Meta');
+
 const {memoize, findByUrl} = require('./src/site/_filters/find-by-url');
 const pathSlug = require('./src/site/_filters/path-slug');
 const containsTag = require("./src/site/_filters/contains-tag");
@@ -27,6 +29,8 @@ module.exports = function (config) {
     config.addFilter('pathSlug', pathSlug);
     config.addFilter('containsTag', containsTag);
     config.addFilter('md', md);
+
+    config.addShortcode('Meta', Meta);
 
     config.addNunjucksAsyncShortcode('Image', async (filepath, alt, classes, sizes) => {
         let options = {

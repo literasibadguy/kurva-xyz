@@ -36,7 +36,10 @@ layout: 'layouts/base'
 
                 <h1>{{ feed.data.title }}</h1>
             </a>
-            <a class="card-source__link" href="{{ feed.data.jurnal }}">Kunci Jawaban</a>
+
+            {% if feed.data.jurnal %}
+                <a class="card-source__link" href="{{ feed.data.jurnal }}">Kunci Jawaban</a>
+            {% endif %}
 
             {% if feed.data.tags %}
                 <div class="card__tags cluster gap-top-base" aria-label="tags for this page">
