@@ -1,4 +1,13 @@
 
 .akses__head {
     border-bottom: 1px solid gray;
+    --region-space: 2rem;
+}
+
+.akses__feature {
+    border-bottom: 1px solid gray;
+}
+
+.akses__howto {
+    --region-space: 3rem;
 }

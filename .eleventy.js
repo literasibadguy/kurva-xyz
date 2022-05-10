@@ -8,6 +8,9 @@ const {memoize, findByUrl} = require('./src/site/_filters/find-by-url');
 const pathSlug = require('./src/site/_filters/path-slug');
 const containsTag = require("./src/site/_filters/contains-tag");
 const md = require("./src/site/_filters/md");
+const consoleDump = require("./src/site/_filters/console-dump");
+const strip = require("./src/site/_filters/strip");
+const { minifyJs } = require("./src/site/_filters/minify-js");
 
 
 global.__basedir = __dirname;
@@ -25,10 +28,13 @@ module.exports = function (config) {
         return memoize(collection.getAll());
     })
 
+    config.addFilter('consoleDump', consoleDump);
     config.addFilter('findByUrl', findByUrl);
     config.addFilter('pathSlug', pathSlug);
     config.addFilter('containsTag', containsTag);
     config.addFilter('md', md);
+    config.addFilter('strip', strip);
+    config.addNunjucksAsyncFilter('minifyJs', minifyJs);
 
     config.addShortcode('Meta', Meta);
 

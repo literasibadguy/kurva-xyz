@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm-run-all clean gulp eleventy",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all gulp eleventy --parallel watch:gulp eleventy:serve",
@@ -29,6 +30,7 @@
     "markdown-it": "^13.0.1",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.70.2",
-    "sass": "^1.51.0"
+    "sass": "^1.51.0",
+    "terser": "^5.13.1"
   }
 }

@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: Model dan Grid
 cover: "./src/images/feeds/model-dan-grid-wide.png"
-jurnal: "/jurnal/css-model-dan-grid"
+jurnal: "/kunci/css-model-dan-grid"
 tags: 
     - feeds
     - grid
