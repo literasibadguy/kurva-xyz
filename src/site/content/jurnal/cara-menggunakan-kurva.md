@@ -1,6 +1,6 @@
 ---
 layout: layouts/jurnal.njk
-title: Cara belajar CSS menggunakan Kurva
+title: How to learn with Kurva
 cover: "./src/images/feeds/iklan-majalah.png"
 tags: journal
 ---

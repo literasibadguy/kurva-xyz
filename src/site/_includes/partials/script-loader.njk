@@ -1,0 +1,46 @@
+
+
+{% set scriptLoader %}
+function loadScript(url, type) {
+    const s = document.createElement('script');
+    s.src = url;
+    s.onload = () => {
+        document.dispatchEvent(new CustomEvent('scriptLoaded', {detail: {url}}));
+    }
+    if (type) {
+        s.type = type;
+    }
+    if (type === 'module') {
+        s.async = false;
+        const pre = document.createElement('link');
+        pre.rel = 'modulepreload';
+        pre.href = url;
+        document.head.append(pre)
+        window.addEventListener('DOMContentLoaded', () => {
+            document.head.append(s);
+        });
+    } else {
+        document.head.append(s);
+    }
+ }
+
+
+{% if pageScripts %}
+    let pageScripts = {{ pageScripts | dump | safe }};
+    document.addEventListener('scriptLoaded', (e) => {
+        const source = e.detail.url.split('?')[0]
+        const index = pageScripts.indexOf(source);
+        if (index > -1) {
+            pageScripts.splice(index, 1);
+        }
+        if (pageScripts.length === 0) {
+            document.dispatchEvent(new CustomEvent('pageScriptsLoaded'));
+        }
+    })
+{% endif %}
+{% for item in pageScripts %}
+    loadScript('{{item}}', 'module');
+{% endfor %}
+
+{% endset %}
+<script>{{ scriptLoader | safe }}</script>

@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Iklan Majalah
+title: Magazine Advertising
 cover: "./src/images/feeds/iklan-majalah.png"
 # jurnal: "/jurnal/bikin-iklan-majalah-dengan-flex"
 tags: 
