@@ -10,8 +10,6 @@ export class PaypalCheckout extends LitElement {
 
     render()  {
         let subscriptionKurva;
- // Renders the PayPal button
-
         loadScript({ "client-id": "AQTKwwKCnsT0Gf98Jhxb6ga8BFNIhpGiznEkjjhpmIFXplDExPiMDKwdn3GEtSkeY3ON8xK7AzKX9yNd", vault: true })
             .then((paypal) => {
                 subscriptionKurva = paypal.Buttons({
