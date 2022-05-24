@@ -1,42 +1,100 @@
-import { LitElement } from "lit-element";
+import { LitElement, property, query } from "lit-element";
 import { html } from "lit-html";
+import { BaseElement } from "../BaseElement";
+import { initialize, registerUser } from '../../merahbase';
+import {store} from '../../store/store';
 
-class RegisterUser extends LitElement {
+class RegisterUser extends BaseElement {
+    static get properties() {
+        return {
+            emailValue: {type: String, },
+            passwordValue: {type: String, },
+            confirmPasswordValue: {type: String, },
+            disabledButton: {type: Boolean, },
+        };
+    }
 
     constructor() {
         super();
+        this.processing = false;
+        this.submitted = false;
+        this.onSubmit = this.onSubmit.bind(this);
+
+        if (store.getState().isSignedIn) {
+            initialize();
+        }
     }
 
     connectedCallback()  {
         super.connectedCallback();
+        this.form = this.renderRoot?.querySelector('form');
         this.addEventListener('submit', this.onSubmit);
     }
 
     onSubmit(e) {
         e.preventDefault();
-
+        console.log("What works for me");
         const form = new FormData(e.target);
-        console.log(form);
+        console.log(form.value);
+        console.log(this.emailValue);
+        registerUser(this.emailValue, this.passwordValue).then((user) => {
+            if (user) {
+                console.log(user);
+            }
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
+
+    onChangeFirstName(e) {
+        this.emailValue = e.target.value;
+    }
+
+    onChangeLastName(e) {
+
+    }
+
+    onChangeEmail(e) {
+        this.emailValue = e.target.value;
+    }
+
+    onChangePassword(e)  {
+        this.passwordValue = e.target.value;
+    }
+
+    onChangeConfirmPassword(e)  {
+        this.confirmPasswordValue = e.target.value;
+        console.log(this.confirmPasswordValue);
     }
 
     render() {
         return html`
-        <form>
-            <div>
+        <form class="w-stack" id="form-register" method="post">
+            <div class="w-stack">
+                <label for="choose">First Name</label>
+                <input class="input-text" id="last-name" @input="${this.onChangeEmail}" type="text" required>
+            </div>
+
+            <div class="w-stack">
+                <label for="choose">Last Name</label>
+                <input class="input-text" id="first-name" @input="${this.onChangeEmail}" type="text" required>
+            </div>
+
+            <div class="w-stack">
             <label for="choose">Email</label>
-            <input id="email" type="email" required>
+            <input class="input-text" id="email" @input="${this.onChangeEmail}" type="email" required>
             </div>
 
-            <div>
+            <div class="w-stack">
             <label for="password">Password</label>
-            <input id="password" type="password" required>
+            <input class="input-text" id="password" @input="${this.onChangePassword}" type="password" required>
             </div>
 
-            <div>
+            <div class="w-stack">
             <label for="confirm-password">Confirm Password</label>
-            <input id="confirm-password" type="password" required>
+            <input class="input-text" id="confirm-password" @input="${this.onChangeConfirmPassword}" type="password" required>
             </div>
-            <input type="submit" value="Send">
+            <button class="submit-button" type="submit" value="Send">Register</button>
             </div>
         </form>
         `

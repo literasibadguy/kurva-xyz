@@ -1,0 +1,43 @@
+
+.registration-page {
+    --region-space: 1rem;
+    max-width: 600px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+
+.login-page {
+    --region-space: 1rem;
+    max-width: 600px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+
+.input-text {
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+.input-text:invalid {
+    border: 1px solid red;
+}
+
+.input-text:focus:invalid {
+    border: 1px solid black;
+}
+
+.submit-button {
+    padding: 0.5rem;
+    background-color: black;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-button:disabled {
+    background-color: gray;
+}
+
+.submit-button:enabled  {
+    background-color: black;
+}
