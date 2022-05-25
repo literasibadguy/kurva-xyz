@@ -2,6 +2,12 @@
 import {initializeApp } from 'firebase/app';
 import { getAuth, 
     createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut as authSignOut } from 'firebase/auth';
+import {
+    getFirestore,
+    doc,
+    runTransaction,
+    onSnapshot,
+} from 'firebase/firestore';
 import { store } from './store/store';
 // import { site } from '../site/_data/site';
 
@@ -21,31 +27,111 @@ export function initialize() {
         appId: "1:443896995756:web:aac54fe4c84523e2536409",
         measurementId: "G-6HHTTHF0J6"
       });
+
+    let firestoreUserUnsubscribe = () => {};
+    let lastSavedUrl = null;
+
+    const onUserSnapshot = (snapshot) => {
+        let saveNewUrlToState = false;
+
+        const data = snapshot.data() || {};
+        const savedUrl = data.currentUrl || '';
+
+        const {userUrl, userUrlSeen} = store.getState();
+
+        if (lastSavedUrl && lastSavedUrl !== savedUrl) {
+            saveNewUrlToState = true;
+        } else if (!userUrl) {
+            saveNewUrlToState = true;
+        } else if (!lastSavedUrl && userUrl) {
+            saveUserUrl(userUrl, userUrlSeen);
+            lastSavedUrl = userUrl;
+            return;
+        } else {
+
+        }
+        lastSavedUrl = savedUrl;
+
+        if (saveNewUrlToState) {
+            const seen = (data.urls && data.urls[savedUrl]) || null;
+            const userUrlSeen = seen ? seen.toDate() : null;
+            const userUrlResultsPending = Boolean(savedUrl);
+
+            store.setState({
+                userUrl: savedUrl,
+                userUrlSeen,
+                userUrlResultsPending,
+            })
+        }
+    }
+
+    getAuth().onAuthStateChanged((user) => {
+        store.setState({checkingSignedInState: false});
+        firestoreUserUnsubscribe();
     
+        if (!user) {
+            return;
+        }
+    
+        store.setState({
+            isSignedIn: true,
+            user,
+        });
+
+        console.log(user);
+
+        firestoreUserUnsubscribe = (function () {
+            let internalUnsubscribe = null;
+            let unsubscribed = false;
+
+            if (!unsubscribed) {
+                internalUnsubscribe = onSnapshot(userRef(), onUserSnapshot);
+            }
+
+            return () => {
+                unsubscribed = true;
+                if (internalUnsubscribe) {
+                    internalUnsubscribe();
+                    internalUnsubscribe = null;
+                }
+            };
+        })();
+    });
+    
+    isInitialized = true;
 }
 
 initialize();
 
-getAuth().onAuthStateChanged((user) => {
-    store.setState({checkingSignedInState: false});
-    if (!user) {
-        return;
+function userRef() {
+    const state = store.getState();
+    if (!state.user) {
+        return null;
     }
 
-    store.setState({
-        isSignedIn: true,
-        user,
-    });
+    const firestore = getFirestore();
+    return doc(firestore, 'users', state.user.uid);
+}
 
-    isInitialized = true;
-})
+export async function saveUserUrl(url, auditedOn = null) {
+    const ref = userRef();
+    if (!ref) {
+        return null;
+    }
 
-export async function registerUser(email, password) {
+    const firestore = getFirestore();
+    const p = runTransaction(firestore, async (transaction) => {
+
+    })
+}
+
+export async function registerUser(email, password, name) {
     let user = null;
     try {
         initialize();
         const res = await createUserWithEmailAndPassword(getAuth(), email, password);
         user = res.user;
+
     } catch (err) {
         console.log('Registration error', err);
     }

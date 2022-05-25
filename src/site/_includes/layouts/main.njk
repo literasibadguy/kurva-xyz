@@ -2,17 +2,20 @@
 layout: 'layouts/base'
 ---
 
+
+
 {# {% from 'macros/feed-card.njk' import feedCard with context %} #}
 {% from 'macros/tag-pills.njk' import tagPills with context %}
 
 {% set paged = collections.feeds %}
 
+
 <main class="wide-card-index" id="main">
     <div class="heading__home">
         <div class="wrapper region">
             <div class="all-center">
-            <h2>Eksperimen desain web dan CSS</h2>
-            <p>Belajar sederhana menulis CSS dengan pilihan contoh kasus halaman desain web terkini</p>
+            <h2>Web Design Experiments Lab</h2>
+            <p>Into the example cases and the recent designs, Kurva is a research and exploring style of web pages and CSS</p>
             </div>
         </div>
     </div>
@@ -38,7 +41,7 @@ layout: 'layouts/base'
             </a>
 
             {% if feed.data.jurnal %}
-                <a class="card-source__link" href="{{ feed.data.jurnal }}">Kunci Jawaban</a>
+                <a class="card-source__link" href="{{ feed.data.jurnal }}">Source Key</a>
             {% endif %}
 
             {% if feed.data.tags %}

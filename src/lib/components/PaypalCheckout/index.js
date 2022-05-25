@@ -26,6 +26,7 @@ export class PaypalCheckout extends LitElement {
                       });
                     },
                     onApprove: function(data, actions) {
+                        // Update Data User
                       alert(data.subscriptionID); // You can add optional success message for the subscriber here
                     }
                 }).render('#paypal-button-container-P-4SC22356SF739513UMKCEHYI');

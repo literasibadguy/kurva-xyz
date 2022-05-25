@@ -15,7 +15,7 @@ const plugins = [
 ]
 
 const devConfig = {
-    input: pages,
+    input: ['./src/lib/app.js', ...pages],
     output: {
         dir: 'dist/js',
         format: 'esm'

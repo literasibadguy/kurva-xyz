@@ -40,6 +40,8 @@ function loadScript(url, type) {
 {% endif %}
 {% for item in pageScripts %}
     loadScript('{{item}}', 'module');
+{% else %}
+    loadScript('{{ '/js/default.js' }}', 'module');
 {% endfor %}
 
 {% endset %}

@@ -7,8 +7,10 @@ import {store} from '../../store/store';
 class RegisterUser extends BaseElement {
     static get properties() {
         return {
-            emailValue: {type: String, },
-            passwordValue: {type: String, },
+            firstName: { type: String },
+            lastName: { type: String },
+            emailValue: {type: String },
+            passwordValue: {type: String },
             confirmPasswordValue: {type: String, },
             disabledButton: {type: Boolean, },
         };
@@ -47,11 +49,11 @@ class RegisterUser extends BaseElement {
     }
 
     onChangeFirstName(e) {
-        this.emailValue = e.target.value;
+        this.firstName = e.target.value;
     }
 
     onChangeLastName(e) {
-
+        this.lastName = e.target.value;
     }
 
     onChangeEmail(e) {
@@ -72,12 +74,7 @@ class RegisterUser extends BaseElement {
         <form class="w-stack" id="form-register" method="post">
             <div class="w-stack">
                 <label for="choose">First Name</label>
-                <input class="input-text" id="last-name" @input="${this.onChangeEmail}" type="text" required>
-            </div>
-
-            <div class="w-stack">
-                <label for="choose">Last Name</label>
-                <input class="input-text" id="first-name" @input="${this.onChangeEmail}" type="text" required>
+                <input class="input-text" id="first-name" @input="${this.onChangeFirstName}" type="text" required>
             </div>
 
             <div class="w-stack">

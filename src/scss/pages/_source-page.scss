@@ -1,4 +1,14 @@
 
+.source-page {
+    background-color: #fbfbf9;
+    --region-space: 1rem;
+}
+
+.source-inner {
+    background-color: white;
+    padding: 1rem;
+}
+
 .source__header {
     border-top: 1px solid #1f1f1f;
     border-bottom: 1px solid #1f1f1f;
@@ -6,7 +16,7 @@
 }
 
 .source__heading {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .source__demo {

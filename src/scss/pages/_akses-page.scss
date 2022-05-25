@@ -1,4 +1,18 @@
 
+
+.access-page-restrict {
+    background-color: black;
+    color: white;
+    margin-inline: auto;
+    max-width: 600px;
+    padding: 1rem;
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
 .akses__head {
     border-bottom: 1px solid gray;
     --region-space: 2rem;

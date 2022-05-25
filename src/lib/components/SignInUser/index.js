@@ -26,7 +26,7 @@ class SignInUser extends BaseStateElement {
     connectedCallback() {
         super.connectedCallback();
         this.form = this.renderRoot?.querySelector('form');
-        this.signOutForm = this.renderRoot?.getElementById('.sign-out');
+        this.signOutForm = document.getElementById('sign-out');
         this.addEventListener('submit', this.submitSignIn);
 
         if (this.emailValidated && this.passValue.length > 0) {
@@ -35,10 +35,12 @@ class SignInUser extends BaseStateElement {
             this.disableButton = true;
         }
 
-        // this.addEventListener('submit', this.submitLogOut);
+        this.addEventListener('submit', this.submitSignIn);
+        // this.signOutForm.addEventListener('submit', this.submitLogOut);
     }
 
     onChangeEmail(e) {
+        this.passValue = '';
         if (e.target.validity.typeMismatch) {
             this.emailValidated = false;
         } else if (e.target.validity.valueMissing) {
@@ -102,8 +104,9 @@ class SignInUser extends BaseStateElement {
 
     render() {
         if (this.isSignedIn) {
+            window.location = '/';
             return html`
-                <form id="sign-out" method="post">
+                <form class="sign-out-form" id="sign-out" method="post">
                     <div class="w-stack">
                     <h2>You're signed in. Go to your account page</h2>
                     <button form="sign-out" type="submit">Log out</button>

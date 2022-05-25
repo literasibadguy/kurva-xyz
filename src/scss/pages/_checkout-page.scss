@@ -1,0 +1,20 @@
+
+.checkout-page {
+    margin-inline: auto;
+    max-width: 600px;
+    --region-space: 2rem;
+}
+
+.checkout-info {
+    border-top: 1px solid black;
+    max-width: 600px;
+
+   > * {
+       border-bottom: 1px solid black;
+       padding-bottom: 1rem;
+   }
+}
+
+.paypal-box {
+    max-width: 600px;
+}

@@ -1,22 +1,26 @@
 ---
 layout: 'layouts/landing-page'
+pageScripts:
+    - '/js/access-source.js'
 ---
 
 {% from 'macros/tag-pills.njk' import tagPills with context %}
 
+
+<access-source>
 <div class="source-page">
-    <div class="wrapper region">
+    <div class="source-inner wrapper region">
         <header class="region source__header">
-        <h1 class="source__heading">
+        <h3 class="source__heading">
             {{ renderData.title }}
-        </h1>
+        </h3>
 
         {% if renderData.demo %}
             <a class="source__demo" href={{ renderData.demo }}>Demo</a>
         {% endif %}
 
         {% if renderData.premium !== false %}
-            <p class="source__premium">Konten Akses Premium</p>
+            <p class="source__premium">Access Premiums</p>
         {% endif %}
 
         {% if tags %}
@@ -36,3 +40,4 @@ layout: 'layouts/landing-page'
         </div>
     </div>
 </div>
+</access-source>

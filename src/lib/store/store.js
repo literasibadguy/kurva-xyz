@@ -7,7 +7,10 @@ const initialState = {
     checkingSignInState: true,
     isSignedIn: Boolean(localStorage['kurva_isSignedIn']),
     userAcceptsCookies: false,
-    useer: null,
+    user: null,
+    userUrlSeen: null,
+    userUrl: null,
+    currentUrl: window.location.pathname,
 }
 
 let store;
