@@ -5,3 +5,9 @@
   padding-top: var(--region-space, #{get-space('size-4')});
   padding-bottom: var(--region-space, #{get-space('size-4')});
 }
+
+// CUSTOM FOR MARGIN UTILITY
+.edges {
+  margin-top: var(--edges-space, #{get-space('size-3')});
+  margin-bottom: var(--edges-space, #{get-space('size-3')});
+}

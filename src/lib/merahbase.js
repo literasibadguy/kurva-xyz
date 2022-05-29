@@ -5,8 +5,11 @@ import { getAuth,
 import {
     getFirestore,
     doc,
+    collection,
     runTransaction,
     onSnapshot,
+    addDoc,
+    setDoc,
 } from 'firebase/firestore';
 import { store } from './store/store';
 // import { site } from '../site/_data/site';
@@ -67,7 +70,7 @@ export function initialize() {
 
     getAuth().onAuthStateChanged((user) => {
         store.setState({checkingSignedInState: false});
-        firestoreUserUnsubscribe();
+        // firestoreUserUnsubscribe();
     
         if (!user) {
             return;
@@ -80,22 +83,7 @@ export function initialize() {
 
         console.log(user);
 
-        firestoreUserUnsubscribe = (function () {
-            let internalUnsubscribe = null;
-            let unsubscribed = false;
-
-            if (!unsubscribed) {
-                internalUnsubscribe = onSnapshot(userRef(), onUserSnapshot);
-            }
-
-            return () => {
-                unsubscribed = true;
-                if (internalUnsubscribe) {
-                    internalUnsubscribe();
-                    internalUnsubscribe = null;
-                }
-            };
-        })();
+        
     });
     
     isInitialized = true;
@@ -110,7 +98,7 @@ function userRef() {
     }
 
     const firestore = getFirestore();
-    return doc(firestore, 'users', state.user.uid);
+    return doc(firestore, 'users', state.user.id);
 }
 
 export async function saveUserUrl(url, auditedOn = null) {
@@ -129,9 +117,22 @@ export async function registerUser(email, password, name) {
     let user = null;
     try {
         initialize();
+        const firestore = getFirestore();
         const res = await createUserWithEmailAndPassword(getAuth(), email, password);
-        user = res.user;
+        // Add a new document in collection "cities"
+        // const collectRef = collection(firestore, 'users');
+        const docRef = doc(firestore, 'users', res.user.uid);
+        console.log(docRef);
+        const sd = setDoc(docRef, {
+            email: email,
+            id: res.user.uid,
+            name: name,
+            paidUser: false,
+        });
 
+        await sd;
+        user = res.user;
+        
     } catch (err) {
         console.log('Registration error', err);
     }

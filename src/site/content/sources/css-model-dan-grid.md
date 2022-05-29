@@ -1,5 +1,5 @@
 ---
-layout: layouts/source-page.njk
+layout: layouts/source-page.html
 title: Kunci CSS Model dan Grid
 jurnal: "/jurnal/grid-sederhana-menyusun-foto-model"
 renderData:

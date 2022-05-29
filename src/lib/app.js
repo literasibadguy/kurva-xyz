@@ -5,10 +5,9 @@ import { localStorage } from './utils/storage';
 document.body.classList.remove('unresolved');
 
 function onGlobalStateChanged({isSignedIn}) {
+    document.body.classList.toggle('lh-signedin', isSignedIn);
 
-    if (isSignedIn) {
-        // window.location = '/';
-    }
+    localStorage['kurva_isSignedIn'] = isSignedIn ? 'probably' : '';
     
 }
 store.subscribe(onGlobalStateChanged());

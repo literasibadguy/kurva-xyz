@@ -1,5 +1,4 @@
-import { LitElement } from "lit-element"; 
-import { html } from "lit-html";
+import { LitElement, html } from "lit"; 
 import { loadScript } from "@paypal/paypal-js";
 
 

@@ -1,5 +1,4 @@
-import { LitElement } from "lit-element";
-import { html  } from "lit-html";
+import { html, LitElement  } from "lit";
 import { BaseElement } from "../BaseElement";
 import { BaseStateElement } from "../BaseStateElement";
 import { signInUser, signOut } from '../../merahbase';

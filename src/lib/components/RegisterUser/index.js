@@ -1,18 +1,19 @@
-import { LitElement, property, query } from "lit-element";
-import { html } from "lit-html";
+import {  html } from "lit";
 import { BaseElement } from "../BaseElement";
+import { BaseStateElement } from "../BaseStateElement";
 import { initialize, registerUser } from '../../merahbase';
 import {store} from '../../store/store';
 
-class RegisterUser extends BaseElement {
+class RegisterUser extends BaseStateElement {
     static get properties() {
         return {
             firstName: { type: String },
-            lastName: { type: String },
             emailValue: {type: String },
             passwordValue: {type: String },
             confirmPasswordValue: {type: String, },
             disabledButton: {type: Boolean, },
+            checkingSignedInState: {type: Boolean},
+            isSignedIn: {type: Boolean},
         };
     }
 
@@ -39,9 +40,10 @@ class RegisterUser extends BaseElement {
         const form = new FormData(e.target);
         console.log(form.value);
         console.log(this.emailValue);
-        registerUser(this.emailValue, this.passwordValue).then((user) => {
+        registerUser(this.emailValue, this.passwordValue, this.firstName).then((user) => {
             if (user) {
                 console.log(user);
+                window.location.assign('/check-out');
             }
         }).catch((error) => {
             console.log(error);
@@ -50,10 +52,6 @@ class RegisterUser extends BaseElement {
 
     onChangeFirstName(e) {
         this.firstName = e.target.value;
-    }
-
-    onChangeLastName(e) {
-        this.lastName = e.target.value;
     }
 
     onChangeEmail(e) {
@@ -70,6 +68,12 @@ class RegisterUser extends BaseElement {
     }
 
     render() {
+        if (this.isSignedIn) {
+            return html`
+                <h2>Already signed in</h2>
+            `
+        }
+        
         return html`
         <form class="w-stack" id="form-register" method="post">
             <div class="w-stack">
@@ -95,6 +99,11 @@ class RegisterUser extends BaseElement {
             </div>
         </form>
         `
+    }
+
+    onStateChanged({checkingSignedInState, isSignedIn}) {
+        this.checkingSignedInState = checkingSignedInState;
+        this.isSignedIn = isSignedIn;
     }
 }
 

@@ -1,5 +1,5 @@
 ---
-layout: layouts/source-page.njk
+layout: layouts/source-page.html
 title: Source Key CSS Aviation and Grid Area
 renderData:
     title: Source Key CSS Aviation and Grid Area
@@ -8,6 +8,8 @@ renderData:
 tags: 
     - grid
     - basic
+# pageScripts:
+    # - '/js/access-source.js'
 # pageScripts:
     # - '/js/checkout.js'
 ---

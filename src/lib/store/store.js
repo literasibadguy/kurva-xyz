@@ -4,7 +4,7 @@ import { localStorage } from "../utils/storage";
 
 const initialState = {
 
-    checkingSignInState: true,
+    checkingSignedInState: true,
     isSignedIn: Boolean(localStorage['kurva_isSignedIn']),
     userAcceptsCookies: false,
     user: null,

@@ -11,6 +11,20 @@
     color: black;
 }
 
+.account-items {
+    z-index: 999;
+    float: left;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    line-height: 20px;
+    position: absolute;
+
+    a {
+        color: white;
+    }
+}
+
 .site-header__brand {
     display: block;
     text-align: center;
