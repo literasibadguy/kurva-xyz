@@ -2,6 +2,6 @@
 .wrapper {
     margin-inline: auto;
     width: 1000px;
-    width: clamp(16rem, 95vw, 1000px);
+    width: clamp(16rem, 95vw, 85rem);
     position: relative;
 }

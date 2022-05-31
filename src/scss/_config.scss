@@ -33,4 +33,9 @@ $gorko-config: (
     'lg': '(min-width: 80em)',
     'xl': '(min-width: 106em)',
   ),
+  'font': (
+    'items': $gorko-fonts,
+    'output': 'standard',
+    'property': 'font-family',
+  ),
 )

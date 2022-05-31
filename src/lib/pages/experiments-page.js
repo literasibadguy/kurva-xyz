@@ -2,4 +2,4 @@
 
 import '../components/base';
 
-import '../components/TabInterfaces';
+import '../components/TabFilters';

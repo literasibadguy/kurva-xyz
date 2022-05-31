@@ -19,3 +19,12 @@ $gorko-space-scale: (
   "size-3": clamp(3.75rem, 3.21rem + 2.68vw, 5.625rem),
   "size-4": clamp(6.25rem, 5.36rem + 4.46vw, 9.375rem),
 );
+
+///  FONTS
+$gorko-fonts: (
+  "base": "Segoe UI,system-ui,-apple-system,sans-serif",
+  "serif": " Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+  "mono": "SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace",
+);
+
+$global-transition-fade: 400ms ease;
