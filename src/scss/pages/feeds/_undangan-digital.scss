@@ -1,0 +1,144 @@
+
+
+#undangan-page {
+    background-color: rgb(14, 27, 44);
+    color: rgb(247, 195, 87);
+    font-family: Cormorant, Georgia, 'Times New Roman', Times, serif;
+
+    h1, h2, h3, h4, p {
+        font-family: Cormorant, Georgia, 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+}
+
+#undangan-intro {
+    --region-space: 2rem;
+    h1 {
+        font-size: 60px;
+    }
+
+    img {
+        max-height: 250px;
+    }
+}
+
+#undangan-speech {
+    img {
+        max-width: 200px;
+    }
+    max-width: 700px;
+    line-height: 1.5rem;
+}
+
+#istri-keluarga {
+    --region-space: 2rem;
+    max-width: 700px;
+
+    .cluster {
+        justify-content: center;
+    }
+}
+
+
+
+.bunga-border {
+    min-width: 700px;
+}
+
+.photo-placeholder {
+    max-width: 150px;
+
+    svg {
+        color: rgb(247, 195, 87);
+    }
+}
+
+#suami-keluarga {
+    --region-space: 2rem;
+    max-width: 700px;
+}
+
+#istri-keluarga .repel {
+    --guter: 5rem;
+    justify-content: flex-start;
+}
+
+#suami-keluarga .repel {
+    --guter: 5rem;
+    justify-content: flex-end;
+}
+
+#keluarga-info {
+    display: flex;
+}
+
+#undangan-event {
+    --region-space: 1rem;
+}
+
+#undangan-date {
+    max-width: 600px;
+    // border-right: 1px solid rgb(247, 195, 87);
+    max-height: 100px;
+
+    *:nth-child(2) {
+        border-right: 1px solid rgb(247, 195, 87);
+        border-left: 1px solid rgb(247, 195, 87);
+    }
+
+    * {
+        // border-right: 1px solid rgb(247, 195, 87);
+        padding: 2rem;
+    }
+}
+
+#akad-nikah {
+    --region-space: 2rem;
+}
+
+#resepsi-nikah {
+    --region-space: 2rem;
+}
+
+.weeding-date {
+    img {
+        max-width: 50px;
+    }
+}
+
+.weeding-location {
+    img {
+        max-width: 40px;
+    }
+}
+
+.flower-frame {
+    min-width: 700px;
+    justify-content: space-between;
+    img {
+        max-width: 200px;
+    }
+
+    #reverse {
+        rotate: y 180deg;
+    }
+
+}
+
+#undangan-greets {
+    max-width: 700px;
+    line-height: 2rem;
+    --region-space: 2rem;
+}
+
+#undangan-footer {
+    max-width: 700px;
+    --region-space: 2rem;
+    h1 {
+        font-size: 50px;
+    }
+
+    .flower-frame {
+        rotate: 180deg;
+    }
+}

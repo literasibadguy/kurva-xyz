@@ -70,3 +70,39 @@
   src: local('IBMPlexMono-Text'),
     url('/fonts/plex-mono/IBMPlexMono-Text.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local('Cormorant-Regular'),
+    url('/fonts/cormorant/Cormorant-Regular.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: local('Cormorant-Bold'),
+    url('/fonts/cormorant/Cormorant-Bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 500;
+  font-display: optional;
+  src: local('Cormorant-Medium'),
+    url('/fonts/cormorant/Cormorant-Medium.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: local('Cormorant-SemiBold'),
+    url('/fonts/cormorant/Cormorant-SemiBold.otf') format('otf');
+}
