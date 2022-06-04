@@ -28,6 +28,19 @@
 	}
 }
 
+.tag {
+    opacity: 0;
+  }
+
+.tag.visible {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+    // transform: translate(0, 0);
+  }
+
 #undangan-intro {
     --region-space: 2rem;
     h1 {
@@ -42,6 +55,7 @@
 #undangan-speech {
     img {
         max-width: 200px;
+        margin-inline: auto;
     }
     max-width: 700px;
     line-height: 1.5rem;
@@ -150,6 +164,8 @@
 
     #reverse {
         rotate: y 180deg;
+        // -webkit-transform-origin-y:rotate(180deg);
+        transform: rotateY(180deg);
     }
 
 }
