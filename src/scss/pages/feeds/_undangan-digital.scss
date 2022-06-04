@@ -12,6 +12,23 @@
 }
 
 #undangan-intro {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#undangan-intro {
     --region-space: 2rem;
     h1 {
         font-size: 60px;
@@ -28,6 +45,18 @@
     }
     max-width: 700px;
     line-height: 1.5rem;
+}
+
+#event-countdown {
+    justify-content: center;
+}
+
+.count-item {
+    padding: 2rem;
+    border: 1px solid rgb(247, 195, 87);
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 100px;
 }
 
 #istri-keluarga {

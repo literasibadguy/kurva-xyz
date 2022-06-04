@@ -136,6 +136,7 @@ pre > code {
 @import 'compositions/auto-grid';
 @import 'compositions/cluster';
 @import 'compositions/repel';
+@import 'compositions/sidebar';
 @import 'compositions/switcher';
 @import 'compositions/wrapper';
 @import 'compositions/wide-card-index';
@@ -153,6 +154,7 @@ pre > code {
 @import 'pages/homepage';
 @import 'pages/signin-page';
 @import 'pages/checkout-page';
+@import 'pages/feeds/daily-blog.scss';
 @import 'pages/feeds/model-dan-grid.scss';
 @import 'pages/feeds/iklan-majalah.scss';
 @import 'pages/feeds/jadwal-elegan-bandara.scss';

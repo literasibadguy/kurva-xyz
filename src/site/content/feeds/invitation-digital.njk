@@ -7,12 +7,14 @@ tags:
     - intermediate
 ---
 
+
 <div id="undangan-page">
     <div id="undangan-intro" class="region wrapper all-center">
         <img alt="Flower of Weeding" src="/images/feeds/bunga-utama-weeding-of.png"></img>
         <h1>Name & Name</h1>
     </div>
-    <div id="undangan-speech" class="wrapper all-center w-stack">
+    <div id="undangan-speech" class="wrapper all-center">
+        <div class="w-stack">
         <h3>Assalamu'alaikum Warahmatullahi Wabarakatuh</h3>
         <p>Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan.
             Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang
@@ -21,6 +23,27 @@ tags:
         <img alt="Small Flower" src="/images/feeds/small-flower.png"></img>
         <p>Kami bermaksud untuk menyelenggarakan acara pernikahan kami
                 dan kami ingin anda menjadi bagian dari hari istimewa kami</p>
+        </div>
+        <div id="event-countdown" class="repel edges">
+            <div id="count-day" class="count-item">
+                <h1 id="day"></h1>
+                <h2>Hari</h1>
+            </div>
+             <div id="count-hour" class="count-item">
+                <h1 id="hour"></h1>
+                <h2>Jam</h1>
+            </div>
+             <div id="count-minute" class="count-item">
+                <h1 id="minute"></h1>
+                <h2>Menit</h1>
+            </div>
+             <div id="count-second" class="count-item">
+                <h1 id="second"></h1>
+                <h2>Detik</h1>
+            </div>
+        </div>
+        {% include "partials/countdown-time.njk" %}
+        {# <countdown-time></countdown-time> #}
     </div>
     <div id="istri-keluarga" class="wrapper region">
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>

@@ -54,7 +54,7 @@
 }
 
 @font-face {
-  font-family: 'Plex Mono';
+  font-family: 'PlexMono';
   font-style: normal;
   font-weight: 400;
   font-display: optional;
@@ -63,12 +63,21 @@
 }
 
 @font-face {
-  font-family: 'Plex Mono';
+  font-family: 'PlexMono';
   font-style: normal;
   font-weight: 300;
   font-display: optional;
   src: local('IBMPlexMono-Text'),
     url('/fonts/plex-mono/IBMPlexMono-Text.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: local('IBMPlexMono-Text'),
+    url('/fonts/plex-mono/IBMPlexMono-Regular.woff2') format('woff2');
 }
 
 @font-face {

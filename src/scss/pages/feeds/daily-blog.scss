@@ -1,0 +1,85 @@
+
+.masuk-root {
+    background-color: rgb(227, 233, 224);
+    --region-space: 2rem;
+
+    h1, h2, h3, h4 {
+        @include apply-utility('font', 'mono');
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    @include apply-utility('font', 'mono');
+}
+
+.masuk-layout-header {
+    border-bottom: 2px dotted black;
+}
+
+.masuk-home {
+    max-width: 1000px;
+    background-color: white;
+}
+
+#masuk-logo {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.masuk-layout-main {
+    --sidebar-target-width: 600px;
+    --sidebar-content-min-width: 25%;
+    --edges-space: 2rem;
+}
+
+.masuk-posts {
+    line-height: 1.5;
+}
+
+.masuk-article {
+    margin-bottom: 4rem;
+    border-bottom: 2px dotted black;
+}
+
+.side-masuk {
+    border-left: 1px dotted black;
+    padding: 1rem;
+}
+
+.side-masuk ul {
+    list-style-type: none;
+}
+
+.article-cover {
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.article-content {
+    --region-space: 1rem;
+}
+
+.article-tags {
+    justify-content: flex-start;
+}
+
+.article-tags p {
+    background-color: black;
+    color: white;
+}
+
+.masuk-layout-footer {
+    border-top: 2px dotted black;
+    --region-space: 2rem;
+}
