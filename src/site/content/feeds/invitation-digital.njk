@@ -5,6 +5,8 @@ tags:
     - feeds
     - flex
     - intermediate
+pageScripts:
+    - '/js/invitation-page.js'
 ---
 
 {% include "partials/transition-scroll.njk" %}
@@ -46,23 +48,23 @@ tags:
         {% include "partials/countdown-time.njk" %}
         {# <countdown-time></countdown-time> #}
     </div>
-    <div id="istri-keluarga" class="wrapper region rag">
+    <div id="istri-keluarga" class="couple wrapper region rag">
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
-        <div class="repel">
+        <div class="couple-columns">
         <div class="photo-placeholder">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="50" fill="#f7c357"/>
             </svg>
         </div>
-        <div class="keluarga-info">
+        <div class="flow">
             <h1>Nama Nama</h1>
             <p>Putra dari Bapak - Ibu<p>
         </div>
         </div>
     </div>
-    <div id="suami-keluarga" class="wrapper region tag">
-        <div class="repel">
-        <div class="keluarga-info">
+    <div id="suami-keluarga" class="couple wrapper region tag">
+        <div class="couple-columns">
+        <div class="flow">
             <h1>Nama Nama</h1>
             <p>Putra dari Bapak - Ibu<p>
         </div>
@@ -113,16 +115,18 @@ tags:
             <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
             <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
         </div>
-        <div class="w-stack tag">
-        <h1>Kirim Ucapan</h1>
-        <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati
+        <div class="w-stack--sm tag">
+            <h1>Kirim Ucapan</h1>
+            <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati
                 dan dijadikan-Nya kasih sayang diantara kamu sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir" (Q.S Ar-Ruum : 21)</p>
-        <div id="greets-box">
             {# Greeting Comments Box #}
-        </div>
-        <p>Terima kasih atas ucapan doa restu dari anda,
-            Dan jika memberi adalah ungkapan tanda kasih anda, Anda dapat memberi kado secara cashless dengan mengirim amplop digital secara transfer pada akun di bawah ini :</p>
-        <h2>Rekening a/n Name<h2>
+            {# {% include "partials/ucapan-form.njk" %} #}
+            <div id="greets-box" class="tag">
+                {% include "partials/ucapan-form.njk" %}
+                <ucapan-list></ucapan-list>
+            </div>
+            <p>Jika memberi adalah ungkapan tanda kasih anda, Anda dapat memberi kado secara cashless dengan mengirim amplop digital secara transfer pada akun di bawah ini :</p>
+            <h2>Rekening a/n Name</h2>
         </div>
     </div>
     <div id="undangan-footer" class="wrapper all-center w-stack region tag">

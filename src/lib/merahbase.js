@@ -10,6 +10,8 @@ import {
     onSnapshot,
     addDoc,
     setDoc,
+    getDoc,
+    CollectionReference,
 } from 'firebase/firestore';
 import { store } from './store/store';
 // import { site } from '../site/_data/site';
@@ -119,8 +121,6 @@ export async function registerUser(email, password, name) {
         initialize();
         const firestore = getFirestore();
         const res = await createUserWithEmailAndPassword(getAuth(), email, password);
-        // Add a new document in collection "cities"
-        // const collectRef = collection(firestore, 'users');
         const docRef = doc(firestore, 'users', res.user.uid);
         console.log(docRef);
         const sd = setDoc(docRef, {
@@ -139,6 +139,24 @@ export async function registerUser(email, password, name) {
 
     return user;
 }
+
+export async function addCommentField(data)  {
+    let comment = null;
+    try {
+        initialize();
+        const firestore = getFirestore();
+        const docRef = doc(firestore, 'weedings', 'nama-nama');
+        const colRef = collection(firestore, 'weedings', 'nama-nama', 'ucapans');
+        const docSet = await addDoc(colRef, data);
+
+        await docSet;
+        comment = await getDoc(docSet);
+    } catch (err) {
+        console.log('Registration error', err);
+    }
+    return comment;
+}
+
 
 export async function signInUser(email, password) {
     let user = null;

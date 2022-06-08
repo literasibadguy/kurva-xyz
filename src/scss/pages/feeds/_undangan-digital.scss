@@ -16,7 +16,7 @@
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 2s;
+	animation-duration: 1s;
 }
 
 @keyframes fadeInOpacity {
@@ -37,7 +37,7 @@
     animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
-	animation-duration: 2s;
+	animation-duration: 1s;
     // transform: translate(0, 0);
   }
 
@@ -75,31 +75,73 @@
 
 #istri-keluarga {
     --region-space: 2rem;
-    max-width: 700px;
+}
 
-    .cluster {
-        justify-content: center;
+.couple {
+    --region-space: 2rem;
+    --cluster-horizontal-alignment: center;
+    max-width: 700px;
+    margin-inline: auto;
+    text-align: center;
+
+    h1,
+    p {
+        margin-inline: auto;
     }
+
+    > svg {
+        display: block;
+      }
+}
+
+.couple-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block-start: get-space('base');
+    gap: $global-gutter;
 }
 
 
 
+@include media-query('md') {
+    .couple {
+        --cluster-horizontal-alignment: center;
+        text-align: left;
+    }
+
+    #suami-keluarga .couple-columns {
+        grid-template-columns: 2fr 1fr;
+        justify-items: end;
+        align-items: center;
+    }
+
+    .couple-columns {
+        grid-template-columns: 1fr 2fr;
+        justify-items: start;
+        align-items: center;
+    }
+}
+
 .bunga-border {
-    min-width: 700px;
+    min-width: 250px;
+    margin-inline: auto;
 }
 
 .photo-placeholder {
     max-width: 150px;
+    margin-inline: auto;
 
     svg {
         color: rgb(247, 195, 87);
+        display: block;
+        width: 100%;
     }
 }
 
-#suami-keluarga {
-    --region-space: 2rem;
-    max-width: 700px;
-}
+// #suami-keluarga {
+//     --region-space: 2rem;
+//     max-width: 700px;
+// }
 
 #istri-keluarga .repel {
     --guter: 5rem;
@@ -156,24 +198,50 @@
 }
 
 .flower-frame {
-    min-width: 700px;
+    min-width: 250px;
     justify-content: space-between;
     img {
         max-width: 200px;
     }
 
     #reverse {
-        rotate: y 180deg;
+        rotate: y 0deg;
         // -webkit-transform-origin-y:rotate(180deg);
         transform: rotateY(180deg);
     }
 
 }
 
+#greets-box {
+    .wrapper {
+        max-width: 600px;
+    }
+
+    .send-button {
+        background-color:  rgb(247, 195, 87);
+        min-width: 300px;
+    }
+}
+
 #undangan-greets {
     max-width: 700px;
     line-height: 2rem;
     --region-space: 2rem;
+}
+
+#ucapan-lists {
+    max-height: 600px;
+    border: 1px solid rgb(247, 195, 87);
+    display: block;
+    overflow: scroll;
+    border-radius: 1rem;
+    --edges-space: 2rem;
+}
+
+.ucapan-item {
+    border-bottom: 0.5px dotted;
+    --flow-space: 0;
+    margin: 1rem;
 }
 
 #undangan-footer {

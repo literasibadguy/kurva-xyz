@@ -4,6 +4,11 @@
     flex-direction: column;
 }
 
+.w-stack--sm {
+    display: flex;
+    flex-direction: column;
+}
+
 .w-stack * + * {
     margin-top: 1rem;
 }

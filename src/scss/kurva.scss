@@ -15,6 +15,7 @@ $global-prose-element-max-width: 50rem;
 
 @import 'functions/get-space';
 
+@import 'mixins/button-base-styles';
 @import 'mixins/card-base-styles';
 
 body {
@@ -111,6 +112,32 @@ pre {
   // border: 1px solid black;
 }
 
+/// Form Fields Invitation
+
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea {
+  display: block;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font: inherit;
+  padding: 0.8em;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea,
+select {
+  max-width: 40rem;
+}
+
 code {
   padding: 2rem;
   font-size: 0.8em;
@@ -143,11 +170,13 @@ pre > code {
 
 @import 'components/stack';
 
+@import 'blocks/button';
 @import 'blocks/card';
 @import 'blocks/pill';
 @import 'blocks/prose';
 @import 'blocks/site-footer';
 @import 'blocks/site-header';
+
 
 @import 'pages/akses-page';
 @import 'pages/source-page';
@@ -164,3 +193,4 @@ pre > code {
 @import 'utilities/flow';
 @import 'utilities/region';
 @import 'utilities/all-center';
+@import 'utilities/visually-hidden';

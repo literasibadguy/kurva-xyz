@@ -1,0 +1,32 @@
+
+<ucapan-box>
+<div class="wrapper">
+    <h2 class="ucapin__message">Kartu Ucapan</h2>
+    <form class="flow gap-top-size-2" method="post">
+        <div>
+            <label class="visually-hidden" for="sub-firstname">Tulis nama</label>
+            <input id="sub-firstname" name="FirstName" placeholder="nama kamu" required
+            type="text" />
+        </div>
+        <div>
+            <label class="visually-hidden" for="sub-email">Tulis ucapan kamu:</label>
+            <textarea id="sub-greeting" name="Greeting" placeholder="Tulis isi ucapan kamu" autocorrect="off" minlength="10" cols="30" rows="5"></textarea>
+        </div>
+        <div class="gap-top-size-2">
+        <div class="ucapin__error hidden-yes">
+          {# {% Aside 'warning' %} #}
+            <p class="ucapin__error__message"></p>
+          {# {% endAside %} #}
+        </div>
+        {# <noscript>{% Aside 'warning' %}{{ 'i18n.subscribe.no_javascript' | i18n(locale) }}{% endAside %}</noscript> #}
+      </div>
+        <div id="button-hidden" class="all-center gap-top-size-1">
+            <div>
+                <button class="send-button" type="submit">
+                    Kirim
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+</ucapan-box>

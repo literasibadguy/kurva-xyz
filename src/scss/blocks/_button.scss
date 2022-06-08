@@ -1,0 +1,20 @@
+
+
+.button {
+    text-transform: uppercase;
+    letter-spacing: 0.03ch;
+    border-radius: 2rem;
+    padding: 1.4em 1em;
+  
+    @include button-base-styles();
+  }
+
+  .send-button {
+    text-transform: uppercase;
+    letter-spacing: 0.03ch;
+    border-radius: 2rem;
+    padding: 1.4em 1em;
+  
+    @include button-base-styles();
+  }
+  
