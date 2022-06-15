@@ -1,3 +1,3 @@
 # Kurva
 
-Belajar desain web dan CSS dengan kasus contoh desain terkini
+Web design experiment lab, exploring graphic design, typography and commercial design into CSS and front-end based.

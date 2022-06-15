@@ -11,8 +11,12 @@ basic:
   description: Belajar CSS dari di tingkat sederhana
 
 intermediate:
-  title: Intermediatee
+  title: Intermediate
   description: Eksplor CSS lebih detail di tingkat lebih lanjut
+
+in-progress:
+  title: In Progress
+  description: In Confusion
 
 advanced:
   title: Advanced

@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Model dan Grid
+title: Model and Grid
 cover: "./src/images/feeds/model-dan-grid-wide.png"
 jurnal: "/sources/css-model-dan-grid"
 tags: 

@@ -8,8 +8,8 @@
 #tab-lists {
     /* border-bottom: 1px solid black; */
     padding: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 1000px;
+    // margin: 0 auto;
     /* margin-top: 1rem; */
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -39,9 +39,12 @@
 }
 
 #dessert-info {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
     font-size: 24px;
+    // border: 2px solid black;
+    border-radius: 2rem;
+    --edges-space: 12rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #dessert-intro {
@@ -51,9 +54,21 @@
 #dessert-store {
     background-color: black;
     color: white;
-    max-width: 250px;
+    // max-width: 250px;
     padding: 2rem;
     border-radius: 2rem;
+}
+
+#dessert-title {
+    background-color: yellow;
+    border-radius: 2rem;
+    // border: 2px solid black;
+    padding: 2rem;
+    font-size: 45px;
+
+    h1 {
+        font-size: 50px;
+    }
 }
 
 .dessert-cover {
@@ -98,8 +113,9 @@
 
 .dessert-filters {
     display: flex;
-    justify-content: center;
-    --region-space: 2rem;
+    // justify-content: left;
+    --region-space: 1rem;
+    border-bottom: 2px solid black;
 }
 
 #dessert-slot {
@@ -117,6 +133,7 @@
     border-radius: 30px;
     font-weight: 400;
     font-size: 28px;
+    --edges-space: 2rem;
 }
 
 .dessert-cat {
@@ -124,7 +141,7 @@
     vertical-align: middle;
     background: transparent;
     font-size: 28px;
-    color:rgb(123, 0, 10);
+    color: black;
     border: none;
     appearance: none;
     cursor: pointer;
@@ -134,18 +151,18 @@
 
 
     &:hover {
-        border-bottom: 2px solid rgb(123, 0, 10);
+        border-bottom: 2px solid black;
     }   
 }
 
 .dessert__item {
-    color: rgb(123, 0, 10);
+    color: black;
     cursor: pointer;
     text-align: center;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-flow: column;
-    text-align: center;
+    text-align: left;
     // transition: opacity 1s ease;
     // opacity: 0;
     opacity: 1;
@@ -162,7 +179,7 @@
 }
 
 .dessert-item__title {
-    color: rgb(123, 0, 10);
+    color: black;
     font-weight: 400;
     font-size: 24px;
 }
