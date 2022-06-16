@@ -4,7 +4,6 @@ pagination:
     data: collections.feeds
     size: 1
     alias: paged
-    addAllPagesToCollections: true
 pageScripts:
     - '/js/home.js'
 ---

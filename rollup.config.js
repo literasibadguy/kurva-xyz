@@ -3,11 +3,8 @@ const fs = require('fs');
 const {join} = require('path');
 
 const {nodeResolve} = require('@rollup/plugin-node-resolve');
-
 const commonjs = require('@rollup/plugin-commonjs');
-
 const {terser} = require('rollup-plugin-terser');
-
 const postcss = require('rollup-plugin-postcss');
 
 const pagesDir = './src/lib/pages';

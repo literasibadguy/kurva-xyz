@@ -22,12 +22,23 @@ tags:
 
 <div id="dessert-page">
         <div id="dessert-intro" class="switcher">
-          <div id="dessert-info" class="all-center edges">
-          <div id="dessert-store">
-            <h2>Visit our store</h2>
-            <p>Open 10am - 8pm</p>
-            <p>2699 Velvet St.</p>
-            <p>Bugis City, 24556</p>
+          <div id="dessert-info" class="edges">
+          <div id="dessert-store" class="repel">
+            <div id="dessert-address">
+              <h2>Visit our store</h2>
+              <p>Open 10am - 8pm</p>
+              <p>2699 Velvet St.</p>
+              <p>Bugis City, 24556</p>
+            </div>
+             <div id="dessert-notice">
+              <h2>ANNOUCEMENT</h2>
+              <p>FRESH HONEY LIMITED FOR FIRST 20 CUSTOMERS</p>
+              <p>Tax price excluded</p>
+            </div>
+          </div>
+          <div id="dessert-featured" class="all-center">
+            <h1>FRESH HONEY</h1>
+            <img src="https://d2w9rnfcy7mm78.cloudfront.net/15274308/original_339e5a1a3ad1dd01d757cc0b0dda7c9e.jpg?1645479284?bc=0">
           </div>
            <div id="dessert-title">
             <h1>DESSERT & COFFEE STORE</h1>
@@ -42,7 +53,7 @@ tags:
         <tab-filters all="All">
         </tab-filters>
         <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
-          <h2 id="dessert-heading" class="all-center wrapper region edges">"I have been thinking get coffee and dessert, It's just a couple of miles from our village"</h2>
+          <h2 id="dessert-heading" class="wrapper region edges">"I have been thinking get coffee and dessert, It's just a couple of miles from our village"</h2>
           <div id="dessert-list" class="wrapper auto-grid">
                 <div class="dessert__item">
                     <img class="dessert__item-cover" src="https://d2w9rnfcy7mm78.cloudfront.net/11619598/original_5ab811222e687d35e2b8faedbf698b4c.jpg?1618648750?bc=0" />
