@@ -1,2 +1,2 @@
 
-import '../components/TabInterfaces';
+// import '../components/TabInterfaces';
