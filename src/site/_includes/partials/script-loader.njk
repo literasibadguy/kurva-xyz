@@ -53,4 +53,4 @@ loadScript('{{ helpers.hashForProd('/js/app.js') }}', 'module');
 {% endfor %}
 
 {% endset %}
-<script>{{ scriptLoader | minifyJs | cspHash | safe }}</script>
+<script type="text/javascript">{{ scriptLoader | minifyJs | cspHash | safe }}</script>
