@@ -3,7 +3,7 @@
 {%- set subtitle %}{{ blogtitle or searchTitle or relatedTitle or tiptitle or eleventyNavigation.key or title }}{% endset %}
 {%- set subtitleText %}{{ subtitle }}{% if subtitle and subtitle != "Kurva, eksperimen desain web dan belajar CSS" %} - Kurva{% endif %}{% endset %}
 <title>{{ subtitleText }}</title>
-<link rel="stylesheet" href="/css/kurva.css">
+<link rel="stylesheet" href="{{ helpers.hashForProd('/css/kurva.css') }}">
 
 {% Meta page, renderData %}
 

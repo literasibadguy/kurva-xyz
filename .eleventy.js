@@ -11,11 +11,19 @@ const md = require("./src/site/_filters/md");
 const consoleDump = require("./src/site/_filters/console-dump");
 const strip = require("./src/site/_filters/strip");
 const { minifyJs } = require("./src/site/_filters/minify-js");
+const { cspHash } = require("./src/site/_filters/csp-hash");
+const helpers = require('./src/site/_data/helpers');
+const includeRaw = require('./src/site/_includes/components/includeRaw');
+const { hashForProd } = require('./src/site/_filters/csp-hash');
 
+const {minifyHtml} = require('./src/site/_transforms/minify-html');
 
 global.__basedir = __dirname;
 
 module.exports = function (config) {
+    console.log('Eleventy is building..., please wait...');
+    const isProd = process.env.ELEVENTY_ENV === 'prod';
+    const isStaging = process.env.ELEVENTY_ENV === 'staging';
 
     // config.setLibrary('md', marfkdown);
 
@@ -35,8 +43,18 @@ module.exports = function (config) {
     config.addFilter('md', md);
     config.addFilter('strip', strip);
     config.addNunjucksAsyncFilter('minifyJs', minifyJs);
+    config.addFilter('cspHash', cspHash);
+    config.addFilter('hashForProd', hashForProd);
+    config.addShortcode('helpers', helpers);
 
     config.addShortcode('Meta', Meta);
+    config.addShortcode('includeRaw', includeRaw);
+
+    config.setUseGitIgnore(false);
+
+    if (isProd || isStaging) {
+        config.addTransform('minifyHtml', minifyHtml);
+      }
 
     config.addNunjucksAsyncShortcode('Image', async (filepath, alt, classes, sizes) => {
         let options = {
@@ -59,7 +77,7 @@ module.exports = function (config) {
         dir: {
             input: 'src/site/content',
             output: 'dist',
-            data: '../data',
+            data: '../_data',
             includes: '../_includes',
         },
         templateFormats: ['njk', 'md'],

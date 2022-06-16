@@ -1,6 +1,7 @@
 
 import {store} from './store/store';
 import { localStorage } from './utils/storage';
+import removeServiceWorkers from './utils/sw-remove';
 
 document.body.classList.remove('unresolved');
 
@@ -13,3 +14,4 @@ function onGlobalStateChanged({isSignedIn}) {
 store.subscribe(onGlobalStateChanged());
 onGlobalStateChanged(store.getState());
 
+removeServiceWorkers();

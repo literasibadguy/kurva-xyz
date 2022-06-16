@@ -83,7 +83,7 @@ export function initialize() {
             user,
         });
 
-        console.log(user);
+        // console.log(user);
 
         
     });
@@ -122,7 +122,7 @@ export async function registerUser(email, password, name) {
         const firestore = getFirestore();
         const res = await createUserWithEmailAndPassword(getAuth(), email, password);
         const docRef = doc(firestore, 'users', res.user.uid);
-        console.log(docRef);
+        // console.log(docRef);
         const sd = setDoc(docRef, {
             email: email,
             id: res.user.uid,

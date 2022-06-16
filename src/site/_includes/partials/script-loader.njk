@@ -1,3 +1,9 @@
+{% for item in inlineScripts %}
+  {% set inlineScript %}
+    {% includeRaw item %}
+  {% endset %}
+  <script>{{ inlineScript | minifyJs | cspHash | safe }}</script>
+{% endfor %}
 
 
 {% set scriptLoader %}
@@ -24,6 +30,8 @@ function loadScript(url, type) {
     }
  }
 
+loadScript('{{ helpers.hashForProd('/js/app.js') }}', 'module');
+
 
 {% if pageScripts %}
     let pageScripts = {{ pageScripts | dump | safe }};
@@ -39,10 +47,10 @@ function loadScript(url, type) {
     })
 {% endif %}
 {% for item in pageScripts %}
-    loadScript('{{item}}', 'module');
+    loadScript('{{ helpers.hashForProd(item) }}', 'module');
 {% else %}
-    loadScript('{{ '/js/default.js' }}', 'module');
+    loadScript('{{ helpers.hashForProd('/js/default.js') }}', 'module');
 {% endfor %}
 
 {% endset %}
-<script>{{ scriptLoader | safe }}</script>
+<script>{{ scriptLoader | minifyJs | cspHash | safe }}</script>
