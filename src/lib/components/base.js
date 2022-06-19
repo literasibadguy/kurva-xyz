@@ -1,2 +1,4 @@
 
 import './AccountHeader';
+
+import './ThemeToggle';

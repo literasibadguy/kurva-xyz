@@ -1,4 +1,36 @@
 
+@media (prefers-color-scheme: dark) {
+   .site-footer {
+    background-color: black;
+    color: white;
+   }
+
+   .w-footer {
+    border-top: 1px solid white;
+    
+    a {
+        text-decoration: underline;
+        color: white;
+    }
+   }
+}
+ 
+[data-user-theme="light"] {
+    .site-footer {
+        background-color: white;
+        color: black;
+    }
+
+    .w-footer {
+        border-top: 1px solid black;
+    }
+
+    a {
+        color: black;
+    }
+
+}
+
 .site-footer {
     padding: $global-gutter;
     
@@ -9,9 +41,5 @@
 }
 
 .w-footer {
-    border-top: 1px solid black;
 
-    a {
-        text-decoration: underline;
-    }
 }

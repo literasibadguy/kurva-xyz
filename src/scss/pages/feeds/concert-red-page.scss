@@ -1,0 +1,42 @@
+
+#concert-red-page {
+    // background-color: rgb(245, 2, 1);
+    color: black;
+    min-height: 1000px;
+
+    h1 {
+        font-size: 45px;
+    }
+}
+
+#ocean-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#concert-date {
+    // transform: rotate(35deg);
+    max-width: 600px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#ocean-blue-fade {
+    opacity: 0.5;
+    text-align: left;
+
+    > * {
+        max-width: 700px;
+    }
+
+    &:first-child {
+        min-width: 800px;
+    }
+}
+
+.ocean-blue {
+    // transform: rotate(30deg);
+    max-width: 600px;
+    text-align: center;
+}

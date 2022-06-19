@@ -26,9 +26,32 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+// [data-user-theme="light"] {
+//   main {
+//     color: black;
+//     background-color: white;
+
+//     a {
+//       color: black;
+//     }
+//   }
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   main {
+//     background-color: black;
+//     color: white;
+
+//     a {
+//       color: white;
+//     }
+//   }
+// }
+
 main {
     flex: auto;
 }
+
 
 h1,
 h2,
@@ -189,6 +212,7 @@ pre > code {
 @import 'pages/feeds/jadwal-elegan-bandara.scss';
 @import 'pages/feeds/order-dessert.scss';
 @import 'pages/feeds/undangan-digital';
+@import 'pages/feeds/concert-red-page.scss';
 
 @import 'utilities/flow';
 @import 'utilities/region';

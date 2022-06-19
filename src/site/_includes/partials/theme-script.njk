@@ -1,0 +1,14 @@
+{% set inlineScript %}
+    window.applyThemeSetting = function(override) {
+        const browserSetting = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const currentSetting = override || localStorage.getItem('user-color-scheme') || browserSetting;
+        const currentAttribute = document.documentElement.getAttribute('data-user-theme');
+
+        if (currentSetting) {
+            if (currentSetting !== currentAttribute) {
+                document.documentElement.setAttribute('data-user-theme', currentSetting);
+            }
+        }
+    }
+{% endset %}
+<script>{{ inlineScript | minifyJs | cspHash | safe }}</script>
