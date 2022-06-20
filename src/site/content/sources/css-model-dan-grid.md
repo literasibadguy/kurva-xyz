@@ -13,6 +13,9 @@ tags:
 
 ### CSS
 
+<kurva-tabs>
+<div data-label="css">
+
 ```css
 .model__and-grid {
     /* --region-space: #{get-space('base')}; */
@@ -42,12 +45,10 @@ tags:
     margin: 0 auto;
 }
 
-/* Make member in the center of item */
 .women-member {
     margin: 0 auto;
 }
 
-/* Lets make a space between text and image */
 .women-member > * {
     margin-top: 1rem;
   }
@@ -58,13 +59,13 @@ tags:
     object-fit: cover;
     display: block;
 }
-
 ```
 
-## HTML Kunci
+</div>
+
+<div data-label="html">
 
 ```html
-
 <main class="model__and-grid">
  <div class="header-nav region">
         <h3>Our Selection Model</h3>
@@ -120,5 +121,7 @@ tags:
         </div>
 </div>
 </main>
-
 ```
+
+</div>
+</kurva-tabs>
