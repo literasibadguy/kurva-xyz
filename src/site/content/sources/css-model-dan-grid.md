@@ -11,10 +11,9 @@ tags:
     - basic
 ---
 
-### CSS
 
 <kurva-tabs>
-<div data-label="css">
+<div data-label="css" title="t">
 
 ```css
 .model__and-grid {

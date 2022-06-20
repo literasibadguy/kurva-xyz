@@ -6,7 +6,6 @@ draft: true
 pageScripts:
     - '/js/experiments-page.js'
 tags: 
-    - feeds
     - flex
     - intermediate
     - in-progress

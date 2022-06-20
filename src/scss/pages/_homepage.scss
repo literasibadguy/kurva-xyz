@@ -8,12 +8,21 @@
     // color: whitesmoke;
     // background-color: black;
     border-top: 1px solid black;
+    @include apply-utility('font', 'serif');
 
     .region {
         --region-space: #{get-space('size-2')};
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+}
+
+.heading__section {
+    
+    h1 {
+        @include apply-utility('font', 'serif');
+        font-weight: 600;
     }
 }

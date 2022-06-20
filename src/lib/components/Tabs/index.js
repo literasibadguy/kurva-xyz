@@ -2,6 +2,7 @@ import { browserLocalPersistence } from "firebase/auth";
 import { BaseElement } from "../BaseElement";
 import { html } from "lit";
 import { checkOverflow } from "../../utils/check-overflow";
+import { generateIdSalt } from "../../utils/generate-salt";
 
 export class Tabs extends BaseElement {
     static get properties() {
@@ -19,7 +20,7 @@ export class Tabs extends BaseElement {
         this.overflow = false;
         this.prerenderedChildren = null;
         this.tabs = null;
-        // this.idSalt = generate
+        this.idSalt = generateIdSalt('kurva-tab-')
 
         this.onResize = this.onResize.bind(this);
         this._changeTab = this._changeTab.bind(this);
@@ -62,6 +63,19 @@ export class Tabs extends BaseElement {
         const tabs = this.querySelector('.kurva-tabs__tablist');
 
         this.overflow = checkOverflow(tabs, 'width');
+    }
+
+    onFocus(e) {
+        const tab = e.currentTarget;
+        const tabs = this.querySelectorAll('.kurva-tabs__tab');
+        const index = Array.from(tabs).indexOf(tab);
+
+        tab.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center',
+        });
+        this.activeTab = index;
     }
 
     updated(changedProperties) {
