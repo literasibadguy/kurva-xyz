@@ -1,0 +1,38 @@
+
+.kurva-tabs__tab {
+    position: relative;
+    flex: 1 0 auto;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: gray;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.03ch;
+    border-bottom: 2px solid gray;
+
+    &:hover {
+        border-bottom: 2px solid white;
+    }
+
+}
+
+.kurva-tabs__tab[aria-selected='true'] {
+    border-color: var(
+      --tabs-active-color,
+      black
+    );
+  
+    // @include apply-utility('color', 'core-text');
+    color: black;
+  }
+  
+
+.kurva-tabs__panel {
+    height: 100%;
+    overflow: auto;
+
+    code, pre {
+        height: 100%;
+    }
+}

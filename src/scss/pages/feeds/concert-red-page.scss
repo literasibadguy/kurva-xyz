@@ -1,12 +1,12 @@
 
 #concert-red-page {
-    // background-color: rgb(245, 2, 1);
+    background-color: rgb(245, 2, 1);
     color: black;
-    min-height: 1000px;
+    min-height: 1800px;
+}
 
-    h1 {
-        font-size: 45px;
-    }
+#concert-head {
+    margin: 0 auto;
 }
 
 #ocean-layout {
@@ -15,28 +15,87 @@
     align-items: flex-end;
 }
 
-#concert-date {
+#concert-head {
     // transform: rotate(35deg);
-    max-width: 600px;
-    font-size: 50px;
-    text-align: center;
+    font-size: 45px;
+    text-align: left;
+    color: rgb(254, 255, 0);
 }
 
 #ocean-blue-fade {
     opacity: 0.5;
     text-align: left;
+    min-width: 300px;
+}
 
-    > * {
-        max-width: 700px;
-    }
-
-    &:first-child {
-        min-width: 800px;
-    }
+.ocean-grid {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // // column-gap: 1em;
+    // row-gap: -1em;
+    // margin: 0 auto;
+    margin-top: 15em;
 }
 
 .ocean-blue {
     // transform: rotate(30deg);
-    max-width: 600px;
+    float: left;
+    text-align: left;
+    font-size: 45px;
+    color: rgb(254, 255, 0);
+}
+
+#ocean-blue-fade {
     text-align: center;
+}
+
+#ocean-blue-black-right {
+    float: right;
+}
+
+#ocean-blue-black-center {
+    color: black;
+}
+
+#dragon-center {
+    margin-inline: auto;
+    margin-top: 20rem;
+    margin-bottom: -6em;
+}
+
+.dragon-moon {
+    font-size: 30px;
+    color: rgb(254, 255, 0);
+}
+
+#dragon-pattern {
+    margin: 0 auto;
+    max-width: 1000px;
+    color: rgb(254, 255, 0)
+}
+
+#pupu-large-size {
+    font-size: 300px;
+}
+
+
+.inline-concert {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+   
+    h1 {
+        font-size: 45px;
+    }
+}
+
+#concert-schedule {
+    top: 100px;
+    justify-content: space-between;
+}
+
+#concert-club {
+    bottom: 90px;
+    gap: 2em;
 }
