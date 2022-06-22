@@ -20,7 +20,7 @@ layout: 'layouts/base'
         </div>
     </div>
     <div class="auto-grid" id="archive__collections">
-        {% for feed in paged %}
+        {% for feed in paged | reverse %}
             {# {% set data = feed.data %} #}
 
             {# {{ feedCard({ #}

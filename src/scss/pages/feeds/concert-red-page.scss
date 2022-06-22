@@ -1,26 +1,117 @@
 
 #concert-red-page {
-    background-color: rgb(245, 2, 1);
     color: black;
-    min-height: 1800px;
+    min-height: 1280px;
+    background-color: rgb(245, 2, 1);
 }
 
-#concert-head {
-    margin: 0 auto;
+#ocean-base {
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+
+#ocean-yellow {
+    display: grid;
+    clip-rule: evenodd;
+    grid-template-columns: repeat(8, 2fr);
+    grid-template-rows: repeat(6, 2fr);
+    // margin-top: -40em;
+    position: absolute;
+    top: 0;
+    left: 10em;
+
+    #yellow-2 {
+        grid-row: 2;
+        grid-column: 5;
+    }
+
+    #yellow-3 {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    #yellow-3 {
+        grid-row: 4;
+        grid-column: 5;
+    }
+
+    #yellow-4 {
+        grid-row: 5;
+        grid-column: 6;
+    }
+
+    #yellow-5 {
+        grid-row: 6;
+        grid-column: 1;
+    }
+
+    #yellow-6 {
+        grid-row: 1;
+        grid-column: 7;
+    }
+
+
+}
+
+// Grid Yellow
+.yellow-circle {
+    width: 160px;
+    height: 160px;
+    background-color: yellow;
+    z-index: 1;
+    clip-path: circle();
+
 }
 
 #ocean-layout {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    // border: 2px solid black;
+    z-index: 2;
+    position: absolute;
+    top: 5em;
 }
 
+
 #concert-head {
-    // transform: rotate(35deg);
-    font-size: 45px;
-    text-align: left;
-    color: rgb(254, 255, 0);
+    margin-inline: auto;
+    line-height: 1;
+
+    h1 {
+        font-size: 45px;
+        color: rgb(254, 255, 0);
+    }
 }
+
+#ocean-box {
+    width: 300px;
+    height: 100px;
+    border-right: 8px solid yellow;
+    border-top: 8px solid yellow;
+}
+
+#concert-cover-1 {
+    // z-index: -99;
+    position: relative;
+    object-fit: cover;
+    margin-inline: auto;
+    max-height: 1280px;
+    object-fit: cover;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+// #concert-cover-1 {
+//     // max-height: 1080px;
+//     margin-inline: auto;
+//     z-index: -97;
+//     clip-path: ellipse(333px 235px at 46.81% 50%);
+//     position: relative;
+//     max-height: 1080px;
+//     top: -15em;
+//     // margin-top: -30em;
+// }
 
 #ocean-blue-fade {
     opacity: 0.5;
@@ -29,19 +120,15 @@
 }
 
 .ocean-grid {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // // column-gap: 1em;
-    // row-gap: -1em;
-    // margin: 0 auto;
-    margin-top: 15em;
+    position: relative;
+    margin-top: 10em;
 }
 
 .ocean-blue {
     // transform: rotate(30deg);
     float: left;
     text-align: left;
-    font-size: 45px;
+    font-size: 40px;
     color: rgb(254, 255, 0);
 }
 
@@ -59,8 +146,11 @@
 
 #dragon-center {
     margin-inline: auto;
-    margin-top: 20rem;
-    margin-bottom: -6em;
+    position: relative;
+    margin-top: 18em;
+    // margin-top: -30em;
+    // margin-top: -40em;
+    // margin-bottom: -6em;
 }
 
 .dragon-moon {
@@ -71,11 +161,14 @@
 #dragon-pattern {
     margin: 0 auto;
     max-width: 1000px;
-    color: rgb(254, 255, 0)
+    color: rgb(254, 255, 0);
+    z-index: 3;
+    margin-top: 1em;
 }
 
 #pupu-large-size {
     font-size: 300px;
+    transform: scale(1, 1.4);
 }
 
 
@@ -98,4 +191,5 @@
 #concert-club {
     bottom: 90px;
     gap: 2em;
+    justify-content: space-between;
 }
