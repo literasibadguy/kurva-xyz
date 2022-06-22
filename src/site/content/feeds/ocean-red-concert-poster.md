@@ -51,6 +51,7 @@ tags:
         <div id="dragon-center">
         <h1 class="dragon-moon">@DRAGON_MOON_CLUB</h1>
         <h1 class="dragon-moon">@DRAGON_MOON_CLUB</h1>
+        <h1 class="dragon-moon">INTRODUCING</h1>
         </div>
         <div id="dragon-pattern" class="all-center">
             <div id="concert-schedule" class="inline-concert">
