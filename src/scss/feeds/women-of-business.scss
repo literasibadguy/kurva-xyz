@@ -1,0 +1,37 @@
+
+@import '../bases';
+
+#wof-page {
+    background-color: black;
+    min-height: 1080px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: PlexMono,Consolas,Liberation Mono,Menlo,monospace;
+}
+
+#wof-header {
+    display: flex;
+}
+
+#wof-headline {
+    color: white;
+    padding: 1em;
+    font-family: PlexMono,Consolas,Liberation Mono,Menlo,monospace;
+    margin-inline: auto;
+}
+
+#wof-cover {
+    min-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4em;
+    margin-inline: auto;
+}
+
+#wof-first-woman {
+    max-height: 700px;
+    min-width: 800px;
+    object-fit: cover;
+}
+

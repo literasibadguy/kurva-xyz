@@ -1,0 +1,8 @@
+
+{# <link rel="stylesheet" href="{{ helpers.hashForProd('/css/kurva.css') }}"> #}
+
+{% if styleScripts %}
+{% for item in styleScripts %}
+    <link rel="stylesheet" href="{{ helpers.hashForProd(item) }}">
+{% endfor %}
+{% endif %}

@@ -3,6 +3,7 @@ const sassProcessor = require('gulp-sass')(require('sass'));
 
 const sourceFiles = [
     './src/scss/kurva.scss',
+    './src/scss/feeds/*',
 ];
 
 const isProduction = process.env.ELEVENTY_ENV === 'prod';
