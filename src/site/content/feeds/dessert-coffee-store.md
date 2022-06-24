@@ -32,7 +32,7 @@ tags:
               <p>Bugis City, 24556</p>
             </div>
              <div id="dessert-notice">
-              <h2>ANNOUCEMENT</h2>
+              <h3>ANNOUCEMENT</h3>
               <p>FRESH HONEY LIMITED FOR FIRST 20 CUSTOMERS</p>
               <p>Tax price excluded</p>
             </div>
