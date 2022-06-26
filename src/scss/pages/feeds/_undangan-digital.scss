@@ -165,15 +165,15 @@
     max-width: 600px;
     // border-right: 1px solid rgb(247, 195, 87);
     max-height: 100px;
+    padding: 1rem;
 
     *:nth-child(2) {
-        border-right: 1px solid rgb(247, 195, 87);
-        border-left: 1px solid rgb(247, 195, 87);
+        // border-right: 1px solid rgb(247, 195, 87);
+        // border-left: 1px solid rgb(247, 195, 87);
     }
 
     * {
         // border-right: 1px solid rgb(247, 195, 87);
-        padding: 2rem;
     }
 }
 
@@ -231,11 +231,13 @@
 
 #ucapan-lists {
     max-height: 600px;
-    border: 1px solid rgb(247, 195, 87);
+    border: 1px solid #0e1b2c;
     display: block;
     overflow: scroll;
     border-radius: 1rem;
     --edges-space: 2rem;
+    background-color: whitesmoke;
+    color: #0e1b2c;
 }
 
 .ucapan-item {

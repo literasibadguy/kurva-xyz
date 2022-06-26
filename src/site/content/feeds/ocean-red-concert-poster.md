@@ -9,7 +9,6 @@ tags:
     - feeds
     - flex
     - grid
-    - intermediate
     - in-progress
 ---
 
