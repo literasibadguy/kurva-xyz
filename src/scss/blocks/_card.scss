@@ -2,6 +2,10 @@
 .card {
     @include card-base-styles;
 
+    img {
+        border-radius: 1em;
+    }
+
     h1, h2 {
         font-weight: 400;
     }

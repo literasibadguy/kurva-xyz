@@ -9,7 +9,6 @@ tags:
     - feeds
     - flex
     - grid
-    - in-progress
 ---
 
 <div id="concert-red-page">

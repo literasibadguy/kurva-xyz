@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/landing-page'
 title: Women of Business with Dynamic Layout
-# cover: "./src/images/feeds/dessert-and-coffee-store.jpg"
+cover: "./src/images/feeds/women-of-business.jpg"
 draft: true
 pageScripts:
     - '/js/experiments-page.js'
@@ -16,7 +16,7 @@ tags:
 
 <div id="wof-page">
     <header id="wof-header">
-        <h2 id="wof-headline">WOMEN OF BUSINESS</h2>
+        <h2 id="wof-headline">WOMEN OF BUSINESS MAGAZINE</h2>
     </header>
     <div id="wof-cover">
         <img id="wof-first-woman" src="https://d2w9rnfcy7mm78.cloudfront.net/7305299/original_f4cfa133cdaa5b3821c3858d62427bcf.jpg?1589625299?bc=0" />
