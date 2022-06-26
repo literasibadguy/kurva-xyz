@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/landing-page'
-title: Women of Business with Dynamic Layout
+title: Women Lifestyle Magazine with Grayscale Filter
 cover: "./src/images/feeds/women-of-business.jpg"
 draft: true
 pageScripts:
