@@ -1,0 +1,50 @@
+@import '../bases';
+
+
+#happiness-page {
+    background-color: #948e8d;
+    
+    h1, h2 {
+        font-family: PlexMono,Consolas,Liberation Mono,Menlo,monospace;
+    }
+}
+
+#happiness-title {
+    padding-top: 1em;
+    padding-bottom: 10em;
+
+    h1 {
+        font-size: 4em;
+    }
+
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+}
+
+#happiness-header  {
+    display: flex;
+    gap: 2em;
+    justify-content: start;
+    padding: 2em;
+}
+
+#happiness-table {
+    padding-top: 2em;
+}
+
+.activity-item {
+    border-top: 1px solid black;
+    padding: 2em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8em;
+
+    font-size: xx-small;
+
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+}
