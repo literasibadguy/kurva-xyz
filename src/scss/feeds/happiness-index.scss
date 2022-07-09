@@ -2,7 +2,7 @@
 
 
 #happiness-page {
-    background-color: #948e8d;
+    background-color: #dbdee2;
     
     h1, h2 {
         font-family: PlexMono,Consolas,Liberation Mono,Menlo,monospace;
@@ -12,6 +12,9 @@
 #happiness-title {
     padding-top: 1em;
     padding-bottom: 10em;
+    padding-left: 1em;
+    color: #141612;
+    background-color: #edefec;
 
     h1 {
         font-size: 4em;
@@ -20,6 +23,10 @@
     &:hover {
         color: white;
         background-color: black;
+
+        h1, h2 {
+            color: white;
+        }
     }
 }
 
@@ -40,11 +47,77 @@
     display: flex;
     justify-content: flex-start;
     gap: 8em;
+    color: #141612;
 
     font-size: xx-small;
 
     &:hover {
         color: white;
         background-color: black;
+
+        h1, h2 {
+            color: white;
+        }
+    }
+}
+
+.act-eff {
+    display: flex;
+    width: 600px;
+    justify-content: right;
+
+}
+
+#sex-active {
+    width: 1000px;
+}
+
+#dance-active {
+    width: 800px;
+}
+
+// #library-active {
+//     padding-right: 7em;
+// }
+
+// #running-active {
+//     padding-right: 8em;
+// }
+
+// #gardening-active {
+//     padding-right: 9em;
+// }
+
+// #singing-active {
+//     padding-right: 10em;
+// }
+
+#talking-active {
+    width: 300px;
+}
+
+#nature-active {
+    width: 280px;
+}
+
+#nature-active {
+    width: 250px;
+}
+
+#walk-active {
+    width: 260px;
+}
+
+#hunt-active {
+    width: 250px;
+}
+
+#alcohol-active {
+    width: 200px;
+}
+
+#reference-activity {
+    a {
+        text-decoration: underline;
     }
 }

@@ -2,7 +2,6 @@
 layout: 'layouts/landing-page'
 title: Women Lifestyle Magazine with Grayscale Filter
 cover: "./src/images/feeds/women-of-business.jpg"
-draft: true
 pageScripts:
     - '/js/experiments-page.js'
 styleScripts:
