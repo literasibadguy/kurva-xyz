@@ -1,11 +1,11 @@
 name = "kurva-xyz"
 type = "webpack"
-account_id = "88018ab33f1bd7fcbd871efd4776caa5" # hijau-xyz.workers.dev
+account_id = "88018ab33f1bd7fcbd871efd4776caa5" # kurva-xyz.workers.dev
 workers_dev = true
 
 [env.production]
 workers_dev = false
-account_id = "88018ab33f1bd7fcbd871efd4776caa5" # hijau-xyz.workers.dev
+account_id = "88018ab33f1bd7fcbd871efd4776caa5" # kurva-xyz.workers.dev
 zone_id = "149718f8a42664439ee8e67641a8d489"
 route = "kurva.xyz/*"
 
