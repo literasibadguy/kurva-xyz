@@ -1,0 +1,89 @@
+
+@import '../bases';
+
+// #073231
+
+#favorite-spot-ptk {
+    background-color: #0251a8;
+    min-height: 800px;
+}
+
+.big-size-spot {
+    font-size: 8em;
+    color: #f3f1ed;
+    margin: 0 auto;
+    border-top: 0.8px solid #f3f1ed;
+    border-left: 0.8px solid #f3f1ed;
+    border-right: 0.8px solid #f3f1ed;
+
+    h1 {
+        font-size: 4rem;
+        line-height: 3rem;
+        font-weight: 700;
+    }
+
+    #title-big {
+        padding: 1rem;
+    }
+}
+
+#bill-table {
+    display: flex;
+
+}
+
+#inner-spot {
+    padding: 1em;
+    min-height: 600px;
+    margin: 0 auto;
+}
+
+#bill-summary {
+    background-color: #f3f1ed;
+    min-height: 400px;
+}
+
+#bill-tables {
+    background-color: #f3f1ed;
+    min-height: 400px;
+    width: 800px;
+}
+
+.spot-item {
+    min-height: 100px;
+    border: 0.8px solid #0251a8;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+
+    h1, h2 {
+        color: #0251a8;
+    }
+
+    .spot-label {
+        font-weight: 400;
+    }
+}
+
+#spot-header {
+    min-height: 200px;
+}
+
+.spot-foot {
+    float: right;
+    font-weight: 400;
+    text-align: right;
+    
+
+    h2 {
+        border-bottom: 1px solid #0251a8;
+    }
+}
+
+.bill-cart-item {
+    padding: 1rem;
+}
+
+#bill-cart-label {
+    padding: 1rem;
+}

@@ -1,0 +1,155 @@
+---
+layout: layouts/restrict-page.njk
+permalink: /{{ paged.url }}index.html
+title: Indonesian Weeding Digital Invitation - Classic
+pageScripts:
+    - '/js/invitation-page.js'
+pagination:
+  data: collections.invitations
+  size: 1
+  alias: paged
+  resolve: values
+  addAllPagesToCollections: true
+---
+
+{% include "partials/transition-scroll.njk" %}
+
+<div id="undangan-page">
+    <div id="undangan-intro" class="region wrapper all-center">
+        <img alt="Flower of Weeding" src="/images/feeds/bunga-utama-weeding-of.png"></img>
+        <h1 class="tag">Rima & Ilman</h1>
+    </div>
+    <div id="undangan-speech" class="wrapper all-center">
+        <div class="w-stack">
+        <h3 class="tag">Assalamu'alaikum Warahmatullahi Wabarakatuh</h3>
+        <p class="tag">Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan.
+            Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang
+            kau ciptakan diantara kami untuk mengikuti Sunnah Rasul-Mu dalam
+            rangka membentuk keluarga yang sakinah, mawaddah, warahmah.</p>
+        <img class="tag" alt="Small Flower" src="/images/feeds/small-flower.png"></img>
+        <p class="tag">Kami bermaksud untuk menyelenggarakan acara pernikahan kami
+                dan kami ingin anda menjadi bagian dari hari istimewa kami</p>
+        </div>
+        <div id="event-countdown" class="repel edges tag">
+            <div id="count-day" class="count-item">
+                <div class="count-inside">
+                <h1 id="day"></h1>
+                <h2>Hari</h1>
+                </div>
+            </div>
+             <div id="count-hour" class="count-item">
+                <div class="count-inside">
+                <h1 id="hour"></h1>
+                <h2>Jam</h1>
+                </div>
+            </div>
+             <div id="count-minute" class="count-item">
+                <div class="count-inside">
+                <h1 id="minute"></h1>
+                <h2>Menit</h1>
+                </div>
+            </div>
+             <div id="count-second" class="count-item">
+                <div class="count-inside">
+                <h1 id="second"></h1>
+                <h2>Detik</h1>
+                </div>
+            </div>
+        </div>
+        {% include "partials/countdown-time.njk" %}
+        {# <countdown-time></countdown-time> #}
+    </div>
+    <div id="istri-keluarga" class="couple wrapper region rag">
+        <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
+        <div class="sidebar region">
+        <div class="photo-placeholder">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="#f7c357"/>
+            </svg>
+        </div>
+        <div class="flow">
+            <h1>Rima Nuzla Fitri, S.T</h1>
+            <p>Putri dari Drs. H. Edi Saputra - Dra. Hj. Nurbainir<p>
+        </div>
+        </div>
+    </div>
+    <div id="suami-keluarga" class="couple wrapper region tag">
+        <div class="sidebar region" data-direction="rtl">
+        <div class="flow">
+            <h1>Ilman Nur Syamsudin, S.P</h1>
+            <p>Putra dari Bapak - Ibu<p>
+        </div>
+        <div class="photo-placeholder">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="#f7c357"/>
+            </svg>
+        </div>
+        </div>
+        <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
+    </div>
+    <div id="undangan-event" class="wrapper all-center region tag">
+        <h3>Rangkaian Acara akan diselenggarakan pada:</h3>
+        <div id="undangan-date" class="repel region">
+            <h1>Minggu</h1>
+            <h1>25 Agustus</h1>
+            <h1>2022</h1>
+        </div>
+        <div id="akad-nikah" class="region w-stack tag">
+            <h1>Akad Nikah</h1>
+            <div class="weeding-date all-center w-stack">
+                <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
+                <h3>Minggu, 25 Agustus 2022</h3>
+                <h3>Pukul 07.00 WIB</h3>
+            </div>
+            <div class="weeding-location all-center">
+                <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
+                <h3>Lokasi Acara</h3>
+                <h3>Jl. Batununggal, Kab. Bandung, Jawa Barat</h3>
+            </div>
+        </div>
+        <div id="resepsi-nikah" class="region w-stack tag">
+            <h1>Resepsi</h1>
+            <div class="weeding-date all-center w-stack">
+                <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
+                <h3>Minggu, 25 Agustus 2022</h3>
+                <h3>Pukul 07.00 WIB</h3>
+            </div>
+            <div class="weeding-location all-center">
+                <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
+                <h3>Lokasi Acara</h3>
+                <h3>Jl. Batununggal, Kab. Bandung, Jawa Barat</h3>
+            </div>
+        </div>
+    </div>
+    <div id="undangan-greets" class="wrapper all-center region tag">
+        <div class="flower-frame repel">
+            <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
+            <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
+        </div>
+        <div class="w-stack--sm tag">
+            <h1>Kirim Ucapan</h1>
+            <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati
+                dan dijadikan-Nya kasih sayang diantara kamu sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir" (Q.S Ar-Ruum : 21)</p>
+            {# Greeting Comments Box #}
+            {# {% include "partials/ucapan-form.njk" %} #}
+            <div id="greets-box" class="tag">
+                {% include "partials/ucapan-form.njk" %}
+                <ucapan-list></ucapan-list>
+            </div>
+            <p>Jika memberi adalah ungkapan tanda kasih anda, Anda dapat memberi kado secara cashless dengan mengirim amplop digital secara transfer pada akun di bawah ini :</p>
+            <h2>Rekening a/n Name</h2>
+        </div>
+    </div>
+    <div id="undangan-footer" class="wrapper all-center w-stack region tag">
+        <img alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
+        <h3>Atas kehadiran dan doa restu dari Bapak/Ibu/Saudara/i sekalian kami mengucapkan Terima Kasih</h3>
+        <p>Wassalamualaikum Warahmatullahi Wabarakatuh</p>
+        <h3>KAMI YANG BERBAHAGIA</h3>
+        <h1>Name & Name</h1>
+        {# Side Flower Image #}
+        <div class="flower-frame repel tag">
+            <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
+            <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
+        </div>
+    </div>
+</div>

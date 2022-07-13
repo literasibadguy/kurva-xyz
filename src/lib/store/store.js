@@ -11,6 +11,7 @@ const initialState = {
     userUrlSeen: null,
     userUrl: null,
     currentUrl: window.location.pathname,
+    isModalOpen: false,
 }
 
 let store;

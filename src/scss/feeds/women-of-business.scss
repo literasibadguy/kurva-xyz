@@ -24,9 +24,8 @@
 }
 
 #wof-first-woman {
-    max-height: 650px;
-    min-width: 600px;
-    object-fit: cover;
+    max-height: 400px;
+    padding: 1em;
 }
 
 #wof-header {
@@ -38,19 +37,6 @@
     padding: 1em;
     font-family: PlexMono,Consolas,Liberation Mono,Menlo,monospace;
     margin-inline: auto;
-}
-
-#wof-storyline  {
-    margin: 1em;
-    padding: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    h2, p {
-        width: 200px;
-        text-align: center;
-    }
 }
 
 .wof-stack {
@@ -140,6 +126,27 @@
 }
 
 @include media-query('md') {
+
+    #wof-first-woman {
+        padding: unset;
+        max-height: 650px;
+        min-width: 600px;
+        object-fit: cover;
+    }
+
+    #wof-storyline  {
+        margin: 1em;
+        padding: 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        h2, p {
+            width: 200px;
+            text-align: center;
+        }
+    }
+    
 
 #wof-grids {
     display: grid;

@@ -8,10 +8,6 @@ renderData:
 tags: 
     - grid
     - basic
-# pageScripts:
-    # - '/js/access-source.js'
-# pageScripts:
-    # - '/js/checkout.js'
 ---
 
 ```css

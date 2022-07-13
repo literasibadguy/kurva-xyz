@@ -1,8 +1,6 @@
 ---
 layout: 'layouts/landing-page'
 draft: true
-pageScripts:
-    - '/js/checkout.js'
 ---
 
 <main class="akses-page wide-card-index" id="main">
