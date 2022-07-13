@@ -8,6 +8,24 @@
     min-height: 800px;
 }
 
+@keyframes stayFly {
+	0% {
+		font-size: 4rem;
+	}
+	100% {
+		font-size: 6rem;
+	}
+}
+
+@keyframes stayFlyReverse {
+	0% {
+		margin-top: 2em;
+	}
+	100% {
+		margin-top: 1em;
+	}
+}
+
 .big-size-spot {
     font-size: 8em;
     color: #f3f1ed;
@@ -20,17 +38,23 @@
         font-size: 4rem;
         line-height: 3rem;
         font-weight: 700;
+        
     }
 
     #title-big {
+        font-size: 4rem;
         padding: 1rem;
+        // animation-name: stayFlyReverse;
+        animation-iteration-count: infinite;
+	    animation-timing-function: ease-in-out;
+	    animation-duration: 3s;
+        animation-direction: alternate;
     }
 }
 
 #bill-table {
-    display: flex;
-
-}
+    gap: 0;
+} 
 
 #inner-spot {
     padding: 1em;
@@ -40,7 +64,7 @@
 
 #bill-summary {
     background-color: #f3f1ed;
-    min-height: 400px;
+    width: 800px;
 }
 
 #bill-tables {
@@ -65,10 +89,6 @@
     }
 }
 
-#spot-header {
-    min-height: 200px;
-}
-
 .spot-foot {
     float: right;
     font-weight: 400;
@@ -84,10 +104,11 @@
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-}
-
-.bill-cart-item {
     border-bottom: 1px solid #0251a8;
+
+    h2 {
+        color: #0251a8;
+    }
 }
 
 #bill-cart-label {

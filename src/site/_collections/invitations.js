@@ -15,8 +15,6 @@ module.exports = () => {
         const title = `Undangan: ${inviteData.namaUndangan}`;
         const description = `Yang terhormat: ${inviteData.namaUndangan}`;
 
-        console.log('href');
-
         const invitation = {
             ...inviteData,
             data: {

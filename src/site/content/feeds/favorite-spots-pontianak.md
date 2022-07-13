@@ -23,34 +23,48 @@ tags:
         <div class="big-size-spot region">
             <div id="title-big">
             <h1>YOUR JOURNEY</h1>
-            <h1>MUST START</h1>
-            <h1>HERE</h1>
+            <h1>BILL</h1>
+            <h1>PONTIANAK</h1>
             </div>
         </div>
         <div class="cluster" id="bill-table">
             <div id="bill-summary">
-                    <div id="spot-header" class="spot-item">
-                <h1>PONTIANAK UNDER BRIDGE</h1>
-                <h2 class="spot-label">TRAVEL SPOT</h2>
+                <div id="spot-header" class="spot-item">
+                    <h1>YOUR NAME</h1>
+                    <h2 class="spot-label">ASSIGNEE</h2>
+                    <div class="spot-foot">
+                        <h2>PAYMENT METHODS : CASH</h2>
+                    </div>
+                </div>
+            <div class="spot-item">
+                <h1>CLEAR</h1>
+                <h2 class="spot-label">NO COMPLIANCE</h2>
                 <div class="spot-foot">
-                    <h2>PAYMENT METHODS : CASH</h2>
+                    <h2>STATUS</h2>
                 </div>
             </div>
             <div class="spot-item">
-                <h1>ABCDEFG</h1>
-                <h2 class="spot-label">LABEL</h2>
+                <h1>HANGING OUT</h1>
+                <h2 class="spot-label">TYPE</h2>
                 <div class="spot-foot">
                     <h2>ASSIGNEE</h2>
+                </div>
+            </div>
+            <div class="spot-item">
+                <h1>PONTIANAK UNDER BRIDGE</h1>
+                <h2 class="spot-label">SPOTS</h2>
+                <div class="spot-foot">
+                    <h2>LOCATION</h2>
                 </div>
             </div>
             </div>
         <div id="bill-tables">
             <div id="bill-sub">
             <div class="spot-item">
-                <h1>ABCDEFG</h1>
-                <h2 class="spot-label">LABEL</h2>
+                <h1>MIE TIAW HAJI KHAIDIR</h1>
+                <h2 class="spot-label">RESTAURANT NAME</h2>
                 <div class="spot-foot">
-                    <h2>RESTAURANT BILL</h2>
+                    <h2>RESTAURANT TAX: 0%</h2>
                 </div>
             </div>
             <div class="spot-item">
@@ -66,14 +80,21 @@ tags:
                 <div class="bill-cart-item">
                     <h2>KWE TIAW DAGING</h2>
                     <h2>X2</h2>
+                    <h2>RP. 40,000</h2>
                 </div>
                 <div class="bill-cart-item">
                     <h2>KWE TIAW CAMPUR</h2>
                     <h2>X2</h2>
+                    <h2>RP. 40,000</h2>
                 </div>
                 <div class="bill-cart-item">
-                    <h2>KWE TIAW ES JERUK</h2>
+                    <h2>ES JERUK</h2>
                     <h2>X2</h2>
+                    <h2>RP. 16,000</h2>
+                </div>
+                <div class="bill-cart-item">
+                    <h2>TOTAL:</h2>
+                    <h2>RP. 96,000</h2>
                 </div>
             </div>
         </div>
