@@ -82,8 +82,15 @@
 
 .bill-cart-item {
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill-cart-item {
+    border-bottom: 1px solid #0251a8;
 }
 
 #bill-cart-label {
     padding: 1rem;
+    color: #0251a8;
 }
