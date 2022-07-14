@@ -12,20 +12,22 @@ tags:
     - in-progress
 ---
 
-
 <div id="favorite-spot-ptk">
     <div id="inner-spot">
     <div id="spot-right">
-        <div id="spot-box">
-            <img class="wrapper" id="concert-cover-1" src="/images/feeds/bg-chinese-club-store.JPG" />
-        </div>
+        <drag-move targetName="dragme">
+            <div id="spot-box" class="dragme">
+                <img id="concert-cover-1" src="/images/feeds/bridge-pontianak.jpg" />
+            </div>
+        </drag-move>
+        
     </div>
     <div id="spot-left">
         <div class="big-size-spot region">
             <div id="title-big">
-            <h1>YOUR JOURNEY</h1>
-            <h1>BILL</h1>
-            <h1>PONTIANAK</h1>
+            <h1 id="journey-label">YOUR JOURNEY</h1>
+            <h1 id="bill-label">BILL</h1>
+            <h1 id="city-label">PONTIANAK</h1>
             </div>
         </div>
         <div class="cluster" id="bill-table">
