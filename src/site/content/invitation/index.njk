@@ -14,12 +14,16 @@ pagination:
 
 {% include "partials/transition-scroll.njk" %}
 
+<base-modal parent-modal="undangan-modal-invite" open="true">
 <div id="undangan-modal-invite">
-    <div id="invite-box">
-    <h2>Mengundang</h2>
-    <h2>{{ paged.data.namaUndangan }}</h2>
+    <div class="invite-modal web-modal__content">
+        <div id="invite-box">
+            <h2>Mengundang</h2>
+            <h2>{{ paged.data.namaUndangan }}</h2>
+        </div>
     </div>
 </div>
+</base-modal>
 <div id="undangan-page">
     <div id="undangan-intro" class="region wrapper all-center">
         <img alt="Flower of Weeding" src="/images/feeds/bunga-utama-weeding-of.png"></img>

@@ -17,6 +17,7 @@ tags:
     <div id="inner-spot">
     <div id="spot-right">
         <div id="spot-box">
+            <img class="wrapper" id="concert-cover-1" src="/images/feeds/bg-chinese-club-store.JPG" />
         </div>
     </div>
     <div id="spot-left">
