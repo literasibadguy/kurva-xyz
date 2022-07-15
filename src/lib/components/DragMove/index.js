@@ -43,6 +43,8 @@ class DragMove extends BaseElement {
         }
         if(e.preventDefault) e.preventDefault();
 
+        console.log("START DRAGGING", e);
+
         // IE uses srcElement, others use target
         var targ = e.target ? e.target : e.srcElement;
 
@@ -61,7 +63,7 @@ class DragMove extends BaseElement {
         this.drag = true;
 
         // move div element
-            this.targetDrag.addEventListener('mousemove', this.dragDiv);
+        this.targetDrag.addEventListener('mousemove', this.dragDiv);
         return false;
         
 }
