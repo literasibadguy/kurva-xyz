@@ -86,7 +86,7 @@
   font-weight: 400;
   font-display: optional;
   src: local('Cormorant-Regular'),
-    url('/fonts/cormorant/Cormorant-Regular.otf') format('otf');
+    url('/fonts/cormorant/Cormorant-Regular.ttf');
 }
 
 @font-face {
@@ -95,7 +95,7 @@
   font-weight: 700;
   font-display: optional;
   src: local('Cormorant-Bold'),
-    url('/fonts/cormorant/Cormorant-Bold.otf') format('otf');
+    url('/fonts/cormorant/Cormorant-Bold.ttf');
 }
 
 @font-face {
@@ -104,7 +104,7 @@
   font-weight: 500;
   font-display: optional;
   src: local('Cormorant-Medium'),
-    url('/fonts/cormorant/Cormorant-Medium.otf') format('otf');
+    url('/fonts/cormorant/Cormorant-Medium.ttf');
 }
 
 @font-face {
@@ -113,7 +113,7 @@
   font-weight: 600;
   font-display: optional;
   src: local('Cormorant-SemiBold'),
-    url('/fonts/cormorant/Cormorant-SemiBold.otf') format('otf');
+    url('/fonts/cormorant/Cormorant-SemiBold.ttf');
 }
 
 /* playfair-display-regular - latin */
