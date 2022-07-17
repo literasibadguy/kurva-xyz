@@ -22,19 +22,22 @@ class DragMove extends BaseElement {
     connectedCallback() {
         super.connectedCallback();
 
-        this.targetDrag = this.querySelector(`.dragme`);
+        this.targetDrag = this.querySelector(`.${this.targetName}`);
 
         this.targetDrag.addEventListener('mousedown', this.startDrag);
         this.targetDrag.addEventListener('mouseup', this.stopDrag);
 
+        // this.storyDrag.addEventListener('mousedown', this.startDrag);
+        // this.storyDrag.addEventListener('mouseup', this.stopDrag);
     }
 
     disconnectedCallback() {
         super.disconnectedCallback();
 
         this.targetDrag.removeEventListener('mousedown', this.startDrag);
-        this.targetDrag.addEventListener('mousemove', this.dragDiv);
+        this.targetDrag.removeEventListener('mousemove', this.dragDiv);
         this.targetDrag.removeEventListener('mouseup', this.stopDrag);
+
     }
 
     startDrag(e) {
@@ -44,10 +47,14 @@ class DragMove extends BaseElement {
         }
         if(e.preventDefault) e.preventDefault();
 
-        console.log("START DRAGGING", e);
-
         // IE uses srcElement, others use target
-        var targ = e.target ? e.target : e.srcElement;
+        var targ = e.target;
+
+        if (!targ.id === this.targetName) {
+            return;
+        }
+
+        console.log("START DRAGGING", e.target.id);
 
         // calculate event X, Y coordinates
         this.offsetX = e.clientX;
@@ -64,7 +71,9 @@ class DragMove extends BaseElement {
         this.drag = true;
 
         // move div element
-        this.targetDrag.addEventListener('mousemove', this.dragDiv);
+        e.target.addEventListener('mousemove', this.dragDiv);
+        // this.storyDrag.addEventListener('mousemove', this.dragDiv);
+
         return false;
         
 }
