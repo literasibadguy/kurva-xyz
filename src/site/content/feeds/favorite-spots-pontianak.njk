@@ -6,6 +6,7 @@ pageScripts:
 styleScripts:
     - /css/favorites-spots-pontianak.css
 tags: 
+    - feeds
     - flex
     - intermediate
     - in-progress
@@ -14,7 +15,7 @@ tags:
 <div id="favorite-spot-ptk">
     <div id="inner-spot">
     <div id="spot-right">
-        <drag-move>
+        <drag-move targetName="dragme">
             <div id="spot-box">
                 <img class="dragme" id="spot-cover" src="/images/feeds/bridge-pontianak.jpg" />
             </div>
@@ -101,17 +102,31 @@ tags:
         </div>
         </div>
     </div>
-    <div id="spot-story">
-        <div id="spot-experiences">
-            <h1>I REALLY LOVE THE SPOTS. ITS UNIMAGINABLE AND FORGETLESS, I HOPE I CAN REMEMBER THIS FOREVER</h1>
-            <h1>WHAT A SUNSHINE, LOVE THE LOCALS WITH THEIR STREET FOODS, IT MUS BE THE BEST HANGOUT WITH FRIENDS</h1>
-            <h1>I HOPE I CAN BRING THOSE BAKWAN INTO MY CITY, SO MY GRANDMA CAN TASTE AND MAKE IT EVERYDAY</h1>
+    <drag-move targetName="dragstory">
+    <div id="spot-story" class="dragstory repel w-stack">
+        <div id="story-stick">
+            <div>
+                <div class="circle-dot"></div>
+                <h2 id="experience__stick">EXPERIENCES</h2>
+            </div>
+            <div>
+                <div class="circle-dot"></div>
+                <h2 id="favorite__stick">FAVORITES</h2>
+            </div>
         </div>
-        <div id="spot-favorites">
-            <h1>TANJUNG SANA SINI SPOT</h1>
-            <h1>SULTAN PRINCE CASTLE</h1>
-            <h1>WARUNG KOPI ASIANG</h1>
+        <div id="story-row">
+            <div id="spot-experiences">
+                <h3>I REALLY LOVE THE SPOTS. ITS UNIMAGINABLE AND FORGETLESS, I HOPE I CAN REMEMBER THIS FOREVER</h3>
+                <h3>WHAT A SUNSHINE, LOVE THE LOCALS WITH THEIR STREET FOODS, IT MUS BE THE BEST HANGOUT WITH FRIENDS</h3>
+                <h3>I HOPE I CAN BRING THOSE BAKWAN INTO MY CITY, SO MY GRANDMA CAN TASTE AND MAKE IT EVERYDAY</h3>
+            </div>
+            <div id="spot-favorites">
+                <h3>TANJUNG SANA SINI SPOT</h3>
+                <h3>SULTAN PRINCE CASTLE</h3>
+                <h3>WARUNG KOPI ASIANG</h3>
+            </div>
         </div>
     </div>
+    </drag-move>
     </div>
 </div>

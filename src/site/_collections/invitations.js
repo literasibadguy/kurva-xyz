@@ -12,8 +12,8 @@ module.exports = () => {
     for (const key of keys) {
         const inviteData = invitationData[key];
         const href = path.join('/', 'invitations', key, '/');
-        const title = `Undangan: ${inviteData.namaUndangan}`;
-        const description = `Yang terhormat: ${inviteData.namaUndangan}`;
+        const title = `The Weeding of Rima and Ilman - Mengundang ${inviteData.namaUndangan}`;
+        const description = `Yang terhormat: ${inviteData.namaUndangan} - The Weeding of Rima and Ilman`;
 
         const invitation = {
             ...inviteData,

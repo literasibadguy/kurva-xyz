@@ -12,6 +12,7 @@ class DragMove extends BaseElement {
         super();
 
         this.drag = false;
+        this.targetName = '';
 
         this.startDrag = this.startDrag.bind(this);
         this.dragDiv = this.dragDiv.bind(this);
@@ -21,7 +22,7 @@ class DragMove extends BaseElement {
     connectedCallback() {
         super.connectedCallback();
 
-        this.targetDrag = this.querySelector('.dragme');
+        this.targetDrag = this.querySelector(`.dragme`);
 
         this.targetDrag.addEventListener('mousedown', this.startDrag);
         this.targetDrag.addEventListener('mouseup', this.stopDrag);
