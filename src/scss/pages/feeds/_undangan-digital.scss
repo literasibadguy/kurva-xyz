@@ -1,11 +1,22 @@
 
 
- .web-modal__content {
-    flex: 1;
-    overflow: auto;
-    padding: 1.5em 1.5em 0;
-    color: white;
-  }
+.invite {
+
+    web-navigation-drawer > * {
+        color: white;
+        width: 100%;
+        height: 100%;
+    
+        #open-invitation {
+            width: 200px;
+            height: 60px;
+            border: 0;
+            border-radius: 1rem;
+            margin-top: 3em;
+            background-color: rgb(247, 195, 87);
+        }
+    }
+}
 
 
 #undangan-modal-invite {
@@ -32,7 +43,7 @@
 }
 
 #undangan-page {
-    background-color: rgb(1, 1, 1, 0.6);
+    background-color: rgb(0 0 0 / 80%);
     color: rgb(247, 195, 87);
     font-family: 'Cormorant', 'Times New Roman', Times, serif;
     z-index: 4;
@@ -40,7 +51,6 @@
 
     h1, h2, h3, h4, p {
         font-family: Cormorant, 'Times New Roman', Times, serif;
-        font-weight: 600;
     }
 }
 
@@ -68,13 +78,10 @@
 	}
 }
 
-.tag {
-    opacity: 0;
-  }
 
 .tag.visible {
     opacity: 1;
-    animation-name: fadeInOpacity;
+    // animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
@@ -89,7 +96,7 @@
     }
 
     img {
-        max-height: 200px;
+        max-height: 180px;
     }
 }
 
@@ -101,7 +108,7 @@
 
     p {
         font-weight: 400;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     max-width: 700px;
@@ -283,6 +290,10 @@
 
 #resepsi-nikah {
     --region-space: 2rem;
+}
+
+.event-value {
+    font-weight: 600;
 }
 
 .weeding-date {

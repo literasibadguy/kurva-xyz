@@ -17,15 +17,17 @@ pagination:
 
 {% include "partials/transition-scroll.njk" %}
 
-<base-modal parent-modal="undangan-modal-invite" open="true">
-<div id="undangan-modal-invite">
-    <div class="invite-modal web-modal__content">
+<div class="invite">
+<web-navigation-drawer type="standard">
+    <div data-drawer-container class="region all-center w-stack gap-top-size-4">
         <div id="invite-box">
-            <h2>Mengundang</h2>
+            <h2>Yang terhormat</h2>
             <h2>{{ paged.data.namaUndangan }}</h2>
+            <button data-drawer-close-button id="open-invitation">Open Invitation</button>
         </div>
     </div>
-</div>
+</web-navigation-drawer>
+<main>
 </base-modal>
 <div id="undangan-background">
     <img alt="Padang Background" src="/images/feeds/padang.JPG"></img>
@@ -114,12 +116,12 @@ pagination:
             <h1>Akad Nikah</h1>
             <div class="weeding-date all-center w-stack">
                 <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
-                <h3>Minggu, 25 Agustus 2022</h3>
+                <h3 class="event-value">Minggu, 25 Agustus 2022</h3>
                 <h3>Pukul 07.00 WIB</h3>
             </div>
             <div class="weeding-location all-center">
                 <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
-                <h3>Lokasi Acara</h3>
+                <h3 class="event-value">Lokasi Acara</h3>
                 <h3>Jl. Batununggal, Kab. Bandung, Jawa Barat</h3>
             </div>
         </div>
@@ -127,12 +129,12 @@ pagination:
             <h1>Resepsi</h1>
             <div class="weeding-date all-center w-stack">
                 <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
-                <h3>Minggu, 25 Agustus 2022</h3>
+                <h3 class="event-value">Minggu, 25 Agustus 2022</h3>
                 <h3>Pukul 07.00 WIB</h3>
             </div>
             <div class="weeding-location all-center">
                 <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
-                <h3>Lokasi Acara</h3>
+                <h3 class="event-value">Lokasi Acara</h3>
                 <h3>Jl. Batununggal, Kab. Bandung, Jawa Barat</h3>
             </div>
         </div>
@@ -168,4 +170,6 @@ pagination:
             <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
         </div>
     </div>
+</div>
+</main>
 </div>

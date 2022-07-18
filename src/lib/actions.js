@@ -1,7 +1,7 @@
 import { store } from "./store/store";
 
 const disablePage = () => {
-    const main = document.querySelector('#undangan-page') || {};
+    const main = document.querySelector('main') || {};
 
     console.log('DISABLE UNDANGAN PAGE');
 
@@ -10,11 +10,21 @@ const disablePage = () => {
 }
 
 const enablePage = () => {
-    const main = document.querySelector('#undangan-page') || {};
+    const main = document.querySelector('main') || {};
     
     document.body.classList.remove('overflow-hidden');
     main.inert = false;
 }
+
+export const openNavigationDrawer = store.action(() => {
+  disablePage();
+  return {isNavigationDrawerOpen: true};
+});
+
+export const closeNavigationDrawer = store.action(() => {
+  enablePage();
+  return {isNavigationDrawerOpen: false};
+});
 
 export const openModal = store.action(() => {
     disablePage();

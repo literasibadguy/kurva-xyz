@@ -3,7 +3,6 @@ import devtools from 'unistore/devtools';
 import { localStorage } from "../utils/storage";
 
 const initialState = {
-
     checkingSignedInState: true,
     isSignedIn: Boolean(localStorage['kurva_isSignedIn']),
     userAcceptsCookies: false,
@@ -11,6 +10,7 @@ const initialState = {
     userUrlSeen: null,
     userUrl: null,
     currentUrl: window.location.pathname,
+    isNavigationDrawerOpen: true,
     isModalOpen: false,
 }
 
