@@ -19,8 +19,13 @@ pagination:
 
 <div class="invite">
 <web-navigation-drawer type="standard">
-    <div data-drawer-container class="region all-center w-stack gap-top-size-4">
-        <div id="invite-box">
+    <div data-drawer-container class="all-center w-stack">
+        <div id="undangan-background">
+            <img alt="Padang Background" src="/images/feeds/padang.JPG"></img>
+        </div>
+        <div id="black-overlay">
+        </div>
+        <div class="region gap-top-size-4" id="invite-box">
             <h2>Yang terhormat</h2>
             <h2>{{ paged.data.namaUndangan }}</h2>
             <button data-drawer-close-button id="open-invitation">Open Invitation</button>
@@ -35,17 +40,17 @@ pagination:
 <div id="undangan-page">
     <div id="undangan-intro" class="region wrapper all-center w-stack">
         <img alt="Flower of Weeding" src="/images/feeds/bunga-utama-weeding-of.png"></img>
-        <h1 id="couple-name" class="tag">Rima & Ilman</h1>
+        <h1 id="couple-name">Rima & Ilman</h1>
     </div>
     <div id="undangan-speech" class="wrapper all-center">
         <div class="w-stack">
-        <img id="salam-cover" class="tag" alt="Assalamualaikum" src="/images/feeds/Salam@8x.png"></img>
-        <p class="tag">Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan.
+        <img id="salam-cover" alt="Assalamualaikum" src="/images/feeds/Salam@8x.png"></img>
+        <p>Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan.
             Ya Allah, perkenankanlah kami merangkaikan kasih sayang yang
             kau ciptakan diantara kami untuk mengikuti Sunnah Rasul-Mu dalam
             rangka membentuk keluarga yang sakinah, mawaddah, warahmah.</p>
-        <img class="tag" alt="Small Flower" src="/images/feeds/small-flower.png"></img>
-        <p class="tag">Kami bermaksud untuk menyelenggarakan acara pernikahan kami
+        <img alt="Small Flower" src="/images/feeds/small-flower.png"></img>
+        <p>Kami bermaksud untuk menyelenggarakan acara pernikahan kami
                 dan kami ingin anda menjadi bagian dari hari istimewa kami</p>
         </div>
         <div id="event-countdown" class="repel edges tag">
@@ -165,7 +170,7 @@ pagination:
         <h3>KAMI YANG BERBAHAGIA</h3>
         <h1>Rima & Ilman</h1>
         {# Side Flower Image #}
-        <div class="flower-frame repel tag">
+        <div class="flower-frame repel">
             <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
             <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
         </div>

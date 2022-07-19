@@ -30,6 +30,7 @@ class UcapanBox extends BaseElement {
         this.form.removeEventListener('submit', this.onSubmit);
     }
 
+
     async postForm(body) {
         console.log(body);
         const comment  = {
