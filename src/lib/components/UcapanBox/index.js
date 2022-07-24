@@ -80,6 +80,7 @@ class UcapanBox extends BaseElement {
         this.ucapinError.classList.toggle(hiddenClass, true);
         this.ucapinError.querySelector(pTagSelector).textContent = '';
         this.ucapinMessage.textContent = `Terima kasih atas ucapan doa restu dari anda,`;
+        this.form.remove('')
         this.form.removeEventListener('submit', this.onSubmit);
         this.form.parentElement.removeChild(this.form);
     }

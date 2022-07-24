@@ -6,6 +6,7 @@ src/site/_data/resource*.json
 src/audio/
 
 src/site/_data/invitationData.json
+src/images/rm
 
 # Logs
 logs
