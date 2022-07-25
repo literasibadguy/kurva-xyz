@@ -10,7 +10,7 @@
         
         h2 {
             font-family: Cormorant, 'Times New Roman', Times, serif;
-            font-size: 20px;
+            font-size: 21px;
         }
 
         #black-overlay {
@@ -26,7 +26,6 @@
             height: 60px;
             border: 0;
             border-radius: 1rem;
-            margin-top: 3em;
             background-color: rgb(247, 195, 87);
 
             button {
@@ -51,7 +50,8 @@
             --region-space: 1em;
 
             #weeding-headline img {
-                padding: 1em;
+                max-width: 275px;
+                margin-top: 1rem;
             }
         }
     }
@@ -107,6 +107,10 @@
     #couple-name {
         margin-top: 1em;
         margin-bottom: 1em;
+    }
+
+    img {
+        max-width: 300px;
     }
 }
 
@@ -443,6 +447,7 @@
         overflow-x: scroll;
         display: flex;
         align-items: baseline;
+        gap: 1em;
       }
       
       #gallery-couple img {
@@ -451,5 +456,9 @@
          object-fit: cover;
          border-radius: 1rem;
       }
+
+    #rima-ilham-logo {
+        height: 45px;
+    }
 }
 

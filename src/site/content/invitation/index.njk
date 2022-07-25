@@ -19,10 +19,12 @@ pagination:
 
 {% include "partials/transition-scroll.njk" %}
 
-<audio id="bg-sound" class="audio__element" src="{{ helpers.hashForProd('/audio/nothing-gonna-change-my-love.mp3') }}" autoplay preload></audio>
 
 <div class="invite">
 <web-navigation-drawer type="standard">
+    <audio id="bg-sound" class="audio__element" autoplay preload="auto">
+    <source src="{{ helpers.hashForProd('/audio/nothing-gonna-change-my-love.mp3') }}" type="audio/mpeg">
+    </audio>    
     <div data-drawer-container class="all-center w-stack">
         <div id="undangan-background">
             <img alt="Couple Background" src="/images/rm/cover-5-intro.jpg"></img>
@@ -30,9 +32,9 @@ pagination:
         <div id="black-overlay">
             
         </div>
-        <div class="region gap-top-size-4" id="invite-box">
+        <div class="region gap-top-size-4 all-center" id="invite-box">
             <div id="weeding-headline">
-                <h2>The Weeding of</h2>
+                <h2>The Wedding of</h2>
                 <img src="/images/rm/rima-ilham-logo.png"></img>
             </div>
             <div>
@@ -187,7 +189,7 @@ pagination:
         <h3>Atas kehadiran dan doa restu dari Bapak/Ibu/Saudara/i sekalian kami mengucapkan Terima Kasih</h3>
         <p>Wassalamualaikum Warahmatullahi Wabarakatuh</p>
         <h3>KAMI YANG BERBAHAGIA</h3>
-        <img src="/images/rm/rima-ilham-logo.png"></img>
+        <img id="rima-ilham-logo" src="/images/rm/rima-ilham-logo.png"></img>
         {# Side Flower Image #}
         {# <div class="flower-frame repel">
             <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>

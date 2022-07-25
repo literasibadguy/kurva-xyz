@@ -60,7 +60,10 @@ export class NavigationDrawer extends BaseStateElement {
     /** @type HTMLElement */
     this.drawerContainer = this.querySelector('[data-drawer-container]');
     /** @type HTMLElement */
+    this.audioBg = this.querySelector('audio');
     this.closeBtn = this.querySelector('[data-drawer-close-button]');
+
+    // this.audioBg = this.querySelector('audio').play();
 
     this.addEventListeners();
     super.connectedCallback();
@@ -68,9 +71,15 @@ export class NavigationDrawer extends BaseStateElement {
 
   addEventListeners() {
     this.drawerContainer.addEventListener('click', this.onBlockClicks);
+    this.drawerContainer.addEventListener('click', this.letAudioPlayPls);
     this.closeBtn.addEventListener('click', closeNavigationDrawer);
+    this.closeBtn.addEventListener('click', this.letAudioPlayPls);
     this.addEventListener('click', closeNavigationDrawer);
+    this.addEventListener('click', this.letAudioPlayPls);
+    // this.audioBg.play();
   }
+
+
 
   onStateChanged({isNavigationDrawerOpen, currentUrl}) {
     this.open = isNavigationDrawerOpen;
@@ -97,6 +106,17 @@ export class NavigationDrawer extends BaseStateElement {
         updated.setAttribute('active', '');
         updated.setAttribute('aria-current', 'page');
       }
+    }
+  }
+
+  /**
+   * 
+   * @param {Event} e 
+   */
+  letAudioPlayPls(e) {
+    if (e) {
+      this.audioControl = this.getRootNode().querySelector('audio');
+      this.audioControl.play();
     }
   }
 
