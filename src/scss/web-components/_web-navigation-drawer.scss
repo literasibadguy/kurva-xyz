@@ -29,6 +29,7 @@ web-navigation-drawer {
       position: relative;
       transform: translateY(-220%);
       width: var(--web-navigation-drawer-width, fit-content);
+      transition: none;
   
       background-color: rgb(1 1 1 / 40%);
     }
@@ -58,16 +59,13 @@ web-navigation-drawer {
   web-navigation-drawer[open]::before {
     opacity: 1;
   }
-  
-  web-navigation-drawer[open] div[data-drawer-container] {
-    transform: none;
-  }
-  
+
   web-navigation-drawer[animating] [data-drawer-container] {
     transition: transform $global-transition-movement;
   }
   
   web-navigation-drawer[open][animating] [data-drawer-container] {
-    transition: transform $global-transition-movement;
+    transition: none;
+    transform: none;
   }
   

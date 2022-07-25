@@ -10,13 +10,14 @@
         
         h2 {
             font-family: Cormorant, 'Times New Roman', Times, serif;
+            font-size: 20px;
         }
 
         #black-overlay {
             position: fixed;
             width: 100%;
             height: 100%;
-            background-color: rgb(0 0 0 / 60%);
+            background-color: rgb(0 0 0 / 40%);
             margin: 0;
         }
     
@@ -31,10 +32,27 @@
             button {
                 color: black;
             }
+
+            img {
+                height: 25px;
+            }
+
+            h2 {
+                margin-top: 0;
+            }
         }
 
         #invite-box {
             z-index: 400;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            --region-space: 1em;
+
+            #weeding-headline img {
+                padding: 1em;
+            }
         }
     }
 }
@@ -51,7 +69,7 @@
     }
 }
 
-#undangan-background {
+#undangan-background, #land-background {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -82,21 +100,9 @@
 	animation-timing-function: ease-in;
 	animation-duration: 1s;
 
-    --region-space: 1em;
-
-    #gallery-couple {
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        display: flex;
-        align-items: baseline;
-      }
-      
-      #gallery-couple img {
-         scroll-snap-align: center;
-         max-height: 300px;
-         object-fit: cover;
-         border-radius: 1rem;
-      }
+    --region-space: 3em;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     #couple-name {
         margin-top: 1em;
@@ -192,7 +198,7 @@
 }
 
 .couple {
-    --region-space: 2rem;
+    --region-space: 1rem;
     --cluster-horizontal-alignment: center;
     max-width: 700px;
     margin-inline: auto;
@@ -217,6 +223,14 @@
 
 
 @include media-query('md') {
+
+    #undangan-background {
+        img {
+            max-width: 720px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
 
     #undangan-speech {
     
@@ -348,6 +362,17 @@
     h3 {
         font-size: 18px;
     }
+
+    #open-location {
+        padding: 2vh;
+        background-color: rgb(247, 195, 87);
+        color: black;
+        border: 0;
+        border-radius: 1rem;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 1em;
+    }
 }
 
 .flower-frame {
@@ -403,7 +428,8 @@
 
 #undangan-footer {
     max-width: 700px;
-    --region-space: 2rem;
+    --region-space: 3rem;
+    border-top: 1px solid rgb(247, 195, 87);
     h1 {
         font-size: 40px;
     }
@@ -411,5 +437,19 @@
     .flower-frame {
         rotate: 180deg;
     }
+
+    #gallery-couple {
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        display: flex;
+        align-items: baseline;
+      }
+      
+      #gallery-couple img {
+         scroll-snap-align: center;
+         max-height: 300px;
+         object-fit: cover;
+         border-radius: 1rem;
+      }
 }
 

@@ -18,38 +18,44 @@ pagination:
 
 {% include "partials/transition-scroll.njk" %}
 
-<audio id="bg-sound" class="audio__element" src="/audio/kim-loveable.mp3"></audio>
+<audio id="bg-sound" class="audio__element" src="{{ helpers.hashForProd('/audio/nothing-gonna-change-my-love.mp3') }}" autoplay></audio>
 
 <div class="invite">
 <web-navigation-drawer type="standard">
     <div data-drawer-container class="all-center w-stack">
         <div id="undangan-background">
-            <img alt="Padang Background" src="/images/rm/cover-1.jpg"></img>
+            <img alt="Couple Background" src="/images/rm/cover-5-intro.jpg"></img>
         </div>
         <div id="black-overlay">
             
         </div>
         <div class="region gap-top-size-4" id="invite-box">
-            <h2>Yang terhormat</h2>
-            <h2>{{ paged.data.namaUndangan }}</h2>
-            <button data-drawer-close-button id="open-invitation">Open Invitation</button>
+            <div id="weeding-headline">
+                <h2>The Weeding of</h2>
+                <img src="/images/rm/rima-ilham-logo.png"></img>
+            </div>
+            <div>
+            <h2>Kepada Yth:</h2>
+            <h2 class="guest-name">{{ paged.data.namaUndangan }}</h2>
+            <button data-drawer-close-button id="open-invitation">
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 5px; justify-content: center;">
+                    <img src="/images/rm/icon_mail.png"></img>
+                    <h2>Open Invitation</h2>
+                </div>
+            </button>
+            </div>
         </div>
     </div>
 </web-navigation-drawer>
 <main>
 </base-modal>
-<div id="undangan-background">
+<div id="land-background">
     <img alt="Padang Background" src="/images/feeds/padang.JPG"></img>
 </div>
 <div id="undangan-page">
     <div id="undangan-intro" class="region wrapper all-center w-stack">
         {# <img alt="Flower of Weeding" src="/images/feeds/bunga-utama-weeding-of.png"></img> #}
-        <div id="gallery-couple">
-            <img src="/images/rm/cover-3.jpg">
-            <img src="/images/rm/cover-2.jpg">
-            <img src="/images/rm/cover-1.jpg">
-        </div>3
-        <h1 id="couple-name">Rima & Ilman</h1>
+        <img class="region" src="/images/rm/rima-ilham-logo.png"></img>
     </div>
     <div id="undangan-speech" class="wrapper all-center">
         <div class="w-stack">
@@ -62,7 +68,7 @@ pagination:
         <p>Kami bermaksud untuk menyelenggarakan acara pernikahan kami
                 dan kami ingin anda menjadi bagian dari hari istimewa kami</p>
         </div>
-        <div id="event-countdown" class="repel edges tag">
+        <div id="event-countdown" class="repel edges">
             <div id="count-day" class="count-item">
                 <div class="count-inside">
                 <h1 id="day"></h1>
@@ -91,30 +97,22 @@ pagination:
         {% include "partials/countdown-time.njk" %}
         {# <countdown-time></countdown-time> #}
     </div>
-    <div id="istri-keluarga" class="couple wrapper region rag">
+    <div class="couple all-center wrapper region tag">
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
         <div class="sidebar region">
-        <div class="photo-placeholder">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#f7c357"/>
-            </svg>
-        </div>
         <div class="flow">
             <h1>Rima Nuzla Fitri, S.T</h1>
-            <p>Putri dari Drs. H. Edi Saputra - Dra. Hj. Nurbainir<p>
+            <h2>Putri dari</h2>
+            <p>Drs. H. Edi Saputra - Dra. Hj. Nurbainir<p>
         </div>
         </div>
     </div>
-    <div id="suami-keluarga" class="couple wrapper region tag">
+    <div class="couple all-center wrapper region tag">
         <div class="sidebar region" data-direction="rtl">
         <div class="flow">
             <h1>Ilman Nur Syamsudin, S.P</h1>
-            <p>Putra dari Alm. Drs. Dicky Ahmaf Haidir dan Enung Nurani<p>
-        </div>
-        <div class="photo-placeholder">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="#f7c357"/>
-            </svg>
+            <h2>Putra dari</h2>
+            <p>Alm. Drs. Dicky Ahmaf Haidir dan Enung Nurani<p>
         </div>
         </div>
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
@@ -136,7 +134,13 @@ pagination:
             <div class="weeding-location all-center">
                 <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
                 <h3 class="event-value">Lokasi Acara</h3>
-                <h3>Selera Riau Bandung Hotel</h3>
+                <h3>Serela Riau Bandung Hotel</h3>
+                <p>Jl. L. L. R.E. Martadinata No.56, Citarum, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40115</p>
+                <a target="_blank" href="https://goo.gl/maps/Cv2uJUcrH6eW7K9C9">
+                <div id="open-location">
+                    <h2>Menuju lokasi</h2>
+                </div>
+                </a>
             </div>
         </div>
         {# <div id="resepsi-nikah" class="region w-stack tag">
@@ -172,10 +176,16 @@ pagination:
     </div>
     <div id="undangan-footer" class="wrapper all-center w-stack region tag">
         {# <img alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img> #}
+        <img src="/images/rm/protokol-kesehatan.png"></img>
+        <div id="gallery-couple">
+            <img src="/images/rm/cover-3.jpg">
+            <img src="/images/rm/cover-2.jpg">
+            <img src="/images/rm/cover-1.jpg">
+        </div>
         <h3>Atas kehadiran dan doa restu dari Bapak/Ibu/Saudara/i sekalian kami mengucapkan Terima Kasih</h3>
         <p>Wassalamualaikum Warahmatullahi Wabarakatuh</p>
         <h3>KAMI YANG BERBAHAGIA</h3>
-        <h1>Rima & Ilman</h1>
+        <img src="/images/rm/rima-ilham-logo.png"></img>
         {# Side Flower Image #}
         {# <div class="flower-frame repel">
             <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
