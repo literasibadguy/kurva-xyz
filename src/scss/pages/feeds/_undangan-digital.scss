@@ -9,7 +9,7 @@
 .invite {
 
     web-navigation-drawer > * {
-        color: #ffdf9e;
+        color: #ffe095;
         width: 100%;
         height: 100%;
         background-color: rgb(0 0 0 / 80%);
@@ -17,7 +17,7 @@
         h2 {
             font-family: Cormorant, 'Times New Roman', Times, serif;
             font-size: 18px;
-            margin-top: 0.8rem;
+            margin-top: 0.1rem;
         }
 
         #black-overlay {
@@ -41,12 +41,13 @@
 
             img {
                 height: 25px;
+                margin-right: 10px;
             }
 
             h2 {
                 margin-top: 0;
                 color: black;
-                font-size: 18px;
+                font-size: 16px;
             }
         }
 
@@ -59,8 +60,8 @@
             --region-space: 1em;
 
             #weeding-headline img {
-                max-width: 275px;
-                margin-top: 0.5rem;
+                max-width: 200px;
+                margin-top: 0.4rem;
             }
         }
     }
@@ -348,10 +349,12 @@
     max-width: 600px;
     max-height: 100px;
     padding: 1rem;
-    justify-content: space-evenly;
+    justify-content: center;
+    --auto-grid-min-item-size: 1rem;
+    --auto-grid-replacement: 3;
 
     #date-month {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     #date-day {
@@ -360,6 +363,7 @@
         padding-top: 1em;
         padding-bottom: 1em;
     }
+
 
     #date-year {
         border-left: 1px solid rgb(247, 195, 87);
@@ -389,22 +393,22 @@
 
 .weeding-date {
     img {
-        max-width: 50px;
+        max-width: 40px;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 22px;
         font-family: 'Cormorant', 'Times New Roman', Times, serif;
     }
 }
 
 .weeding-location {
     img {
-        max-width: 40px;
+        width: 40px;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     #open-location {
@@ -458,7 +462,7 @@
 }
 
 #ucapan-lists {
-    max-height: 600px;
+    max-height: 300px;
     border: 1px solid rgb(247, 195, 87);
     display: block;
     overflow: scroll;
