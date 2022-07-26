@@ -25,24 +25,25 @@ pagination:
     <audio id="bg-sound" class="audio__element" autoplay preload="auto">
     <source src="{{ helpers.hashForProd('/audio/nothing-gonna-change-my-love.mp3') }}" type="audio/mpeg">
     </audio>    
-    <div data-drawer-container class="all-center w-stack">
+    <div data-drawer-container class="invite-center w-stack">
         <div id="undangan-background">
             <img alt="Couple Background" src="/images/rm/cover-5-intro.jpg"></img>
         </div>
         <div id="black-overlay">
             
         </div>
-        <div class="region gap-top-size-4 all-center" id="invite-box">
-            <div id="weeding-headline">
+        <div class="region gap-top-size-4 invite-center" id="invite-box">
+            <div class="invite-center" id="weeding-headline">
+                <h2>You are invited!</h2>
                 <h2>The Wedding of</h2>
-                <img src="/images/rm/rima-ilham-logo.png"></img>
+                <img alt="Rima Ilman Logo" src="/images/rm/rima-ilham-logo.png"></img>
             </div>
-            <div>
+            <div class="region">
             <h2>Kepada Yth:</h2>
             <h2 class="guest-name">{{ paged.data.namaUndangan }}</h2>
             <button data-drawer-close-button id="open-invitation">
                 <div style="display: flex; flex-direction: row; align-items: center; gap: 5px; justify-content: center;">
-                    <img src="/images/rm/icon_mail.png"></img>
+                    <img alt="email-icon" src="/images/email.svg"></img>
                     <h2>Open Invitation</h2>
                 </div>
             </button>
@@ -56,11 +57,12 @@ pagination:
     <img alt="Padang Background" src="/images/feeds/padang.JPG"></img>
 </div>
 <div id="undangan-page">
-    <div id="undangan-intro" class="region wrapper all-center w-stack">
+    <div id="undangan-intro" class="region wrapper invite-center w-stack">
         {# <img alt="Flower of Weeding" src="/images/feeds/bunga-utama-weeding-of.png"></img> #}
-        <img class="region" src="/images/rm/rima-ilham-logo.png"></img>
+        <img id="weeding-logo" alt="Weeding Logo" class="region" src="/images/rm/wedding-of-logo.png"></img>
+        <img id="rima-ilman-logo" alt="Rima Ilman Logo" class="region" src="/images/rm/rima-ilham-logo.png"></img>
     </div>
-    <div id="undangan-speech" class="wrapper all-center">
+    <div id="undangan-speech" class="wrapper invite-center">
         <div class="w-stack">
         <img id="salam-cover" alt="Assalamualaikum" src="/images/feeds/Salam@8x.png"></img>
         <p>Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan.
@@ -100,7 +102,7 @@ pagination:
         {% include "partials/countdown-time.njk" %}
         {# <countdown-time></countdown-time> #}
     </div>
-    <div class="couple all-center wrapper region tag">
+    <div class="couple invite-center wrapper region tag">
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
         <div class="sidebar region">
         <div class="flow">
@@ -110,31 +112,29 @@ pagination:
         </div>
         </div>
     </div>
-    <div class="couple all-center wrapper region tag">
+    <div class="couple invite-center wrapper region tag">
         <div class="sidebar region" data-direction="rtl">
         <div class="flow">
             <h1>Ilman Nur Syamsudin, S.P</h1>
             <h2>Putra dari</h2>
-            <p>Alm. Drs. Dicky Ahmaf Haidir dan Enung Nurani<p>
+            <p>Alm. Drs. Dicky Akhmaf Haidir dan Enung Nurani<p>
         </div>
         </div>
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
     </div>
-    <div id="undangan-event" class="wrapper all-center region tag">
+    <div id="undangan-event" class="wrapper invite-center region tag">
         <h3>Rangkaian Acara akan diselenggarakan pada:</h3>
         <div id="undangan-date" class="repel region">
             <h1 id="date-day">Minggu</h1>
-            <h1 id="date-month">7 Agustus</h1>
+            <div id="date-flex"><h1 id="date-month">7</h1><h1 id="date-month">Agustus</h1></div>
             <h1 id="date-year">2022</h1>
         </div>
         <div id="akad-nikah" class="region w-stack tag">
-            <h1>Akad Nikah</h1>
-            <div class="weeding-date all-center w-stack">
-                <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
-                <h3 class="event-value">Minggu, 7 Agustus 2022</h3>
-                <h3>Pukul 07.00 WIB</h3>
+            <div class="weeding-date invite-center w-stack">
+                <img style="filter: invert(90%) sepia(64%) saturate(1409%) hue-rotate(315deg) brightness(100%) contrast(95%);" alt="Calendar Icon" src="/images/time.svg"></img>
+                <h3>Pukul 10.00 WIB</h3>
             </div>
-            <div class="weeding-location all-center">
+            <div class="weeding-location invite-center">
                 <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
                 <h3 class="event-value">Lokasi Acara</h3>
                 <h3>Serela Riau Bandung Hotel</h3>
@@ -148,25 +148,24 @@ pagination:
         </div>
         {# <div id="resepsi-nikah" class="region w-stack tag">
             <h1>Resepsi</h1>
-            <div class="weeding-date all-center w-stack">
+            <div class="weeding-date invite-center w-stack">
                 <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
                 <h3 class="event-value">Minggu, 25 Agustus 2022</h3>
                 <h3>Pukul 07.00 WIB</h3>
             </div>
-            <div class="weeding-location all-center">
+            <div class="weeding-location invite-center">
                 <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
                 <h3 class="event-value">Lokasi Acara</h3>
                 <h3>Jl. Batununggal, Kab. Bandung, Jawa Barat</h3>
             </div>
         </div> #}
     </div>
-    <div id="undangan-greets" class="wrapper all-center region tag">
+    <div id="undangan-greets" class="wrapper invite-center region tag">
         {# <div class="flower-frame repel">
             <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
             <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
         </div> #}
         <div class="w-stack--sm tag">
-            <h1>Kirim Ucapan</h1>
             <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati
                 dan dijadikan-Nya kasih sayang diantara kamu sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir" (Q.S Ar-Ruum : 21)</p>
             {# Greeting Comments Box #}
@@ -177,19 +176,25 @@ pagination:
             </div>
         </div>
     </div>
-    <div id="undangan-footer" class="wrapper all-center w-stack region tag">
+    <div id="undangan-footer" class="wrapper invite-center w-stack region tag">
         {# <img alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img> #}
         <img src="/images/rm/protokol-kesehatan.png"></img>
-        <div id="gallery-couple">
-            <img src="/images/rm/cover-3.jpg">
-            <img src="/images/rm/cover-2.jpg">
-            <img src="/images/rm/cover-4.jpg">
-            <img src="/images/rm/cover-1.jpg">
-        </div>
+        <web-carousel>
+            <div id="carousel-couple" class="carousel region">
+            <div id="gallery-couple" data-scroll="snap">
+                <img class="card-couple" src="/images/rm/cover-3.jpg"></img>
+                <img class="card-couple" src="/images/rm/cover-4.jpg"></img>
+                <img class="card-couple" src="/images/rm/cover-2.jpg"></img>
+                <img class="card-couple" src="/images/rm/cover-1.jpg"></img>
+            </div>
+            </div>
+        </web-carousel>
+        <div class="region">
         <h3>Atas kehadiran dan doa restu dari Bapak/Ibu/Saudara/i sekalian kami mengucapkan Terima Kasih</h3>
         <p>Wassalamualaikum Warahmatullahi Wabarakatuh</p>
         <h3>KAMI YANG BERBAHAGIA</h3>
-        <img id="rima-ilham-logo" src="/images/rm/rima-ilham-logo.png"></img>
+        </div>
+        <img alt="Rima Ilman Logo" id="rima-ilham-logo" src="/images/rm/rima-ilham-logo.png"></img>
         {# Side Flower Image #}
         {# <div class="flower-frame repel">
             <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
@@ -199,3 +204,17 @@ pagination:
 </div>
 </main>
 </div>
+
+            {# <button class="icon-button" data-direction="prev" aria-label="back">
+                                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;}
+                </style>
+                <title>caret--right</title>
+                <polygon points="20,24 10,16 20,8 "/>
+                <rect class="st0" width="32" height="32"/>
+                </svg>
+            </button> #}

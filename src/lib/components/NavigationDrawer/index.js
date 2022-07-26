@@ -60,7 +60,6 @@ export class NavigationDrawer extends BaseStateElement {
     /** @type HTMLElement */
     this.drawerContainer = this.querySelector('[data-drawer-container]');
     /** @type HTMLElement */
-    this.audioBg = this.querySelector('audio');
     this.closeBtn = this.querySelector('[data-drawer-close-button]');
 
     // this.audioBg = this.querySelector('audio').play();

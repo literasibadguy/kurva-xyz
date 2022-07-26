@@ -1,23 +1,30 @@
 
+.invite-center > * {
+    text-align: center;
+    margin: 0 auto;
+    margin-inline: auto;
+    margin-top: 0;
+}
 
 .invite {
 
     web-navigation-drawer > * {
-        color: rgb(247, 195, 87);
+        color: #ffdf9e;
         width: 100%;
         height: 100%;
         background-color: rgb(0 0 0 / 80%);
         
         h2 {
             font-family: Cormorant, 'Times New Roman', Times, serif;
-            font-size: 21px;
+            font-size: 18px;
+            margin-top: 0.8rem;
         }
 
         #black-overlay {
             position: fixed;
             width: 100%;
             height: 100%;
-            background-color: rgb(0 0 0 / 40%);
+            background-color: rgb(0 0 0 / 60%);
             margin: 0;
         }
     
@@ -38,6 +45,8 @@
 
             h2 {
                 margin-top: 0;
+                color: black;
+                font-size: 18px;
             }
         }
 
@@ -51,7 +60,7 @@
 
             #weeding-headline img {
                 max-width: 275px;
-                margin-top: 1rem;
+                margin-top: 0.5rem;
             }
         }
     }
@@ -112,6 +121,15 @@
     img {
         max-width: 300px;
     }
+
+    #rima-ilman-logo {
+        --region-space: 1rem;
+    }
+
+    #weeding-logo {
+        max-height: 60px;
+        --region-space: 1rem;
+    }
 }
 
 @keyframes fadeInOpacity {
@@ -148,6 +166,8 @@
     img {
         max-width: 200px;
         margin-inline: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     p {
@@ -173,9 +193,15 @@
     border-radius: 1rem;
     text-align: center;
     max-width: 70px;
+    margin-left: auto;
+    margin-right: auto;
 
     h1, h2 {
         font-weight: 600;
+    }
+
+    h2 {
+        font-size: 16px;
     }
 
     .count-inside {
@@ -206,6 +232,8 @@
     --cluster-horizontal-alignment: center;
     max-width: 700px;
     margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 
     h1,
@@ -262,6 +290,8 @@
 
     .count-item {
         max-width: 100px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .photo-placeholder {
@@ -320,6 +350,10 @@
     padding: 1rem;
     justify-content: space-evenly;
 
+    #date-month {
+        font-size: 20px;
+    }
+
     #date-day {
         border-right: 1px solid rgb(247, 195, 87);
         padding-right: 1em;
@@ -337,6 +371,12 @@
 
 #akad-nikah {
     --region-space: 2rem;
+
+    
+}
+
+#akad-nikah * + * {
+    margin-top: 1rem;
 }
 
 #resepsi-nikah {
@@ -376,6 +416,10 @@
         width: 50%;
         margin: 0 auto;
         margin-top: 1em;
+
+        h2 {
+            color: black;
+        }
     }
 }
 
@@ -442,12 +486,18 @@
         rotate: 180deg;
     }
 
+    #carousel-couple {
+        --region-space: 2em;
+    }
+
     #gallery-couple {
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
         display: flex;
-        align-items: baseline;
+        align-items: center;
         gap: 1em;
+        scroll-behavior: smooth;
+        
       }
       
       #gallery-couple img {
@@ -455,6 +505,9 @@
          max-height: 300px;
          object-fit: cover;
          border-radius: 1rem;
+         width: 280px;
+         margin-top: 0;
+         margin-right: 1em;
       }
 
     #rima-ilham-logo {
