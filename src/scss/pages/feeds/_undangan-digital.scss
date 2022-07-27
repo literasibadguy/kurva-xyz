@@ -403,7 +403,7 @@
 }
 
 .golden-button {
-    padding: 2vh;
+    padding: 1vh;
     color: black;
     background-color: rgb(247, 195, 87);
     display: block;
@@ -428,6 +428,7 @@
 
     #open-location {
         margin-top: 1rem;
+        width: 50%;
     }
 }
 
@@ -519,6 +520,8 @@
 
     #rima-ilham-logo {
         height: 45px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #virtual-wedding {
@@ -527,8 +530,14 @@
         }
     }
 
+    #instagram-link {
+        h3 {
+            margin-top: 0;
+        }
+    }
+
     #virtual-wedding * + * {
-        margin-top: 1rem;
+        // margin-top: 1rem;
     }
 }
 
