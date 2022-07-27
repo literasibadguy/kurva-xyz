@@ -402,6 +402,21 @@
     }
 }
 
+.golden-button {
+    padding: 2vh;
+    color: black;
+    background-color: rgb(247, 195, 87);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-radius: 1rem;
+
+    h2 {
+        color: black;
+    }
+}
+
 .weeding-location {
     img {
         width: 40px;
@@ -412,18 +427,7 @@
     }
 
     #open-location {
-        padding: 2vh;
-        background-color: rgb(247, 195, 87);
-        color: black;
-        border: 0;
-        border-radius: 1rem;
-        width: 50%;
-        margin: 0 auto;
-        margin-top: 1em;
-
-        h2 {
-            color: black;
-        }
+        margin-top: 1rem;
     }
 }
 
@@ -515,6 +519,16 @@
 
     #rima-ilham-logo {
         height: 45px;
+    }
+
+    #virtual-wedding {
+        h3 {
+            line-height: 1.5;
+        }
+    }
+
+    #virtual-wedding * + * {
+        margin-top: 1rem;
     }
 }
 
