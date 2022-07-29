@@ -295,6 +295,23 @@
         margin-right: 0;
     }
 
+    #virtual-wedding {
+
+        #instagram-link {
+            width: 50%;
+
+
+            p {
+                margin-top: 0;
+                font-weight: 700;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
     .photo-placeholder {
         max-width: 100px;
     }
@@ -343,6 +360,34 @@
 
 #undangan-event {
     --region-space: 1rem;
+
+    
+    #virtual-wedding {
+        --region-space: 0.2rem;
+        h3 {
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        p {
+            max-width: 700px;
+            line-height: 1.5;
+        }
+    }
+
+    #instagram-link {
+        // width: 75%;
+
+
+        p {
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+    }
 }
 
 #undangan-date {
@@ -374,7 +419,7 @@
 }
 
 #akad-nikah {
-    --region-space: 2rem;
+    --region-space: 0.2rem;
 
     
 }
@@ -457,6 +502,7 @@
     .send-button {
         background-color:  rgb(247, 195, 87);
         min-width: 300px;
+        color: black;
     }
 }
 
@@ -527,17 +573,49 @@
     #virtual-wedding {
         h3 {
             line-height: 1.5;
+            font-weight: 400;
         }
     }
 
     #instagram-link {
         h3 {
             margin-top: 0;
+            font-weight: 700;
+        }
+
+        img {
+            margin-right: 10px;
         }
     }
 
     #virtual-wedding * + * {
         // margin-top: 1rem;
+    }
+
+    #list-mengundang {
+        --region-space: 1rem;
+
+        #pihak-laki-laki {
+            --region-space: 1rem;
+        }
+
+        #pihak-perempuan {
+            --region-space: 0.2rem;
+        }
+
+        h1 {
+            font-size: clamp(1.25rem,1.2rem + .71vw,1.75rem)
+        }
+
+        h2 {
+            font-size: clamp(1.125rem,1rem + .40vw,1.25rem);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+        }
     }
 }
 

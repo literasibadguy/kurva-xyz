@@ -4,6 +4,7 @@ node_modules
 src/site/_data/resource*.json
 
 src/audio/
+src/site/content/rimailmanwedding/virtual/index.njk
 
 src/site/_data/invitationData.json
 src/images/rm

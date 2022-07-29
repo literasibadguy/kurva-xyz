@@ -11,7 +11,6 @@ tags:
     - feeds
     - flex
     - basic
-    - in-progress
 ---
 
 <div id="happiness-page">
