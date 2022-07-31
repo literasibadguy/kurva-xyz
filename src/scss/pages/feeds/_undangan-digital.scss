@@ -610,11 +610,36 @@
         h2 {
             font-size: clamp(1.125rem,1rem + .40vw,1.25rem);
             font-weight: 700;
+            color: #ffe4a3;
         }
 
         p {
             font-size: 12px;
             font-weight: 400;
+            margin-top: 0.2rem;
+        }
+    }
+
+    #pihak-keluarga {
+        --auto-grid-min-item-size: 1rem;
+        --auto-grid-replacement: 2;
+        --region-space: 1rem;
+    }
+
+    #kel-flex {
+        margin-top: 0;
+
+        h2 {
+            font-size: clamp(0.725rem,0.5rem + .40vw,1.25rem);
+        }
+
+        :first-child {
+            border-bottom: 1px solid rgb(247, 195, 87);
+            padding-bottom: 0.2rem;
+        }
+
+        :last-child {
+            margin-top: 0.5rem;
         }
     }
 }
