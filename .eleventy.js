@@ -33,7 +33,7 @@ module.exports = function (config) {
         return collection.getFilteredByTag("feeds");
     });
     config.addCollection('tags', tags);
-    config.addCollection('invitations', invitations);
+    // config.addCollection('invitations', invitations);
     config.addCollection('memoized', (collection) => {
         return memoize(collection.getAll());
     })

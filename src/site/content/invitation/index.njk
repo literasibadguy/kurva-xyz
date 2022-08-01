@@ -1,20 +1,10 @@
 ---
 layout: layouts/restrict-page.njk
-permalink: /{{ paged.url }}index.html
 title: The Weeding of Rima and Ilman
 thumbnail: 'https://kurva.xyz/images/rm/cover-6-og.jpg'
 alt: Picture of The Weeding of Rima and Ilman
-renderData:
-    title: "{{ paged.title }}"
-    description: "{{ paged.description }}"
 pageScripts:
     - '/js/invitation-page.js'
-pagination:
-  data: collections.invitations
-  size: 1
-  alias: paged
-  resolve: values
-  addAllPagesToCollections: true
 ---
 
 {% include "partials/transition-scroll.njk" %}
@@ -221,7 +211,7 @@ pagination:
             <p>Wassalamualaikum Warahmatullahi Wabarakatuh</p>
             <h3>KAMI YANG BERBAHAGIA</h3>
             <div id="pihak-keluarga" class="auto-grid region">
-            <div id="kel-flex"><h2>Kel. Bpk. Drs. H. Edi Saputra</h2><h2>Ibu Dra. Hj. Nurbainiir</h2></div>
+            <div id="kel-flex"><h2>Kel. Bpk. Drs. H. Edi Saputra</h2><h2>Ibu Dra. Hj. Nurbainir</h2></div>
             <div id="kel-flex"><h2>Kel. Alm. Drs. Dicky Akhmad Haidir</h2><h2>Ibu Enung Nurani</h2></div>
             </div>
         </div>
@@ -248,3 +238,16 @@ pagination:
                 <rect class="st0" width="32" height="32"/>
                 </svg>
             </button> #}
+
+{# 
+{# permalink: /{{ paged.url }}index.html #}
+{#renderData: #}
+    {# title: "{{ paged.title }}" #}
+    {# description: "{{ paged.description }}"
+pagination:
+  data: collections.invitations
+  size: 1
+  alias: paged
+  resolve: values
+  addAllPagesToCollections: true
+ #}

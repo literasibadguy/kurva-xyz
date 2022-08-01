@@ -116,7 +116,7 @@ ul:not([class]) {
     padding-inline-start: 1rem;
   
     > li::before {
-      content: '';
+      // content: '';
       display: block;
       position: absolute;
       inset: 1ex 0 0 0;
