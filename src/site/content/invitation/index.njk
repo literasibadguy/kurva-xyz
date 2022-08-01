@@ -240,6 +240,16 @@ pageScripts:
             </button> #}
 
 {# 
+permalink: /{{ paged.url }}index.html
+renderData:
+    title: "{{ paged.title }}"
+    description: "{{ paged.description }}"
+pagination:
+  data: collections.invitations
+  size: 1
+  alias: paged
+  resolve: values
+  addAllPagesToCollections: true
 {# permalink: /{{ paged.url }}index.html #}
 {#renderData: #}
     {# title: "{{ paged.title }}" #}
