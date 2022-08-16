@@ -1,0 +1,54 @@
+
+
+#lemon-page {
+    min-height: 100vh;
+    background-color: #98dae9;
+}
+
+.lemon-board {
+    background-color: white;
+    border: 1px solid black;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 1rem;
+}
+
+#lemon-banner {
+    min-height: 40vh;
+    display: flex;
+    padding: 0;
+}
+
+#lemon-banner-cover {
+    background-color: white;
+    background-image: url('/images/feeds/lemon-clip-1.png');
+    background-repeat: repeat;
+    background-size: 45px;
+    width: 50%;
+}
+
+#lemon-banner-inner {
+    padding: 1rem;
+    width: 50%;
+    background-color: #176a57;
+    border-radius: 1rem;
+}
+
+#first-menu-lemon {
+    min-height: 40vh;
+    display: flex;
+    padding: 0;
+
+    #inside-lemon {
+        border-right: 1px solid black;
+    }
+}
+
+.lemon-sub {
+    padding: 1rem;
+}
+
+#inside-lemon, #promo-lemon {
+    width: 50%;
+    min-height: 40vh;
+}
