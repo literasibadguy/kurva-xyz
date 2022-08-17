@@ -1,3 +1,5 @@
+@import '../bases';
+
 
 @keyframes scroll {
     0% {
@@ -26,9 +28,8 @@
 .lemon-board {
     background-color: white;
     border: 1px solid black;
-    margin: 2em;
+    margin: 0;
     padding: 1em;
-    border-radius: 1rem;
 }
 
 #lemon-banner {
@@ -37,10 +38,11 @@
     padding: 0;
     position: relative;
     border-radius: 1rem;
+    flex-wrap: wrap;
 }
 
 #lemon-banner-animated {
-    width: 50%;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -73,13 +75,14 @@
 
 #lemon-banner-inner {
     padding: 1rem;
-    width: 50%;
+    width: 100%;
     background-color: #176a57;
     border-radius: 1rem;
+    height: 300px;
 
     #lemon-heading {
         color: #f8f2ab;
-        padding: 8em;
+        padding: 2em;
         text-align: center;
         font-weight: 400;
 
@@ -93,6 +96,7 @@
 #first-menu-lemon {
     min-height: 40vh;
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
 
     #inside-lemon {
@@ -106,21 +110,25 @@
     overflow: hidden;
     display: flex;
     gap: 1rem;
+    padding: 0.8rem;
 }
 
 #lemon-slogans {
     display: flex;
-    min-width: 100%;
+    min-width: unset;
     justify-content: space-around;
     animation: scroll 10s linear infinite;
     gap: 1rem;
 
     li {
         margin-top: 0;
-        // background-color: #176a57;
-        border-radius: 1rem;
+        background-color: white;
+        border-radius: 2rem;
+        border: 1px solid black;
+        padding: 1rem;
         h2 {
             font-weight: 400;
+            text-align: center;
         }
     }
 }
@@ -145,7 +153,7 @@
 }
 
 #inside-lemon, #promo-lemon {
-    width: 50%;
+    width: 100%;
     min-height: 40vh;
     font-weight: 400;
 
@@ -154,4 +162,34 @@
         text-align: center;
         font-size: 2em;
     }
+}
+
+@include media-query('md') {
+
+    .lemon-board {
+        margin: 1em;
+        border-radius: 1em;
+    }
+
+    #lemon-slogans {
+        min-width: 100%;
+    }
+
+    #lemon-banner-animated {
+        width: 50%;
+    }
+
+    #lemon-banner-inner {
+        width: 50%;
+        height: unset;
+
+        #lemon-heading {
+            padding: 8em;
+        }
+    }
+
+    #inside-lemon, #promo-lemon {
+        width: 50%;
+    }
+
 }
