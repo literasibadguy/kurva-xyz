@@ -20,6 +20,16 @@
     }
   }
 
+  @keyframes scrollVertical {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateY(calc(-100% - 1rem));
+    }
+  }
+
+
 #lemon-page {
     min-height: 100vh;
     background: linear-gradient(#98dae9, #589ac6);
@@ -89,6 +99,22 @@
         h2 {
             font-weight: 400;
             font-size: 36px;
+        }
+    }
+}
+
+#list-ingredient {
+    gap: 1rem;
+
+    li {
+        border-bottom: 1px solid black;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        &:before {
+            content: unset;
         }
     }
 }
