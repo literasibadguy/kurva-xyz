@@ -10,6 +10,15 @@
     }
   }
 
+  @keyframes scrollReverse {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(101% - 1rem));
+    }
+  }
+
 
   @keyframes scrollLemon {
     0% {
@@ -105,6 +114,7 @@
 
 #list-ingredient {
     gap: 1rem;
+    animation: scrollVertical 8s linear infinite;
 
     li {
         border-bottom: 1px solid black;
@@ -171,6 +181,8 @@
 
     #menu-inner {
         background: linear-gradient(#efe12f, #f8f2ab);
+        overflow: hidden;
+        max-height: 30vh;
     }
 
     #promo-inner {
@@ -187,6 +199,50 @@
         font-weight: 400;
         text-align: center;
         font-size: 2em;
+    }
+}
+
+#buy-now-button {
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid black;
+    width: 100%;
+    overflow: hidden;
+    
+
+    #buynow-inner {
+        gap: 1rem;
+        display: flex;
+        overflow: hidden;
+    }
+
+    li {
+        border: 1px solid black;
+        border-radius: 1rem;
+        padding: 1em;
+        background-color: #176a57;
+        width: 300px;
+    }
+    
+    h2 {
+        font-weight: 400;
+        color: white;
+        border-radius: 1px solid white;
+        font-size: 24px;
+        color: white;
+    }
+
+}
+
+#list-buynow-text {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 12s linear infinite reverse;
+    justify-content: space-around;
+
+
+    li {
+        margin-top: 0;
     }
 }
 
