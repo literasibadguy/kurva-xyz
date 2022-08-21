@@ -57,7 +57,7 @@ tags:
             <p>JULY 14</p>
         </div>
          <div id="wof-line-5" class="wof-stack">
-            <img id="wof-line-img" src="/images/feeds/malay-success-woman.jpg" />
+            <img id="wof-line-img-filter" src="https://d2w9rnfcy7mm78.cloudfront.net/6944930/original_90cfeaec4e66b1d62c77a442391a4efa.jpg?1587401481?bc=0" />
             <h2>Featured This Week</h2>
             <p>I realize I have given my true talents, when I try owned a business</p>
             <p>JULY 12</p>
