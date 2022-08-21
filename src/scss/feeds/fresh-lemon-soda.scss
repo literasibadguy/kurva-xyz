@@ -39,6 +39,15 @@
   }
 
 
+  @keyframes rotate3d {
+    0% {
+        transform: rotate3d(0);
+    }
+    100%{
+        transform: rotate3d(1, 90, 1, 90deg)
+    }
+  }
+
 #lemon-page {
     min-height: 100vh;
     background: linear-gradient(#98dae9, #589ac6);
@@ -66,6 +75,14 @@
     overflow: hidden;
 }
 
+#subscribe-link {
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #lemon-banner-cover {
     background-size: 45px;
     width: 100%;
@@ -81,9 +98,16 @@
         // animation: scrollLemon 10s linear infinite;
 
         img {
-            // border: 1px solid black;
+            border: 1px solid black;
             border-radius: 10em;
             animation: scrollLemon 5s linear infinite alternate;
+        }
+
+        li {
+            
+            &:before {
+                content: unset;
+            }
         }
     }
 
@@ -96,20 +120,38 @@
     padding: 1rem;
     width: 100%;
     background-color: #176a57;
-    border-radius: 1rem;
     height: 300px;
 
     #lemon-heading {
         color: #f8f2ab;
-        padding: 2em;
+        padding: 0.5em;
         text-align: center;
         font-weight: 400;
 
         h2 {
             font-weight: 400;
-            font-size: 36px;
+            font-size: 28px;
         }
     }
+
+    #lemon-policy {
+        font-size: 12px;
+    }
+}
+
+#empty-yellow {
+    --sidebar-target-width: 3rem;
+    border-right: 1px solid black;
+}
+
+#beli-sekarang-link {
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #f8f2ab;
+    color: black;
+    margin: 1em;
+    font-size: 18px;
+    border: 1px solid black;
 }
 
 #list-ingredient {
@@ -120,7 +162,9 @@
         border-bottom: 1px solid black;
 
         h2 {
-            font-size: 24px;
+            font-size: 20px;
+            text-align: left;
+            padding-bottom: 0.5rem;
         }
 
         &:before {
@@ -153,7 +197,7 @@
     display: flex;
     min-width: unset;
     justify-content: space-around;
-    animation: scroll 10s linear infinite;
+    animation: scroll 12s linear infinite;
     gap: 1rem;
 
     li {
@@ -162,15 +206,22 @@
         border-radius: 2rem;
         border: 1px solid black;
         padding: 1rem;
+        width: 160px;
         h2 {
             font-weight: 400;
             text-align: center;
+        }
+
+        &:before {
+            content: unset;
         }
     }
 }
 
 .lemon-sub {
     padding: 1rem;
+    background: linear-gradient(#faf9ee, #f27a52);
+    text-align: center;
 
     .lemon-sub-inner {
         min-height: 30vh;
@@ -186,7 +237,54 @@
     }
 
     #promo-inner {
-        background: linear-gradient(rgb(13, 174, 86), rgb(235, 255, 81));
+        background-color: white;
+        overflow: hidden;
+        // display: flex;
+        gap: 1rem;
+        max-height: 30vh;
+
+        #promo-lemon-bg {
+            width: 100%;
+            min-height: 30vh;
+            // background-image: url('/images/feeds/lemon-clip-2.png');
+            // background-size: 60px;
+            // background-repeat: space;
+            
+        }
+
+        #lemon-clip-bg {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                animation: rotate3d 3s linear infinite alternate;
+                margin-top: 0;
+
+                &:before {
+                    content: unset;
+                }
+
+                img {
+                    width: 250px;
+                }
+            }
+        }
+
+        #promo-lemon-text {
+            position: relative;
+            bottom: 10rem;
+            z-index: 2;
+        }
+
+        #promo-lemon-bg-second {
+            min-width: 100%;
+            min-height: 30vh;
+            background-image: url('/images/feeds/lemon-clip-2.png');
+            background-size: 40px;
+            background-repeat: space;
+            transform: translateX(-100%);
+            // animation: scrollRightBottom 10s linear infinite;
+        }
     }
 }
 
@@ -198,7 +296,7 @@
     h2 {
         font-weight: 400;
         text-align: center;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -208,6 +306,7 @@
     border: 1px solid black;
     width: 100%;
     overflow: hidden;
+    cursor: pointer;
     
 
     #buynow-inner {
@@ -222,13 +321,17 @@
         padding: 1em;
         background-color: #176a57;
         width: 300px;
+
+        &:before {
+            content: unset;
+        }
     }
     
     h2 {
         font-weight: 400;
         color: white;
         border-radius: 1px solid white;
-        font-size: 24px;
+        font-size: 20px;
         color: white;
     }
 
@@ -237,7 +340,7 @@
 #list-buynow-text {
     display: flex;
     gap: 1rem;
-    animation: scroll 12s linear infinite reverse;
+    animation: scroll 16s linear infinite reverse;
     justify-content: space-around;
 
 
@@ -255,6 +358,10 @@
 
     #lemon-slogans {
         min-width: 100%;
+
+        li {
+            width: unset;
+        }
     }
 
     #lemon-banner-animated {
@@ -264,14 +371,39 @@
     #lemon-banner-inner {
         width: 50%;
         height: unset;
+        border-radius: 1rem;
 
         #lemon-heading {
-            padding: 8em;
+            padding: 6em;
+            
+            h2 {
+                font-size: 30px;
+            }
         }
     }
 
     #inside-lemon, #promo-lemon {
         width: 50%;
+
+        h2 {
+            font-size: 2em;
+        }
+    }
+
+    #list-ingredient {
+
+        li {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    #buy-now-button {
+
+        h2 {
+            font-size: 24px;
+        }
     }
 
 }

@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/base'
 title: Fresh Lemon Soda Machine
+cover: "./src/images/feeds/fresh-lemon-store.png"
 pageScripts:
     - '/js/experiments-page.js'
 styleScripts:
@@ -15,22 +16,28 @@ tags:
 
 <div id="lemon-page">
     <div id="lemon-container">
+        <div class="w-stack" style="text-align: center; padding: 1rem; border-bottom: 1px solid black;">
+            <p>FRESH LEMON IN YOUR HOME.</p>
+            <p style="margin-top: 0;">Subscribe here for daily delivery juice lemon bottles in your door.</p>
+            <a id="subscribe-link">SUBSCRIBE NOW</a>
+        </div>
         <div class="lemon-board" id="lemon-banner">
         <div id="lemon-banner-animated">
             <div id="lemon-banner-cover">
                 <div>
                 <ul id="lemon-lines">
-                <li><img src="/images/feeds/lemon-clip-1.png"></li>
+                <li><div class="dot-lemon"></div><img src="/images/feeds/lemon-clip-1.png"></li>
                 <li><img src="/images/feeds/lemon-clip-1.png"></li>
                 </ul>
                 </div>
             </div>
         </div>
         <div id="lemon-banner-inner">
-            <div id="lemon-heading">
+            <div id="lemon-heading" class="w-stack">
             <h2>FRESH LEMON WITH SODA</h2>
             <p>A HIGH SENSATION WITH FRESHNESS INSIDE YOUR LUNG</p>
-            <a id="beli-sekarang-link">BELI SEKARANG</a>
+            <a id="beli-sekarang-link">BUY NOW</a>
+            <p id="lemon-policy">Rp.5,000 per CAN Included Tax. The price based on Indonesia Jurisdiction</p>
             </div>
         </div>
         </div>
@@ -57,18 +64,19 @@ tags:
         <div class="lemon-board" id="first-menu-lemon">
             <div class="lemon-sub" id="inside-lemon">
                 <h2>INSIDE FRESH LEMON</h2>
+                <p>WE USE THE FRESHEST INGREDIENT EVER</p>
                 <div id="menu-inner" class="lemon-sub-inner">
                     <div class="sidebar">
                     <div id="empty-yellow">
                     </div>
                     <div>
                         <ul id="list-ingredient">
-                        <li><h2>CARBONATED WATER</h2></li>
-                        <li><h2>PALM SUGAR</h2></li>
-                        <li><h2>CINCAU EXTRACT</h2></li>
-                        <li><h2>LEMON EXTTRACT</h2></li>
-                        <li><h2>GRAIN</h2></li>
-                        <li><h2>RICE EXTRACT</h2></li>
+                            <li><h2>CARBONATED WATER</h2></li>
+                            <li><h2>PALM SUGAR</h2></li>
+                            <li><h2>CINCAU EXTRACT</h2></li>
+                            <li><h2>LEMON EXTTRACT</h2></li>
+                            <li><h2>GRAIN</h2></li>
+                            <li><h2>RICE EXTRACT</h2></li>
                         </ul>
                         <ul id="list-ingredient" aria-hidden="true">
                         <li><h2>CARBONATED WATER</h2></li>
@@ -84,7 +92,20 @@ tags:
             </div>
             <div class="lemon-sub" id="promo-lemon">
                 <h2>CLAIM YOUR VITAMIN C</h2>
+                <p>STAY HEALTHY IS OUR TOP QUALITY ASSURANCE</p>
                 <div id="promo-inner" class="lemon-sub-inner">
+                     <div id="promo-lemon-bg">
+                        <ul id="lemon-clip-bg">
+                            <li><img src="/images/feeds/lemon-clip-2.png"></li>
+                             <li><img src="/images/feeds/lemon-clip-2.png"></li>
+                        </ul>
+                    </div>
+                    <div id="promo-lemon-text"
+                    <h2>FREE LEMON VOUCHER</h2>
+                    <h2>CLAIM 20% HERE</h2>
+                    </div>
+                    {# <div id="promo-lemon-bg-second" aria-hidden="true"> #}
+                    {# </div> #}
                 </div>
             </div>
         </div>
@@ -93,24 +114,25 @@ tags:
                 <button id="buy-now-button">
                     <div id="buynow-inner">
                     <ul id="list-buynow-text" aria-hidden="true">
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
                     </ul>
                     <ul id="list-buynow-text">
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
-                        <li><h2>BELI SEKARANG</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
+                        <li><h2>ORDER NOW</h2></li>
                     </ul>
                     </div>
                 </button>
             </div>
+            <p style="text-align: center; padding: 1rem; border-bottom: 1px solid black;" id="lemon-footnote">THE ORDER IS ONLY AVAILABLE ON TAKEAWAY ORDER. NO DELIVERY ORDER</p>
         </div>
     </div>
 </div>
