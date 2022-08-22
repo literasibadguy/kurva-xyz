@@ -1,5 +1,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="{{ eleventy.generator }}">
 {%- set subtitle %}{{ blogtitle or searchTitle or relatedTitle or tiptitle or eleventyNavigation.key or title }}{% endset %}
 {%- set subtitleText %}{{ subtitle }}{% if subtitle and subtitle != "Kurva, eksperimen desain web dan belajar CSS" %} - Kurva{% endif %}{% endset %}
 <title>{{ subtitleText }}</title>
