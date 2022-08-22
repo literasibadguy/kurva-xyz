@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Order Dessert with Sidebar Filter
-cover: "./src/images/feeds/industri-aviasi-grid-area-wide.png"
+cover: "/images/feeds/industri-aviasi-grid-area-wide.png"
 # tags: 
     # - feeds
     # - grid

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Magazine Advertising
-cover: "./src/images/feeds/iklan-majalah.jpg"
+cover: "/images/feeds/iklan-majalah.jpg"
 # jurnal: "/jurnal/bikin-iklan-majalah-dengan-flex"
 tags: 
     - feeds

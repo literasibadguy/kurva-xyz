@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Industri Aviasi dengan grid-area
-cover: "./src/images/feeds/industri-aviasi-grid-area-wide.png"
+cover: "/images/feeds/industri-aviasi-grid-area-wide.png"
 jurnal: "/sources/css-aviation-and-grid-area"
 tags: 
     - feeds

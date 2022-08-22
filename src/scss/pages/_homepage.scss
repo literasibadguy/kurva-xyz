@@ -20,6 +20,33 @@
     }
 }
 
+.card[cover-image^="/images"] {
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    // background-image: url(var(--bg-img-src, ""));
+
+    &:hover {
+        background-color: black;
+        
+        h1, h2, h3 {
+            color: white;
+        }
+    }
+
+    &:hover::after, &:focus::after {
+        content: var(--bg-img-src, "");
+        background-size: 500px;
+        top: 0;
+        right: 0;
+        position: absolute;
+        max-width: 600px;
+        max-height: 600px;
+        // background-color: black;
+        color: white;
+    }
+    
+}
+
 .heading__section {
     
     h1 {

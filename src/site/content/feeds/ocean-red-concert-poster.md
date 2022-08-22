@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/landing-page'
 title: Contemporary Red Concert Poster with Dilemma Position
-cover: "./src/images/feeds/ocean-red-concert-poster.jpg"
+cover: "/images/feeds/ocean-red-concert-poster.jpg"
 draft: true
 pageScripts:
     - '/js/experiments-page.js'

@@ -16,7 +16,7 @@ layout: 'layouts/base'
             </div>
         </div>
     </div>
-    <div class="auto-grid" id="archive__collections">
+    <div class="" id="archive__collections">
         {% for feed in paged | reverse %}
             {# {% set data = feed.data %} #}
 
@@ -27,12 +27,12 @@ layout: 'layouts/base'
                 {# tags: feed.data.tags, #}
                 {# jurnal: feed.data.jurnal #}
             {# }) }} #}
-            <article class="card">
+            <article class="card" style="--bg-img-src: url({{ feed.data.cover }});" cover-image="{{ feed.data.cover }}">
             <a href="{{ feed.url }}" class="w-stack">
 
-                {% if feed.data.cover %}
+                {# {% if feed.data.cover %}
                     {% Image feed.data.cover, "sample data", "sample-data-img", "min-width: 600px;" %}
-                {% endif %}
+                {% endif %} #}
 
                 <h2>{{ feed.data.title }}</h2>
             </a>
