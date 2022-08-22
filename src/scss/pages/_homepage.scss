@@ -1,14 +1,14 @@
 
 
 #archive__collections {
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .heading__home  {
     // color: whitesmoke;
     // background-color: black;
     border-top: 1px solid black;
-    margin-left: 2rem;
+    margin-left: 1rem;
     @include apply-utility('font', 'serif');
 
     .region {
@@ -22,7 +22,12 @@
 
 .card[cover-image^="/images"] {
     padding: 1rem;
-    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    border-left: 1px solid black;
     // background-image: url(var(--bg-img-src, ""));
 
     &:hover {
@@ -45,6 +50,10 @@
         color: white;
     }
     
+}
+
+.card__tags {
+    margin-top: 0;
 }
 
 .heading__section {

@@ -26,8 +26,8 @@ eleventyComputed:
                 {# tags: feed.data.tags, #}
                 {# jurnal: feed.data.jurnal #}
             {# }) }} #}
-            <article class="card">
-            <a href="{{ feed.url }}" class="w-stack">
+            <a href="{{ feed.url }}">
+            <article class="card w-stack">
 
                 {% if feed.data.cover %}
                     {% Image feed.data.cover, "sample data", "sample-data-img", "min-width: 600px;" %}
@@ -42,7 +42,8 @@ eleventyComputed:
                     {{ tagPills(feed.data.tags) }}
                 </div>
             {% endif %}
-            </article>  
+            </article> 
+            </a>
             
         {% endfor %}
     </div>
