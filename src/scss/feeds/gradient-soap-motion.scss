@@ -1,0 +1,98 @@
+@import '../bases';
+
+@keyframes motionbg {
+	0% {
+		background-position: 50% 0%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
+}
+
+#gradient-soap-page {
+    
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#motion-bg {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    // animation: motionbg 10s ease infinite;
+    background-size: 400% 400%;
+    overflow: hidden;
+}
+
+#poster {
+    overflow: hidden;
+    max-width: 1080px;
+    max-height: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(-45deg, #f16757, #e5d1cc);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+#circle-blue-dark {
+    width: 100%;
+    height: 200px;
+    // color: #10213f;
+    // position: relative;
+    top: 0;
+    filter: blur(20px);
+    background-color: #0a172e;
+    box-shadow: 10px -40px 20px 100px #0a172e;
+    // filter: drop-shadow(0 -10mm 4mm #365085);
+    z-index: 3;
+    border-radius: 30vh;
+
+}
+
+#circle-blue-light {
+    width: 600px;
+    height: 600px;
+    color: #f9760d;
+    // filter: blur(0.5rem);
+    // position: relative;
+    bottom: 0;
+    filter: blur(40px);
+    background-color: #f9760d;
+    box-shadow: 10px -40px 40px 100px;
+    z-index: 2;
+    border-radius: 30vh;
+}
+
+#circle-red {
+    width: 100%;
+    height: 400px;
+    color: red;
+    // filter: blur(0.5rem);
+    // position: relative;
+    right: 0;
+    filter: blur(40px);
+    background-color: red;
+    box-shadow: 10px -40px 40px 100px;
+    z-index: 2;
+    border-radius: 30vh;
+}
+
+#circle-ocean {
+    width: 100%;
+    height: 400px;
+    color: red;
+    // filter: blur(0.5rem);
+    // position: relative;
+    right: 0;
+    filter: blur(40px);
+    background-color: red;
+    box-shadow: 10px -40px 40px 100px;
+    z-index: 2;
+    border-radius: 30vh;
+}
