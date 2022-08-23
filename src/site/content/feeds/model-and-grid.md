@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Model and Grid
-cover: "/images/feeds/model-dan-grid-wide.png"
+cover: "https://assets.kurva.xyz/model-dan-grid-wide.jpg"
 jurnal: "/sources/css-model-dan-grid"
 tags: 
     - feeds

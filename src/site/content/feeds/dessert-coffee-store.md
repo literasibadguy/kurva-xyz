@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/landing-page'
 title: Dessert Coffee Store with Tab Menu
-cover: "/images/feeds/dessert-and-coffee-store.jpg"
+cover: "https://assets.kurva.xyz/dessert-and-coffee-store.jpg"
 draft: true
 pageScripts:
     - '/js/experiments-page.js'

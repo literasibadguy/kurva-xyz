@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/landing-page'
 title: Women Lifestyle Magazine with Grayscale Filter
-cover: "/images/feeds/women-of-business.jpg"
+cover: "https://assets.kurva.xyz/women-of-business.jpg"
 pageScripts:
     - '/js/experiments-page.js'
 styleScripts:

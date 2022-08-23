@@ -20,7 +20,7 @@
     }
 }
 
-.card[cover-image^="/images"] {
+.card {
     padding: 1rem;
     border-top: 1px solid black;
     display: flex;
@@ -46,7 +46,7 @@
         position: absolute;
         max-width: 600px;
         max-height: 600px;
-        // background-color: black;
+        background-color: black;
         color: white;
     }
     

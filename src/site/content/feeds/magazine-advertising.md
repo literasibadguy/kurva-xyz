@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Magazine Advertising
-cover: "/images/feeds/iklan-majalah.jpg"
+cover: "https://assets.kurva.xyz/iklan-majalah.jpg"
 # jurnal: "/jurnal/bikin-iklan-majalah-dengan-flex"
 tags: 
     - feeds

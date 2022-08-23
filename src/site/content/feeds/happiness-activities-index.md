@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/landing-page'
 title: Happiness Activities Index Table
-cover: "/images/feeds/happines-activities-index.png"
+cover: "https://assets.kurva.xyz/happines-activities-index.png"
 draft: true
 pageScripts:
     - '/js/experiments-page.js'
