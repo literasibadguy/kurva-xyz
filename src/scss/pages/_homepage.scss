@@ -9,7 +9,7 @@
     // background-color: black;
     border-top: 1px solid black;
     margin-left: 1rem;
-    @include apply-utility('font', 'serif');
+    @include apply-utility('font', 'mono');
 
     .region {
         --region-space: #{get-space('size-1')};

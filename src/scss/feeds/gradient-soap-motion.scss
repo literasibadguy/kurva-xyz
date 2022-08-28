@@ -1,5 +1,14 @@
 @import '../bases';
 
+@font-face {
+    font-family: 'Adieu';
+    font-weight: 400;
+    font-display: optional;
+    src: local('Cormorant-SemiBold'),
+      url('/fonts/Adieu-Light.otf');
+  }
+  
+
 @keyframes motionbg {
 	0% {
 		background-position: 50% 0%;
@@ -19,11 +28,10 @@
 }
 
 
-#motion-bg {
+#gradient-inner {
     width: 100%;
     height: 100%;
     background-color: black;
-    // animation: motionbg 10s ease infinite;
     background-size: 400% 400%;
     overflow: hidden;
 }
@@ -38,18 +46,16 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 2rem;
+    position: relative;
 }
 
 #circle-blue-dark {
     width: 100%;
     height: 200px;
-    // color: #10213f;
-    // position: relative;
     top: 0;
     filter: blur(20px);
     background-color: #0a172e;
     box-shadow: 10px -40px 20px 100px #0a172e;
-    // filter: drop-shadow(0 -10mm 4mm #365085);
     z-index: 3;
     border-radius: 30vh;
 
@@ -59,8 +65,6 @@
     width: 600px;
     height: 600px;
     color: #f9760d;
-    // filter: blur(0.5rem);
-    // position: relative;
     bottom: 0;
     filter: blur(40px);
     background-color: #f9760d;
@@ -73,8 +77,6 @@
     width: 100%;
     height: 400px;
     color: red;
-    // filter: blur(0.5rem);
-    // position: relative;
     right: 0;
     filter: blur(40px);
     background-color: red;
@@ -87,12 +89,110 @@
     width: 100%;
     height: 400px;
     color: red;
-    // filter: blur(0.5rem);
-    // position: relative;
     right: 0;
     filter: blur(40px);
     background-color: red;
     box-shadow: 10px -40px 40px 100px;
     z-index: 2;
     border-radius: 30vh;
+}
+
+#gradient-top {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2em;
+
+    h1, h2, h3, p {
+        color: white;
+        font-size: 45px;
+        font-weight: 400;
+    }
+}
+
+#gradient__nav-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+
+    a {
+        color: white;
+        @include apply-utility('font', 'mono');
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#gradient-sponsor {
+    margin-top: 1rem;
+    p {
+        font-family: 'Adieu', Segoe UI,system-ui,-apple-system,sans-serif;
+        font-size: 18px;
+    }
+}
+
+#gradient-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+
+    #gradient-layer__title, #gradient-layer__subtitle, #gradient-layer__place, #gradient-layer__place {
+        font-family: 'Adieu', Segoe UI,system-ui,-apple-system,sans-serif;
+    }
+
+    #gradient-layer__place, #gradient-layer__place {
+        font-size: 25px;
+    }
+}
+
+#gradient-guests {
+    margin: 1rem;
+    --region-space: 1rem;
+    
+    p {
+        @include apply-utility('font', 'mono');
+        font-size: 16px;
+    }
+}
+
+#gradient-baazar {
+    margin: 1rem;
+    --region-space: 1rem;
+    
+    p {
+        @include apply-utility('font', 'mono');
+        font-size: 16px;
+    }
+
+    .bazaar-lists {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .bazaar__item {
+        margin: 1rem;
+        gap: 1em;
+    }
+}
+
+.guest__item {
+    margin: 1rem;
+
+}
+
+#gradient-schedule {
+    h3 {
+        font-size: 24px;
+        @include apply-utility('font', 'mono');
+    }
 }
