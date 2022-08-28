@@ -39,7 +39,7 @@
 #poster {
     overflow: hidden;
     max-width: 1080px;
-    max-height: 1350px;
+    min-height: 1350px;
     margin-left: auto;
     margin-right: auto;
     background: linear-gradient(-45deg, #f16757, #e5d1cc);
@@ -99,12 +99,12 @@
 
 #gradient-top {
     position: absolute;
-    bottom: 0;
+    top: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2em;
+    padding: 1em;
 
     h1, h2, h3, p {
         color: white;
@@ -121,9 +121,13 @@
     a {
         color: white;
         @include apply-utility('font', 'mono');
+        border-radius: 1rem;
+        padding: 1rem;
 
         &:hover {
             text-decoration: underline;
+            background-color: white;
+            color: black;
         }
     }
 }
@@ -142,20 +146,25 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 3em;
+    padding: 2em;
 
-    #gradient-layer__title, #gradient-layer__subtitle, #gradient-layer__place, #gradient-layer__place {
+    #gradient-layer__title, #gradient-layer__subtitle, #gradient-layer__place, #gradient-layer__date {
         font-family: 'Adieu', Segoe UI,system-ui,-apple-system,sans-serif;
+        font-size: 20px;
     }
 
     #gradient-layer__place, #gradient-layer__place {
-        font-size: 25px;
+        font-size: 14px;
     }
 }
 
 #gradient-guests {
     margin: 1rem;
     --region-space: 1rem;
+
+    .grouped-lists {
+        display: flex;
+    }
     
     p {
         @include apply-utility('font', 'mono');
@@ -187,12 +196,69 @@
 
 .guest__item {
     margin: 1rem;
-
 }
 
 #gradient-schedule {
     h3 {
-        font-size: 24px;
+        font-size: 20px;
         @include apply-utility('font', 'mono');
+    }
+}
+
+#gradient-submit {
+    margin-bottom: 1em;
+    a {
+        
+    }
+    h2 {
+        font-size: 24px;
+        font-family: 'Adieu', Segoe UI,system-ui,-apple-system,sans-serif;
+        max-width: 400px;
+        color: whitesmoke;
+        border-radius: 1em;
+        border: 1px solid whitesmoke;
+        padding: 1em;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+            background-color: whitesmoke;
+            color: red;
+        }
+    }
+}
+
+#event-sample-mark {
+    @include apply-utility('font', 'mono');
+    text-align: center;
+
+
+    p {
+        font-size: 11px;
+        font-weight: 400;
+    }
+}
+
+@include media-query('md') {
+
+    #gradient-top {
+        padding: 2em;
+    }
+
+    #gradient__nav-links {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    #gradient-type {
+        padding: 3em;
+
+        #gradient-layer__title, #gradient-layer__subtitle, #gradient-layer__place {
+            font-size: 45px;
+        }
+        
+        #gradient-layer__place, #gradient-layer__date {
+            font-size: 25px;
+        }
     }
 }
