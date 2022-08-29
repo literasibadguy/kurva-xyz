@@ -148,6 +148,11 @@
     height: 100%;
     padding: 2em;
 
+    #gradient-layer__event  {
+        margin-top: 2em;
+        text-align: center;
+    }
+
     #gradient-layer__title, #gradient-layer__subtitle, #gradient-layer__place, #gradient-layer__date {
         font-family: 'Adieu', Segoe UI,system-ui,-apple-system,sans-serif;
         font-size: 20px;
