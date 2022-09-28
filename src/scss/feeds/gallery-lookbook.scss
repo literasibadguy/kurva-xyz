@@ -5,6 +5,7 @@
 
     img {
         max-width: 600px;
+        min-height: 700px;
         object-fit: cover;
 
     }
@@ -23,6 +24,6 @@
     cursor: pointer;
 
     &:hover {
-        border: 1px solid black;
+        border: 2px solid black;
     }
 }
