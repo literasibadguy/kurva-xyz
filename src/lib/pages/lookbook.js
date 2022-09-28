@@ -2,4 +2,5 @@
 
 
 
-import '../components/LookbookGallery/gallery-item';
+import '../components/LookbookGallery/index';
+import '../components/LookbookGallery/look-item';

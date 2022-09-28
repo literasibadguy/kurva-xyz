@@ -16,10 +16,16 @@ export class LookItem extends BaseElement {
 
         this.label = '';
         this.source = "/feeds/bape-90s-lookbook.jpg";
+
+        this.clickedItem = this.clickedItem.bind(this);
     }
 
     clickedItem() {
         console.log("Look clicked")
+
+        let passImage = new CustomEvent('item-clicked', { bubbles: true, composed: true, detail: { source: this.source }})
+
+        this.dispatchEvent(passImage)
     }
 
     render() {
