@@ -16,8 +16,16 @@ tags:
 <div class="gallery-component cluster region wrapper">
     <look-book source="/images/feeds/bape-90s-lookbook.jpg" class="detail-image">
     </look-book>
-    <div id="grid-right" class="detail-grid cluster">
+    <div id="grid-right" class="detail-grid">
+        <div class="cluster">
+        <div class="button-left">
+        {% include "arrow--left.svg" %}
+        </div>
         <p>1 of {{ lookbook.gallerys | length }}</p>
+        <div class="button-right">
+        {% include "arrow--right.svg" %}
+        </div>
+        </div>
         <div id="gallery-items" class="detail-grid cluster">
             {% for item in lookbook.gallerys %}
                 <look-item source="{{ item.src }}"></look-item>
