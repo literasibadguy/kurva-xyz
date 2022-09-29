@@ -23,6 +23,7 @@ export class LookbookGallery extends BaseElement {
 
         this.galleryItems = document.querySelectorAll('look-item');
         for (const item of this.galleryItems) {
+            console.log(item)
             item.addEventListener('item-clicked', this.listenedEvent)
         }
         

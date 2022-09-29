@@ -1,7 +1,6 @@
 ---
 layout: 'layouts/base'
 title: Gallery Lookbook
-cover: "https://assets.kurva.xyz/fresh-lemon-store.png"
 pageScripts:
     - '/js/lookbook.js'
 styleScripts:
@@ -13,20 +12,16 @@ tags:
     - in-progress
 ---
 
+
 <div class="gallery-component cluster region wrapper">
     <look-book source="/images/feeds/bape-90s-lookbook.jpg" class="detail-image">
     </look-book>
-    <div id="gallery-items" class="detail-grid cluster">
-            <look-item source="https://64.media.tumblr.com/a809404229d8a4df15f1fed16ec78fe5/3d5390d72812f96d-28/s500x750/a4e8d0f3f01bd0bf04707fc62e728b675ce5b9ab.png"></look-item>
-            <look-item source="https://64.media.tumblr.com/886915bf4995725f11a594848d9047cd/8de6953917c9a946-0d/s1280x1920/ab78170fe03b54c37762668100ac8cd38e962104.jpg"></look-item>
-            <look-item source="https://64.media.tumblr.com/cebf19508751de93b542c4cd59729b5d/8de6953917c9a946-a2/s1280x1920/a6635bc6c1f92152290238a3e0c0ac3f744c5806.jpg"></look-item>
-            <look-item source="https://64.media.tumblr.com/b59cade24b97f8501ffaeae2129064fa/8de6953917c9a946-45/s1280x1920/efc047e55a1178eeab4a553c099d8775c2e678f3.jpg"></look-item>
-            <look-item source="https://64.media.tumblr.com/e91a4679016f2c729f12b5cc7945d03c/d9f00e037f8a5385-62/s1280x1920/24dfab0007514242b84e36a5752f1b232667a01c.jpg"></look-item>
-            <look-item source="https://64.media.tumblr.com/a809404229d8a4df15f1fed16ec78fe5/3d5390d72812f96d-28/s500x750/a4e8d0f3f01bd0bf04707fc62e728b675ce5b9ab.png"></look-item>
-            <look-item source="/images/feeds/bape-90s-lookbook.jpg"></look-item>
-            <look-item source="https://64.media.tumblr.com/4f5aabb7bd9a6df84b45592402a2ba16/9cd13732db0f3f2b-16/s1280x1920/ad4aad94d00807e901b0794790ccb27447db8e1c.jpg"></look-item>
+    <div id="grid-right" class="detail-grid cluster">
+        <p>1 of {{ lookbook.gallerys | length }}</p>
+        <div id="gallery-items" class="detail-grid cluster">
+            {% for item in lookbook.gallerys %}
+                <look-item source="{{ item.src }}"></look-item>
+            {% endfor %}
+        </div>
     </div>
 </div>
-
-{# https://64.media.tumblr.com/886915bf4995725f11a594848d9047cd/8de6953917c9a946-0d/s1280x1920/ab78170fe03b54c37762668100ac8cd38e962104.jpg #}
-{# https://64.media.tumblr.com/4f5aabb7bd9a6df84b45592402a2ba16/9cd13732db0f3f2b-16/s1280x1920/ad4aad94d00807e901b0794790ccb27447db8e1c.jpg #}

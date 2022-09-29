@@ -1,7 +1,7 @@
 
 const eleventyImage = require("@11ty/eleventy-img");
 const tags = require("./src/site/_collections/tags");
-const invitations = require("./src/site/_collections/invitations");
+// const invitations = require("./src/site/_collections/invitations");
 
 const Meta = require('./src/site/_includes/components/Meta');
 
