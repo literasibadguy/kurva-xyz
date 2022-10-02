@@ -15,6 +15,9 @@
     max-width: 400px;
     gap: 1em;
     align-content: flex-start;
+    max-height: 600px;
+    overflow: scroll;
+    scroll-behavior: auto;
 }
 
 .gallery-item {
@@ -26,4 +29,8 @@
     &:hover {
         border: 2px solid black;
     }
+}
+
+.button-left, .button-right {
+    cursor: pointer;
 }
