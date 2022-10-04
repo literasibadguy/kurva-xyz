@@ -20,6 +20,15 @@ export class LookItem extends BaseElement {
         this.clickedItem = this.clickedItem.bind(this);
     }
 
+    connectedCallback() {
+        super.connectedCallback()
+
+        document.addEventListener('keydown', e => {
+            let code = e.key;
+            console.log("Is there any code key here", code);
+        })
+    }
+
     clickedItem(e) {
         const item = e.currentTarget;
         console.log("Look clicked")
@@ -38,6 +47,8 @@ export class LookItem extends BaseElement {
             LEFT: 37,
             RIGHT: 39,
         }
+
+        console.log("Is it work on keydown");
 
         switch (e.keyCode) {
         case KEYCODE.RIGHT:

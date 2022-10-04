@@ -18,6 +18,7 @@ export class LookbookGallery extends BaseElement {
         this.listenedEvent = this.listenedEvent.bind(this);
         this.buttonLeftClicked = this.buttonLeftClicked.bind(this);
         this.buttonRightClicked = this.buttonRightClicked.bind(this);
+        this.onKeydown = this.onKeydown.bind(this);
     }
 
     connectedCallback() {
@@ -27,11 +28,8 @@ export class LookbookGallery extends BaseElement {
         this.rightButton = document.querySelector('.button-right');
         this.indicator = document.querySelector('#indicator');
 
-        console.log("Is there any left button", this.leftButton);
-
         this.galleryItems = document.querySelectorAll('look-item');
         for (const item of this.galleryItems) {
-            console.log(item)
             // item.addEventListener('item-clicked', this.listenedEvent);
             item.addEventListener('item-clicked', (event) => {
                 const index = Array.from(this.galleryItems).indexOf(item)
@@ -40,9 +38,10 @@ export class LookbookGallery extends BaseElement {
         }
         this.leftButton.addEventListener('click', this.buttonLeftClicked);
         this.rightButton.addEventListener('click', this.buttonRightClicked);
-        
 
-        console.log('this.gallery item', this.galleryItem);
+        document.addEventListener('keydown', e => {
+            this.onKeydown(e);
+        })
     }
 
     disconnectedCallback() {
@@ -69,6 +68,7 @@ export class LookbookGallery extends BaseElement {
         }
 
         const item = items[this.activeLook];
+        console.log(item);
         this.source = item.getAttribute('source');
 
         this.indicator.innerHTML = `${this.activeLook} of ${items.length}`
@@ -78,6 +78,7 @@ export class LookbookGallery extends BaseElement {
         const items = document.querySelectorAll('look-item');
         this.activeLook = (this.activeLook + 1) % items.length || 0;
         const item = items[this.activeLook];
+        console.log(item);
 
         this.source = item.getAttribute('source');
         this.indicator.innerHTML = `${this.activeLook} of ${items.length}`
@@ -91,6 +92,39 @@ export class LookbookGallery extends BaseElement {
         this.indicator.innerHTML = `${index} of 6`
 
         console.log(this.indicator);
+    }
+
+    onKeydown(e) {
+        const KEYCODE = {
+            END: "End",
+            HOME: "Home",
+            LEFT: "ArrowLeft",
+            RIGHT: "ArrowRight",
+        }
+
+        switch (e.key) {
+        case KEYCODE.RIGHT:
+            e.preventDefault();
+            this.buttonRightClicked(e);
+            console.log("RIGHT KEYCODE");
+            break;
+        case KEYCODE.LEFT:
+            e.preventDefault();
+            this.buttonLeftClicked(e);
+            console.log("LEFT KEYCODE");
+            break;
+        case KEYCODE.HOME:
+            e.preventDefault();
+            this.buttonLeftClicked(e);
+            console.log("HOME KEYCODE");
+            break;
+        case KEYCODE.END:
+            e.preventDefault();
+            this.buttonRightClicked(e);
+            console.log("END KEYCODE");
+            break;
+        }
+
     }
 
     render() {
