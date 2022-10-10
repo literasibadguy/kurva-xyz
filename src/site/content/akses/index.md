@@ -21,9 +21,6 @@ draft: true
                 <p>Akses ini dalam pengembangan dan uji coba, silakan kontak email untuk akses awal</p>
                 <p>Silakan tulis email anda dan lanjutkan pembayaran secara bank transfer ke
                 nomor rekening berikut.</p>
-                <p>BANK BCA 0292235664 a/n FIRAS RAFISLAM
-                <p>Jika sudah kami terima, kami akan memberikan konfirmasi akses anda. Terima kasih.</p>
-                <p>Membeli akses Kurva berarti anda sudah setuju dengan <a href="/syarat-ketentuan">syarat ketentuan kami</a></p>
             </div>
             <div id="paypal-button-container-P-4SC22356SF739513UMKCEHYI"></div>
             <kurva-paypal-button></kurva-paypal-button>

@@ -4,13 +4,35 @@
 
 }
 
+.orange-badge {
+    width: 300px;
+    height: 120px;
+    // background-color: rgb(222, 65, 9);
+    border-radius: 6em; 
+    padding: 2em;
+
+    #badge-text {
+        font-size: 24px;
+        text-align: center;
+        text-shadow: unset;
+        // @include apply-utility('font', 'serif');
+    }
+}
+
+.sentimen--section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
 #sentimen__bg-img {
     position: relative;
 }
 
 #landscape-img {
     width: 100%;
-    max-height: 1080px;
+    max-height: 730px;
     object-fit: cover;
 }
 
@@ -19,16 +41,24 @@
     top: 0;
     width: 100%;
     height: 100%;
-}
 
-#sentimen__inner-text {
     display: flex;
-    justify-content: space-around;
-    padding: 8em;
+    // justify-content: space-around;
+    padding: 3em;
     flex-direction: column;
     -webkit-box-pack: center;
     align-items: center;
     height: 100%;
+}
+
+#sentimen__inner-text {
+    display: flex;
+    justify-content: flex-start;
+    // padding: 8em;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    align-items: center;
+    height: 450px;
     text-align: center;
 
     h1, h2, p {
@@ -36,14 +66,24 @@
         text-align: center;
         @include apply-utility('font', 'serif');
         text-shadow: -1px 0 black,0 1px black,1px 0 black,0 -1px black;
+        font-weight: 700;
     }
 }
 
 #sentimen__question {
-    font-size: 24px;
+    font-size: 36px;
 }
 
 #sentimen__quote {
     font-size: clamp(40px, 60px, 80px);
     font-weight: 400;
+}
+
+#sentimen__foot {
+    background-color: rgb(222, 65, 9);
+    min-height: 320px;
+    min-width: 1000px;
+    width: 100%;
+    padding: 2vh;
+    text-align: center;
 }
