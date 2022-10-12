@@ -1,0 +1,53 @@
+
+#openorder-page {
+    background-color: #1b1a0f;
+}
+
+#first-poster {
+    width: 640px;
+    margin: 2em;
+    position: relative;
+}
+
+#first-poster img {
+    width: 640px;
+    height: 960px;
+    object-fit: cover;
+    margin: 2em;
+    z-index: 1;
+    position: relative;
+}
+
+#openorder-title {
+    color: white;
+    font-size: 64px;
+    position: absolute;
+    z-index: 2;
+    top: 5em;
+    right: 0;
+}
+
+#openorder-company {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2em;
+    left: 3em;
+    z-index: 2;
+}
+
+#openorder-company p {
+    color: white;
+    font-size: 14px;
+}
+
+#openorder-company h1 {
+    color: white;
+    font-size: 32px;
+}
+
+#openorder-company h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}

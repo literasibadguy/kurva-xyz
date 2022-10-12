@@ -18,7 +18,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-img": "^2.0.0",
