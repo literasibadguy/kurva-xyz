@@ -1,6 +1,6 @@
 ---
 layout: layouts/source-page.html
-title: Kunci CSS Model dan Grid
+title: Source CSS Model dan Grid
 jurnal: "/jurnal/grid-sederhana-menyusun-foto-model"
 renderData:
     title: Kunci CSS Model dan Grid
