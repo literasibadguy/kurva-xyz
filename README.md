@@ -4,7 +4,7 @@ https://kurva.xyz/
 
 KURVA is a web design exploration index, personal project by [literasibadguy](https://literasi.blog). Making graphic design, ugly posters and many more into web design. It's also a place to learn web design and deep more on HTML and CSS.
 
-<a href='https://ko-fi.com/T6T6D9A93' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href="https://www.buymeacoffee.com/literasibadguy" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 200px !important;" ></a>
 
 ## Building the site
 
