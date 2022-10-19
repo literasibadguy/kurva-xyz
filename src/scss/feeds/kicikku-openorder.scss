@@ -2,6 +2,7 @@
 #openorder-page {
     background-color: #1b1a0f;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #first-poster {
@@ -35,21 +36,35 @@
     border-radius: 1em;
 }
 
+.openorder-heading {
+    z-index: 2;
+    top: 18em;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1em;
+
+    #open-circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 10em;
+        background-color: white;
+    }
+}
+
 .openorder-title {
     color: white;
     font-size: 64px;
-    position: absolute;
-    z-index: 2;
-    top: 5em;
-    right: 0;
 }
 
 .hours-title {
     color: white;
-    font-size: 64px;
+    font-size: 32px;
     position: absolute;
     z-index: 2;
-    top: 1em;
+    top: 2em;
     right: 0;
 }
 
@@ -79,8 +94,10 @@
 }
 
 #hours-company {
-    bottom: 10em;
+    top: 2em;
     left: 3em;
+    min-height: 960px;
+    justify-content: space-evenly;
 }
 
 #openorder-company p, #hours-company p {
@@ -100,6 +117,13 @@
 }
 
 #hours-company h2 {
-    color: white;
-    font-size: 24px;
+    color: transparent;
+    font-size: 42px;
+    text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
+}
+
+.left-hour-item, .right-hour-item {
+    border-radius: 1em;
+    padding: 1em;
+    backdrop-filter: blur(10px);
 }
