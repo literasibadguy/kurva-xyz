@@ -45,7 +45,7 @@
     height: 100%;
 
     display: flex;
-    padding: 3em;
+    padding: 2em;
     flex-direction: column;
     -webkit-box-pack: center;
     align-items: center;
@@ -54,7 +54,7 @@
 
 #sentimen__inner-text {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     // padding: 8em;
     flex-direction: column;
     -webkit-box-pack: center;
