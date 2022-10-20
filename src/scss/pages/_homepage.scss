@@ -4,6 +4,17 @@
     margin: 1rem;
 }
 
+.archive__header {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+
+    .header__row {
+        padding: 1em;
+        font-size: 12px;
+        font-family: SFMono-Regular, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+    }
+}
+
 .heading__home  {
     // color: whitesmoke;
     // background-color: black;
@@ -21,19 +32,22 @@
 }
 
 .card {
+    // Testing grid for index
     padding: 1rem;
     border-top: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
     border-left: 1px solid black;
+    gap: 1rem;
+
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
     // background-image: url(var(--bg-img-src, ""));
 
     &:hover {
         background-color: black;
         
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             color: white;
         }
     }
@@ -64,5 +78,18 @@
 
     p {
         font-size: 14px;
+    }
+}
+
+@include media-query('md') {
+    .archive__header {
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    
+        .header__row {
+            padding: 1em;
+            font-size: 12px;
+            font-family: SFMono-Regular, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+        }
     }
 }

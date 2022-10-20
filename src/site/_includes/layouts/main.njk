@@ -17,34 +17,26 @@ layout: 'layouts/base'
         </div>
     </div>
     <div class="" id="archive__collections">
+        <div class="archive__header">
+            <p class="header__row">Name</p>
+            <p class="header__row">Display</p>
+            <p class="header__row">Status</p>
+        </div>
         {% for feed in paged | reverse %}
-            {# {% set data = feed.data %} #}
-
-            {# {{ feedCard({ #}
-                {# title: feed.data.title or 'Lalala', #}
-                {# url: feed.url, #}
-                {# cover: feed.data.cover, #}
-                {# tags: feed.data.tags, #}
-                {# jurnal: feed.data.jurnal #}
-            {# }) }} #}
             <article class="card" style="--bg-img-src: url({{ feed.data.cover }});" cover-image="{{ feed.data.cover }}">
             <a href="{{ feed.url }}" class="w-stack">
 
-                {# {% if feed.data.cover %}
-                    {% Image feed.data.cover, "sample data", "sample-data-img", "min-width: 600px;" %}
-                {% endif %} #}
-
-                <h3>{{ feed.data.title }}</h3>
+                <h4>{{ feed.data.title }}</h4>
             </a>
-
-            {% if feed.data.jurnal %}
-                <a class="card-source__link" href="{{ feed.data.jurnal }}">Source Key</a>
-            {% endif %}
 
             {% if feed.data.tags %}
                 <div class="card__tags cluster gap-top-base" aria-label="tags for this page">
                     {{ tagPills(feed.data.tags) }}
                 </div>
+            {% endif %}
+
+            {% if feed.data.jurnal %}
+                <a class="card-source__link" href="{{ feed.data.jurnal }}">Source Key</a>
             {% endif %}
             </article>  
             

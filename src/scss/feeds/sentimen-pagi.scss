@@ -107,6 +107,12 @@
     color: white;
 }
 
+#sentimen__crews {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
 #roles-items {
     display: flex;
     justify-content: space-around;
