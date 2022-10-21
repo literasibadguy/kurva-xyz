@@ -3,6 +3,16 @@ layout: layouts/restrict-page.njk
 title: The Weeding of Rima and Ilman
 thumbnail: 'https://kurva.xyz/images/rm/cover-6-og.jpg'
 alt: Picture of The Weeding of Rima and Ilman
+permalink: /{{ paged.url }}index.html
+renderData:
+    title: "{{ paged.title }}"
+    description: "{{ paged.description }}"
+pagination:
+  data: collections.invitations
+  size: 1
+  alias: paged
+  resolve: values
+  addAllPagesToCollections: true
 pageScripts:
     - '/js/invitation-page.js'
 ---
@@ -12,9 +22,9 @@ pageScripts:
 
 <div class="invite">
 <web-navigation-drawer type="standard">
-    <audio id="bg-sound" class="audio__element" autoplay preload="auto">
-    <source src="{{ helpers.hashForProd('/audio/nothing-gonna-change-modern.mp3') }}" type="audio/mpeg">
-    </audio>    
+    {# <audio id="bg-sound" class="audio__element" autoplay preload="auto"> #}
+    {# <source src="{{ helpers.hashForProd('/audio/nothing-gonna-change-modern.mp3') }}" type="audio/mpeg"> #}
+    {# </audio>     #}
     <div data-drawer-container class="invite-center w-stack">
         <div id="undangan-background">
             <img alt="Couple Background" src="/images/rm/cover-5-intro.jpg"></img>
@@ -25,8 +35,8 @@ pageScripts:
         <div class="region gap-top-size-4 invite-center" id="invite-box">
             <div class="invite-center" id="weeding-headline">
                 <h2>You are invited!</h2>
-                <h2>The Wedding of</h2>
-                <img alt="Rima Ilman Logo" src="/images/rm/rima-ilham-logo.png"></img>
+                <h2>The Wedding of Beauty and Bad Guy</h2>
+                {# <img alt="Rima Ilman Logo" src="/images/rm/rima-ilham-logo.png"></img> #}
             </div>
             <div class="region">
             <h2>Kepada Yth:</h2>
@@ -96,7 +106,7 @@ pageScripts:
         <img class="bunga-border" alt="Bunga Line Footer" src="/images/feeds/bunga-line-footer.png"></img>
         <div class="sidebar region">
         <div class="flow">
-            <h1>Rima Nuzla Fitri, S.T</h1>
+            <h1>Namanya Si Beauty</h1>
             <h2>Putri dari</h2>
             <p>Drs. H. Edi Saputra - Dra. Hj. Nurbainir<p>
         </div>
@@ -105,7 +115,7 @@ pageScripts:
     <div class="couple invite-center wrapper region tag">
         <div class="sidebar region" data-direction="rtl">
         <div class="flow">
-            <h1>Ilman Nur Syamsudin, S.P</h1>
+            <h1>Namanya Bad Guy</h1>
             <h2>Putra dari</h2>
             <p>Alm. Drs. Dicky Akhmad Haidir dan Enung Nurani<p>
         </div>
@@ -136,25 +146,8 @@ pageScripts:
                 </a>
             </div>
         </div>
-        {# <div id="resepsi-nikah" class="region w-stack tag">
-            <h1>Resepsi</h1>
-            <div class="weeding-date invite-center w-stack">
-                <img alt="Calendar Icon" src="/images/feeds/calendar-icon.png"></img>
-                <h3 class="event-value">Minggu, 25 Agustus 2022</h3>
-                <h3>Pukul 07.00 WIB</h3>
-            </div>
-            <div class="weeding-location invite-center">
-                <img alt="Location Icon" src="/images/feeds/location-icon.png"></img>
-                <h3 class="event-value">Lokasi Acara</h3>
-                <h3>Jl. Batununggal, Kab. Bandung, Jawa Barat</h3>
-            </div>
-        </div> #}
     </div>
     <div id="undangan-greets" class="wrapper invite-center region tag">
-        {# <div class="flower-frame repel">
-            <img id="reverse" alt="Bunga Frame Left" src="/images/feeds/bunga-frame.png"></img>
-            <img alt="Bunga Frame Right" src="/images/feeds/bunga-frame.png"></img>
-        </div> #}
         <div class="w-stack--sm tag">
             <p>"Dan Diantara tanda-tanda kebesaran-Nya ialah diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati
                 dan dijadikan-Nya kasih sayang diantara kamu sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir" (Q.S Ar-Ruum : 21)</p>
@@ -172,42 +165,42 @@ pageScripts:
         <web-carousel>
             <div id="carousel-couple" class="carousel region">
             <div id="gallery-couple" data-scroll="snap">
-                <img class="card-couple" src="/images/rm/cover-3.jpg"></img>
-                <img class="card-couple" src="/images/rm/cover-4.jpg"></img>
-                <img class="card-couple" src="/images/rm/cover-2.jpg"></img>
-                <img class="card-couple" src="/images/rm/cover-5-og.jpg"></img>
+                <img class="card-couple" src="https://cdn.pixabay.com/photo/2013/07/27/13/56/couple-168191_960_720.jpg"></img>
+                <img class="card-couple" src="https://cdn.pixabay.com/photo/2019/12/28/02/16/senior-4723737_960_720.jpg"></img>
+                <img class="card-couple" src="https://cdn.pixabay.com/photo/2019/12/28/02/16/senior-4723737_960_720.jpg"></img>
+                <img class="card-couple" src="https://cdn.pixabay.com/photo/2018/05/24/17/35/parrots-3427188_960_720.jpg></img>
             </div>
             </div>
         </web-carousel>
         <div id="list-mengundang" class="region">
             <h1>TURUT MENGUNDANG</h1>
             <div class="region" id="pihak-laki-laki">
-                <h2>Pihak Laki Laki</h2>
-                <p>Keluarga Besar Apa Udin Syamsudin/ Mih Oom Komariah</p>
-                <p>Keluarga Besar Aki Salim / Nene Idah</p>
-                <p>Keluarga Besar Dinas Pertanian / Ketahanan Pangan Kabupaten Karawang</p>
-                <p>Gilang Rahmat Pratama / Laili Lutfiatur Rahma (Kakak)</p>
-                <p>Reza Suwardi (Adik)</p>
-                <p>Fadly Ahmad Fadhillah (Adik)</p>
+                <h2>Family Associate</h2>
+                <p>AAAA BBB CCCC  DDD EEEE FFF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FFF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FFF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FFF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FFF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FFF</p>
             </div>
             <div class="region" id="pihak-perempuan">
                 <h2>Pihak Perempuan</h2>
-                <p>Masnisjar / Khamidar (Mak Dang / Mak Tuo)</p>
-                <p>Nuraini / Darwin (Ibu / Pak Dang)</p>
-                <p>Musniar / Idramayulis ( Tante / Om )</p>
-                <p>Musri / Fitriani ( Mak Etek / Tante )</p>
-                <p>Erizal (Pak Tuo) </p>
-                <p>Nelfiani / Adriwita (Etek / Om)</p>
-                <p>Keluarga Besar BSI KCP Karawang</p>
-                <p>Abdianul Haiqal / Kanigia Inderasty (Kakak)</p>
-                <p>Rinda Nuzla Rahmi / Ahmad Irfan (Kakak)</p>
-                <p>Ilna Nuzla Putri (Adik)</p>
-                <p>Ninik Mamak</p>
-                <p>Urang Sumando / Seluruh Sanak Keluarga</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
+                <p>AAAA BBB CCCC  DDD EEEE FF</p>
             </div>
         </div>
         <div class="region">
-            <h3>Atas kehadiran dan doa restu dari Bapak/Ibu/Saudara/i sekalian kami mengucapkan terima kasih</h3>
+            <h3>As invitation we're really appreacite for your present. Thank you</h3>
             <p>Wassalamualaikum Warahmatullahi Wabarakatuh</p>
             <h3>KAMI YANG BERBAHAGIA</h3>
             <div id="pihak-keluarga" class="auto-grid region">
@@ -239,16 +232,6 @@ pageScripts:
                 </svg>
             </button> #}
 
-{# 
 
-{# permalink: /{{ paged.url }}index.html #}
-{#renderData: #}
-    {# title: "{{ paged.title }}" #}
-    {# description: "{{ paged.description }}"
-pagination:
-  data: collections.invitations
-  size: 1
-  alias: paged
-  resolve: values
-  addAllPagesToCollections: true
- #}
+---
+

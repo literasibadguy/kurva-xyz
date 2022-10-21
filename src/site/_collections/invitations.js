@@ -11,14 +11,14 @@ module.exports = () => {
 
     for (const key of keys) {
         const inviteData = invitationData[key];
-        const href = path.join('/', 'rimailmanwedding', key, '/');
-        const title = `The Wedding of Rima and Ilman`;
-        const description = `Kepada Yth: ${inviteData.namaUndangan}`;
+        const href = path.join('/', 'wedding', key, '/');
+        const title = `The Wedding of Beauty and Bad Guy`;
+        const description = `Presented for: ${inviteData.guestName}`;
 
         const invitation = {
             ...inviteData,
             data: {
-                namaUndangan: inviteData.namaUndangan,
+                guestName: inviteData.guestName,
             },
             description,
             href,
