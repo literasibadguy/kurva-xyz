@@ -79,6 +79,28 @@
     #trademark--kurva {
         text-align: right;
     }
+
+    #flex__trademark {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .grid-trademark {
+        display: grid;
+        grid-template-columns: 27px 27px 27px 120px;
+    }
+
+    .grid-trade-item {
+        width: 16px;
+        height: 12px;
+        background-color: white;
+    }
+
+    #grid-trade-inline {
+        width: 124px;
+    }
 }
 
 #openorder-company, #hours-company {
