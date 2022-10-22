@@ -117,9 +117,10 @@
 
 #hours-company {
     top: 2em;
-    left: 3em;
+    left: 2em;
     min-height: 960px;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 #openorder-company p, #hours-company p {
@@ -148,4 +149,12 @@
     border-radius: 1em;
     padding: 1em;
     backdrop-filter: blur(10px);
+}
+
+.right-hour-item {
+    align-self: flex-end;
+}
+
+.left-hour-item {
+    align-self: flex-start;
 }
