@@ -58,26 +58,17 @@
   font-style: normal;
   font-weight: 400;
   font-display: optional;
-  src: local('IBMPlexMono-Regular'),
-    url('/fonts/plex-mono/IBMPlexMono-Regular.woff2') format('woff2');
+  src: local('FragmentMono-Regular'),
+    url('/fonts/fragment-mono/FragmentMono-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'PlexMono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: optional;
-  src: local('IBMPlexMono-Text'),
-    url('/fonts/plex-mono/IBMPlexMono-Text.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Plex Mono';
-  font-style: normal;
+  font-style: italic;
   font-weight: 400;
   font-display: optional;
-  src: local('IBMPlexMono-Text'),
-    url('/fonts/plex-mono/IBMPlexMono-Regular.woff2') format('woff2');
+  src: local('FragmentMono-Italic'),
+    url('/fonts/fragment-mono/FragmentMono-Italic.woff2') format('woff2');
 }
 
 @font-face {

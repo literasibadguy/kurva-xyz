@@ -103,7 +103,7 @@
     }
 }
 
-#openorder-company, #hours-company {
+#openorder-company, #hours-company, #notice-company {
     display: flex;
     flex-direction: column;
     position: absolute;    
@@ -115,12 +115,29 @@
     left: 2em;
 }
 
-#hours-company {
-    top: 2em;
-    left: 2em;
+#hours-company, #notice-company {
     min-height: 960px;
     justify-content: space-evenly;
     width: 100%;
+}
+
+#notice-company {
+    justify-content: space-around;
+    z-index: 3;
+
+    &:first-child {
+        flex: 1;
+    }
+}
+
+#hours-company {
+    top: 2em;
+    left: 2em;
+}
+
+#notice-company {
+    top: 1em;
+    left: 2em;
 }
 
 #openorder-company p, #hours-company p {
@@ -145,10 +162,32 @@
     text-shadow: -1px 0 white,0 1px white,1px 0 white,0 -1px white;
 }
 
+#notice-company h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.back-blur-item {
+    backdrop-filter: blur(10px);
+}
+
 .left-hour-item, .right-hour-item {
     border-radius: 1em;
     padding: 1em;
-    backdrop-filter: blur(10px);
+}
+
+#fresh-notice h2 {
+    font-size: 24px;
+    text-shadow: unset;
+    color: white;
+}
+
+#fresh-hour-item {
+    flex-direction: column;
+
+    .back-blur-item {
+        padding: 1em;
+    }
 }
 
 .right-hour-item {
@@ -157,4 +196,7 @@
 
 .left-hour-item {
     align-self: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
 }
