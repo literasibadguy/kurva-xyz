@@ -1,0 +1,68 @@
+
+
+#origami-page {
+    // background-color: #e1c8aa;
+    background-color: #f1e0c2;
+}
+
+.replicate-first {
+    display: flex;
+    flex-direction: row;
+}
+
+.gami-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-width: 1000px;
+    align-items: center;
+
+    h1 {
+        font-size: clamp(240px, 50%, 300px);
+    }
+}
+
+.box-gami {
+    width: 240px;
+    height: 240px;
+    background-color: #e1c8aa;
+}
+
+.brown-gami {
+    background-color: #231d1f;
+}
+
+.blue-gami {
+    background-color: #26bfd1;
+}
+
+.red-gami {
+    background-color: #e8082a;
+}
+
+.green-gami {
+    background-color: #00947c;
+}
+
+.purple-gami {
+    background-color: #9768ae;
+}
+
+.trans-gami {
+    background-color: transparent;
+}
+
+#boxes--flexend {
+    justify-content: flex-end;
+}
+
+#boxes__space-between {
+    justify-content: space-between;
+}
+
+#boxes__space-around {
+    justify-content: space-around;
+}
+
+
+.my-text { font-feature-settings: "ss16";}

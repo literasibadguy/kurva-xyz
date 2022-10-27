@@ -1,4 +1,3 @@
 
-import './AccountHeader';
 
 import './ThemeToggle';

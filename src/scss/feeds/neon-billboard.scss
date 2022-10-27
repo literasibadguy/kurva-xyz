@@ -1,0 +1,71 @@
+
+
+#neon-page {
+    background-color: black;
+    text-rendering: optimizeLegibility;
+
+    h1, h2, h3, p {
+        font-family: PlexMono,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        color: white;
+    }
+}
+
+.featured-frame {
+    overflow: hidden;
+    max-height: 450px;
+    max-width: 1080px;
+    border-radius: 5em;
+    border: 2px solid white;
+}
+
+.featured-frame iframe {
+    position: relative;
+    top: -20em;
+}
+
+.particle-billboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.particle--yellow {
+    background-color: yellow;
+    width: 125px; 
+    height: 32px;
+    border-radius: 4em;
+}
+
+.blocks-billboard {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 0.2em;
+    grid-template-columns: repeat(2, 10fr);
+}
+
+.board-item {
+    min-height: 360px;
+    width: 500px;
+    border: 2px solid white;
+    justify-self: center;
+    margin: 1em;
+    border-radius: 2em;
+}
+
+#red-neon {
+    background-color: #f4463a;
+    border: unset;
+}
+
+#purple-neon {
+    background-color: #e00091;
+    border: unset;
+    text-align: center;
+}
+
+#lightgreen-neon {
+    background-color: #6cbaa0;
+}
+
+#lightblue-neon {
+    background-color: #dbfcff;
+}
