@@ -3,10 +3,13 @@
 #neon-page {
     background-color: black;
     text-rendering: optimizeLegibility;
+    display: flex;
+    // justify-content: space-evenly;
 
     h1, h2, h3, p {
         font-family: PlexMono,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         color: white;
+        font-weight: 400;
     }
 }
 
@@ -54,12 +57,29 @@
 #red-neon {
     background-color: #f4463a;
     border: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1em;
+
+    h1, h2 {
+        color: #591814;
+    }
 }
 
 #purple-neon {
     background-color: #e00091;
     border: unset;
     text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    padding: 1em;
+
+    .brand-item {
+        font-size: 45px;
+    }
 }
 
 #lightgreen-neon {
@@ -68,4 +88,25 @@
 
 #lightblue-neon {
     background-color: #dbfcff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 1em;
+
+    h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    h1, h2, p {
+        color: black;
+    }
+}
+
+.new-menus {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
