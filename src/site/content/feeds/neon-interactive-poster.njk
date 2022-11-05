@@ -15,8 +15,21 @@ tags:
 <div class="neon-boards">
     <div class="marquee-billboard">
     </div>
-    <div class="region featured-frame">
+    <div class="featured-frame">
     {# <iframe width="1080" height="960" src="https://www.youtube.com/embed/Xryh6KT9Cpg?controls=0&amp;mute=1&amp;autoplay=1&amp;loop=1&amp;clip=UgkxmaBgSaOiTBPSShEtzXsvcNIrUMImdKPC&amp;clipt=EJjsAxiw4QQ" title="Red Velvet Pose Live Short Clip" frameborder="0" allow="accelerometer; autoplay; mute; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe> #}
+        <div class="deep-pink">
+            <h1 id="fantasy-title">WELCOME TO FANTASY LAND CITY</h1>
+            <h1 id="fantasy-chinese">欢迎来到我的房间</h1>
+        </div>
+        <div id="deep-hotel">
+            <h1>UTOPIA HOTEL</h1>
+            <h2>YOUR FIRST EXPERIENCE WITH THOUSAND STORIES</h2>
+            <h1>STAY WITH OUR FUJI CHILLING ROOM MINIMUM $49,00</h1>
+            <p>NOT INCLUDED TAX</p>
+        </div>
+        <div id="deep-star">
+            <h1>★★★★★</h1>
+        </div>
     </div>
     <div class="particle-billboard">
         <div class="particle--yellow">
@@ -34,12 +47,27 @@ tags:
     </div>
     <div class="blocks-billboard">
         <div id="red-neon" class="board-item">
+            <div id="chinese-mode" class="vertical-groups">
+                <h1 id="vertical-title" class="vertical-bill">24/7 全天候开放</h1>
+                <h1 class="vertical-bill">蔬菜维生素c</h1>
+                <h1 class="vertical-bill">蔬菜维生素c</h1>
+                <h1 class="vertical-bill">三文鱼和金枪鱼</h1>
+            </div>
+            <div class="vertical-groups">
+            <h1 id="vertical-title" class="vertical-bill">CALZONE LIMITED</h1>
+            </div>
             <h1>UNDER PHARMA</h1>
             <h2>TRADITIONAL PHARMACY EST. 1942</h2>
         </div>
         <div id="lightgreen-neon" class="board-item">
-            <h1>YELLOW FLOWER LOAN SERVICE</h1>
-            <h1>LEASING YOUR CYCLE</h1>
+            <div id="aqua-credit">
+            <h1>AQUA DRAGON CREDIT SOLUTIONS CLUB</h1>
+            <p>JUST LEND YOUR APARTMENT UP TO $5,000</p>
+            </div>
+            <div id="authorized-credit">
+            <p>AUTHORIZED BY CHAN FINANCE SERVICE</h1>
+            <p>LEASING YOUR CYCLE</h1>
+            </div>
             <div class="green-lines-neon">
             </div>
         </div>
@@ -61,6 +89,21 @@ tags:
     </div>
 </div>
 <div class="neon-mainmenu">
+    <div class="mainmenu-header">
+        <video autoplay="true" loop="true" src="https://s3.amazonaws.com/criterion-production/spotlight_images/7191-d7cfe0b6ed2434740131e42c29a2a2eb/WKW_loop_001-criterionSite_1920x1080p_original.mov"></video>
+        <div id="cinema-schedule">
+            <p>SCHEDULE</p>
+            <p>01:05 - 02:45PM</p>
+            <p>03:05 - 04:45PM</p>
+            <p>06:05 - 07:45PM</p>
+        </div>
+        <div id="cinema-tagline">
+            <p>IN THE MOOD FOR LOVE</p>
+            <p>PLAYING ON CINEMA</p>
+            <p>AVAILABLE TICKET NOW</p>
+        </div>
+    </div>
+    <div class="mainmenu-tables">
     {% for dimsum in restaurant.dimsums %}
                 <div class="dimsum-menu-item">
                     <h3>{{ dimsum.attributes.chineseName }}</h3>
@@ -73,5 +116,6 @@ tags:
             <h3>$4,99</h3>
         </div> #}
     {% endfor %}
+    </div>
 </div>
 </div> 

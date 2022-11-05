@@ -1,4 +1,5 @@
 
+@import '../types/playfair.scss';
 
 #neon-page {
     background-color: black;
@@ -6,10 +7,15 @@
     display: flex;
     // justify-content: space-evenly;
 
-    h1, h2, h3, p {
+    h1, h2, h3 {
+        // font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
         font-family: PlexMono,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         color: white;
         font-weight: 400;
+    }
+
+    p {
+        font-family: PlexMono,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
     }
 }
 
@@ -17,8 +23,55 @@
     overflow: hidden;
     max-height: 450px;
     max-width: 1080px;
-    border-radius: 5em;
-    border: 2px solid white;
+    // border-radius: 1em;
+    // border: 2px solid white;
+    background-color: #f3a7bb;
+    display: flex;
+
+    .deep-pink {
+        background-color: #c62221;
+        width: 360px;
+        height: 320px;
+        display: flex;
+
+        h1 {
+            writing-mode: vertical-lr;
+            font-weight: 700;
+        }
+
+        #fantasy-title {
+            font-family:  Playfair Display;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 1em;
+            color: #02090a;
+        }
+
+        #fantasy-chinese {
+            font-size: 50px;
+            color: #02090a;
+        }
+
+    }
+
+    #deep-hotel {
+        background-color: #bad4a7;
+        padding: 2em;
+
+        h1 {
+            font-size: clamp(40px,50%,48px)
+        }
+
+        h1, h2, p {
+            color: #7e6742;
+        }
+    }
+
+    #deep-star {
+        writing-mode: vertical-lr;
+        font-size: 24px;
+    }
+
 }
 
 .featured-frame iframe {
@@ -43,15 +96,16 @@
     grid-auto-flow: row;
     gap: 0.2em;
     grid-template-columns: repeat(2, 10fr);
+    width: 55.5%;
 }
 
 .board-item {
     min-height: 360px;
-    width: 500px;
-    border: 2px solid white;
+    width: 450px;
+    // border: 2px solid white;
     justify-self: center;
-    margin: 1em;
-    border-radius: 2em;
+    // margin: 1em;
+    border-radius: 1em;
 }
 
 #red-neon {
@@ -62,14 +116,22 @@
     justify-content: flex-end;
     align-items: center;
     padding: 1em;
+    position: relative;
 
     h1, h2 {
         color: #591814;
     }
+
+    .vertical-groups {
+        .vertical-bill {
+            color: white;
+        }
+    }
 }
 
 #purple-neon {
-    background-color: #e00091;
+    // background-color: #e00091;
+    background-color: #f3a7bb;
     border: unset;
     text-align: center;
     flex-direction: column;
@@ -79,11 +141,36 @@
 
     .brand-item {
         font-size: 45px;
+        color: #e13c3c;
     }
 }
 
 #lightgreen-neon {
-    background-color: #6cbaa0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    #aqua-credit {
+
+        padding: 1em;
+        text-align: left;
+
+        h1 {
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 1em;
+            color: #0b3482;
+            font-family: 'Playfair Display';
+        }
+    }
+
+    #authorized-credit {
+        background-color: #0b3482;
+        color: white;
+        padding: 2em;
+    }
 }
 
 #lightblue-neon {
@@ -104,9 +191,74 @@
     }
 }
 
+
+.vertical-groups {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+#chinese-mode {
+    left: 0;
+}
+
+.vertical-bill {
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 40px;
+}
+
+#vertical-title {
+    color: white;
+}
+
 .new-menus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.neon-mainmenu {
+    width: 55.5%;
+}
+
+.dimsum-menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid white;
+}
+
+.mainmenu-header {
+    position: relative;
+    max-height: 450px;
+
+    video {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    #cinema-schedule {
+        color: white;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #cinema-tagline {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 }

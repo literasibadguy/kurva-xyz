@@ -1,6 +1,6 @@
 
 module.exports = () => {
     return {
-        layout: 'base',
+        layout: 'layouts/base.njk',
     }
 }

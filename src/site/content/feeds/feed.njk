@@ -1,0 +1,42 @@
+---json
+{
+  "permalink": "/feeds/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "layout": false,
+  "override:tags": [],
+  "metadata": {
+    "title": "Kurva Index Feeds",
+    "subtitle": "Works and experiments publishing index of Kurva.",
+    "url": "https://kurva.xyz/",
+    "feedUrl": "https://kurva.xyz/feeds/feed.xml",
+    "author": {
+      "name": "literasibadguy",
+      "email": "firas@literasi.blog"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.feeds | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.feed.id }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.feeds %}
+  {% set absolutePostUrl %}{{ post.url | absoluteUrl(metadata.url) }}{% endset %}
+  {%- set entryTitle %}{{ post.data.newstitle or post.data.searchTitle or post.data.relatedTitle or post.data.tiptitle or post.data.eleventyNavigation.key or post.data.title }}{% endset %}
+  <entry>
+    <title>{{ entryTitle }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

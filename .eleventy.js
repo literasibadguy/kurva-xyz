@@ -1,5 +1,7 @@
 
 const eleventyImage = require("@11ty/eleventy-img");
+const rssPlugin = require("@11ty/eleventy-plugin-rss");
+
 const tags = require("./src/site/_collections/tags");
 const invitations = require("./src/site/_collections/invitations");
 
@@ -19,6 +21,7 @@ const { hashForProd } = require('./src/site/_filters/csp-hash');
 
 const {minifyHtml} = require('./src/site/_transforms/minify-html');
 
+
 global.__basedir = __dirname;
 
 module.exports = function (config) {
@@ -27,6 +30,8 @@ module.exports = function (config) {
     const isStaging = process.env.ELEVENTY_ENV === 'staging';
 
     // config.setLibrary('md', marfkdown);
+
+    config.addPlugin(rssPlugin);
 
     config.addCollection("feeds", function(collection) {
         const tag = 'feeds';
