@@ -81,8 +81,39 @@
 
 .particle-billboard {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    min-height: 200px;
+    background-color: yellow;
+    justify-content: space-evenly;
+
+    #kicikku-station {
+
+        h1 {
+            font-size: clamp(40px, 50%, 45px);
+            font-weight: 700;
+        }
+
+        h1, h2 {
+            color: black;
+            font-family: 'Playfair Display';
+        }
+    }
+
+    .particle-rail {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #english-edition {
+        font-size: 12px;
+        background-color: black;
+        color: yellow;
+    }
 }
+
+
+
+
 
 .particle--yellow {
     background-color: yellow;
