@@ -1,6 +1,7 @@
 
 const eleventyImage = require("@11ty/eleventy-img");
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlightPlugin = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const tags = require("./src/site/_collections/tags");
 const invitations = require("./src/site/_collections/invitations");
@@ -30,6 +31,19 @@ module.exports = function (config) {
     const isStaging = process.env.ELEVENTY_ENV === 'staging';
 
     // config.setLibrary('md', marfkdown);
+
+    config.addPlugin(syntaxHighlightPlugin, {
+		templateFormats: ["md", "njk"],
+		init: function({ Prism }) {
+			Prism.languages.markdown = Prism.languages.extend('markup', {
+				'frontmatter': {
+					pattern: /^---[\s\S]*?^---$/m,
+					greedy: true,
+					inside: Prism.languages.yaml
+				}
+			});
+		}
+	});
 
     config.addPlugin(rssPlugin);
 
