@@ -149,9 +149,73 @@
         color: #591814;
     }
 
+    #oriental-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+    }
+
     .vertical-groups {
+        display: flex;
+        flex-direction: row;
         .vertical-bill {
             color: white;
+        }
+    }
+
+    #chinese-mode {
+        left: 0;
+    }
+
+    #chinese-red-mode {
+        .vertical-bill {
+            background-color: transparent;
+        }
+
+        h1 {
+            color: black;
+        }
+    }
+    
+    .vertical-bill {
+        text-orientation: upright;
+        writing-mode: vertical-lr;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        width: 40px;
+    }
+
+    #calzone-limited {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #pharma-brand {
+        background-color: black;
+        // padding: 2em;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 150px;
+        max-width: 400px;
+        overflow: hidden;
+
+
+        h1, h2 {
+            font-family: 'Playfair Display';
+            font-weight: 700;
+            color: #f4463a;
+        }
+
+        h1 {
+            font-size: 50px;
+            position: relative;
+            top: -20px;
+            width: 450px;
         }
     }
 }
@@ -162,13 +226,30 @@
     border: unset;
     text-align: center;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     display: flex;
     padding: 1em;
 
     .brand-item {
         font-size: 45px;
         color: #e13c3c;
+        font-family: 'Playfair Display';
+        font-weight: 600;
+    }
+
+    .featured-categories {
+        h2 {
+            color: #e13c3c;
+        }
+    }
+
+    #last-cinemas {
+        background-color: black;
+        padding: 1em;
+
+        h2 {
+            color: white;
+        }
     }
 }
 
@@ -204,12 +285,14 @@
     background-color: #dbfcff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-content: center;
+    align-items: center;
     gap: 1em;
+    text-align: center;
 
     h2 {
-        font-size: 45px;
+        font-size: 24px;
         text-align: center;
     }
 
@@ -219,25 +302,7 @@
 }
 
 
-.vertical-groups {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-}
 
-#chinese-mode {
-    left: 0;
-}
-
-.vertical-bill {
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    width: 40px;
-}
 
 #vertical-title {
     color: white;
