@@ -1,4 +1,5 @@
 
+@import '../types/archivo.scss';
 
 #origami-page {
     // background-color: #e1c8aa;
@@ -6,25 +7,78 @@
 }
 
 .replicate-first {
+    // display: flex;
+    // flex-direction: row;
+}
+
+#gami-poster {
+    // min-width: 960px;
+    padding: 1em;
+}
+
+#posterhead-origami {
+    display: flex;
+    justify-content: space-evenly;
+
+    h1 {
+        font-family: 'Archivo';
+        color:#231d1f
+    }
+
+    #ayang-title {
+        font-size: clamp(50px, 50%, 60px);
+    }
+
+    #established-ayang  {
+        h1:first-child {
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        }
+    }
+
+}
+
+#origami-trademark-company {
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        font-family: 'Archivo';
+        font-weight: 500;
+    }
+
+
+    
+}
+
+#pattern-origamis {
     display: flex;
     flex-direction: row;
+    gap: 2em;
+
+
+    .pattern-origami-item {
+        height: 340px;
+        width: 340px;
+        background-color: #231d1f;
+    }
 }
 
 .gami-boxes {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    min-width: 1000px;
+    // min-width: 1000px;
     align-items: center;
 
     h1 {
-        font-size: clamp(240px, 50%, 300px);
+        font-size: clamp(40px, 50%, 50px);
     }
 }
 
 .box-gami {
-    width: 240px;
-    height: 240px;
+    width: 180px;
+    height: 180px;
     background-color: #e1c8aa;
 }
 
