@@ -162,28 +162,6 @@ select {
   max-width: 40rem;
 }
 
-code {
-  padding: 2rem;
-  font-size: 0.8em;
-  tab-size: 2;
-  text-align: left;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  box-decoration-break: clone;
-  color: #161616;
-  background-color: #f4f4f4;
-  font-weight: 300;
-  font-family: Plex Mono,Consolas,Liberation Mono,Menlo,monospace;
-  line-height: 1.3333;
-}
-
-pre > code {
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 @import 'compositions/auto-grid';
 @import 'compositions/cluster';
 @import 'compositions/repel';
@@ -201,6 +179,8 @@ pre > code {
 @import 'blocks/site-footer';
 @import 'blocks/site-header';
 @import 'blocks/carousel';
+@import 'blocks/code';
+@import 'blocks/prism-theme';
 
 @import 'web-components/kurva-tabs';
 @import 'web-components/web-navigation-drawer';
@@ -215,7 +195,6 @@ pre > code {
 @import 'pages/feeds/iklan-majalah.scss';
 @import 'pages/feeds/jadwal-elegan-bandara.scss';
 @import 'pages/feeds/order-dessert.scss';
-@import 'pages/feeds/undangan-digital';
 @import 'pages/feeds/concert-red-page.scss';
 
 @import 'utilities/flow';

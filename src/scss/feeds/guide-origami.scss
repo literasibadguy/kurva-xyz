@@ -60,7 +60,30 @@
     .pattern-origami-item {
         height: 340px;
         width: 340px;
+        // background-color: #231d1f;
+    }
+
+    .full-pt-cl, .half-pt-cl, .third-pt-cl {
         background-color: #231d1f;
+    }
+
+    .full-pt-cl {
+        width: 100%;
+        height: 50px;
+    }
+
+    .half-pt-cl {
+        width: 50%;
+        height: 50px;
+    }
+
+    .third-pt-cl {
+        width: 25%;
+        height: 50px;
+    }
+
+    #blue-mark {
+        background-color: #26bfd1;
     }
 }
 

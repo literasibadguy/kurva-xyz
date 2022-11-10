@@ -1,0 +1,22 @@
+
+#hate-aesthetic-page {
+    width: 640px;
+    height: 600px;
+    background-color: #7096b8;
+    position: relative;
+}
+
+.hate-aesthetic-titles {
+    position: absolute;
+    z-index: 2;
+    box-sizing: content-box;
+    width: 100%;
+    text-align: center;
+    padding-top: 10em;
+
+
+    h1 {
+        font-size: 48px;
+        color: #f5f5dc;
+    }
+}
