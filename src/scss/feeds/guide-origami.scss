@@ -63,6 +63,13 @@
         // background-color: #231d1f;
     }
 
+    .left-pt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .full-pt-cl, .half-pt-cl, .third-pt-cl {
         background-color: #231d1f;
     }
