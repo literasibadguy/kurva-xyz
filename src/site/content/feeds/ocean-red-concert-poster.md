@@ -2,7 +2,6 @@
 layout: 'layouts/landing-page'
 title: Contemporary Red Concert Poster with Dilemma Position
 cover: "https://assets.kurva.xyz/ocean-red-concert-poster.jpg"
-draft: true
 pageScripts:
     - '/js/experiments-page.js'
 tags: 
