@@ -16,6 +16,13 @@
     padding: 1em;
 }
 
+#letterhead {
+    --region-space: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
 #posterhead-origami {
     display: flex;
     justify-content: space-evenly;
@@ -41,6 +48,7 @@
 #origami-trademark-company {
     display: flex;
     justify-content: center;
+    gap: 2em;
 
     h2 {
         font-family: 'Archivo';
@@ -57,6 +65,15 @@
     gap: 2em;
     justify-content: center;
 
+    .reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .center-pt {
+        display: flex;
+        justify-content: center;
+    }
 
     .pattern-origami-item {
         height: 340px;
@@ -88,6 +105,10 @@
     .third-pt-cl {
         width: 25%;
         height: 50px;
+    }
+
+    #default-mark {
+        background-color: #f1e0c2;
     }
 
     #blue-mark {
@@ -153,8 +174,21 @@
     justify-content: space-between;
 }
 
+#boxes__left {
+    justify-content: left;
+}
+
+#boxes__right {
+    justify-content: right;
+}
+
+
 #boxes__space-around {
     justify-content: space-around;
+}
+
+#boxes__space-evenly {
+    justify-content: space-evenly;
 }
 
 
