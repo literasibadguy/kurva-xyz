@@ -146,11 +146,11 @@ tags:
         </div>
     </div>
     <div class="mainmenu-tables">
-    {% for dimsum in restaurant.dimsums %}
+    {% for dimsum in dimsumsample %}
                 <div class="dimsum-menu-item">
-                    <h3>{{ dimsum.attributes.chineseName }}</h3>
-                    <h3>---- {{ dimsum.attributes.englishName }}</h3>
-                    <h3>${{ dimsum.attributes.price }}</h3>
+                    <h3>{{ dimsum.chineseName }}</h3>
+                    <h3>---- {{ dimsum.englishName }}</h3>
+                    <h3>${{ dimsum.price }}</h3>
                 </div>
         {# <div class="dimsum-menu-item">
             <h3>脚鸡</h3>

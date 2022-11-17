@@ -1,3 +1,62 @@
 [
-    {}
+    {
+        "chineseName": "炸肉饺",
+        "englishName": "Fried Meat Dumpling",
+        "price": 4.9
+    },
+    {
+        "chineseName": "虾酿豆腐",
+        "englishName": "Shrimp Stuffed Tofu",
+        "price": 3.5
+    },
+    {
+        "chineseName": "酿墨西哥胡椒",
+        "englishName": "Stuff Jalepeno Pepper",
+        "price": 2.9
+    },
+    {
+        "chineseName": "韭菜饺子",
+        "englishName": "Chive Dumplings",
+        "price": 2.5
+    },
+    {
+        "chineseName": "素食竹卷",
+        "englishName": "Vegetarians Bamboo Roll",
+        "price": 3.2
+    },
+    {
+        "chineseName": "芝麻鸡",
+        "englishName": "Sesame Chicken",
+        "price": 4.5
+    },
+    {
+        "chineseName": "春卷",
+        "englishName": "Spring Roll",
+        "price": 4.5
+    },
+    {
+        "chineseName": "蒸烤牛肉包",
+        "englishName": "Steamed Roasted Beef Bun",
+        "price": 4.99
+    },
+    {
+        "chineseName": "蛋挞",
+        "englishName": "Egg Tart",
+        "price": 2.99
+    },
+    {
+        "chineseName": "牛肉竹笋饺子",
+        "englishName": "Beef & Bamboo Shoot Dumpling",
+        "price": 4.5
+    },
+    {
+        "chineseName": "芝麻炸豆腐",
+        "englishName": "Sesame Fried Tofu",
+        "price": 4.5
+    },
+    {
+        "chineseName": "椰子布丁",
+        "englishName": "Coconut Pudding",
+        "price": 4.55
+    }
 ]
