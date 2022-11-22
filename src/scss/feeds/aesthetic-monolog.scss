@@ -1,0 +1,37 @@
+
+#hate-aesthetic-monolog {
+    min-height: 600px;
+    background-color: #7096b8;
+    color: white;
+}
+
+#poster-mono {
+    margin: 1em;
+}
+
+.tile-convos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#women-photo-inner {
+    max-width: 613px;
+    position: relative;
+
+    #head-aest, #reply-aest {
+        position: absolute;
+        color: white;
+    }
+
+    #head-aest {
+        top: 0;
+        margin-top: 10em;
+    }
+
+    #reply-aest {
+        bottom: 0;
+        margin-bottom: 6rem;
+        right: 0;
+    }
+}
