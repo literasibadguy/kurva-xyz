@@ -1,7 +1,7 @@
 
 
 #green-medit-poster {
-    min-height: 1000px;
+    max-height: 960px;
     background-color: #068e41;
     display: flex;
     color: white;
@@ -11,6 +11,7 @@
     min-width: 300px;
     min-height: 1000px;
     width: 50%;
+    display: flex;
 
     #vertical-clubs {
         padding: 1em;
@@ -18,7 +19,7 @@
         flex-direction: column;
         justify-content: space-around;
         height: 1000px;
-        width: 200px;
+        width: 120px;
     }
 
     h1 {
@@ -26,12 +27,32 @@
         writing-mode: vertical-lr;
         vertical-align: bottom;
     }
+
+    #cover-poster {
+        
+        img {
+            max-height: 960px;
+            object-fit: cover;
+        }
+    }
 }
 
 .fishnet-poster {
     display: flex;
     flex-direction: column;
     width: 50%;
+    position: relative;
+
+    #poster-club-type {
+        background-color: yellow;
+        padding: 2em;
+        color: #068e41;
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+        }
+    }
 }
 
 .little-boxes {
@@ -57,5 +78,29 @@
         background-color: #068e41;
         width: 16px;
         height: 36px;
+    }
+}
+
+#destination {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#schedules-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.schedule-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2em;
+    border-bottom: 1px solid white;
+
+    h2 {
+        font-weight: 400;
     }
 }
